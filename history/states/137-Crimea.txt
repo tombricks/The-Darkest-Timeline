@@ -7,7 +7,7 @@ state={
 	state_category = city
 
 	history={
-		owner = SOV
+		owner = NVR
 		victory_points = {
 			3686 20
 		}

@@ -5,6 +5,7 @@ ideologies = {
 		types = {
 		
 			communism_ideology = { }
+			marxism_leninism = { }
 
 		}
 		
@@ -186,7 +187,8 @@ ideologies = {
 	
 		types = {
 		
-			ultranationalism_ideology = { }
+			fascism_ideology = { }
+			nazism = { can_be_randomly_selected = no }
 			
 		}
 		

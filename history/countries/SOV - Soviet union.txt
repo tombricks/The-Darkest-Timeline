@@ -1,11 +1,38 @@
 # SOV - Soviet union.txt
 capital = 219
-set_stability = 0.6
-set_war_support = 0.6
+set_stability = 0.55
+set_war_support = 0.75
+
+set_cosmetic_tag = SOV_UNION_communism
+
+create_country_leader = {
+	name = "Yegor Ligachev"
+	ideology = marxism_leninism
+	picture = "Yegor_Ligachev.dds"
+}
 
 set_politics = {
-         ruling_party = neutrality
-        last_election = "2012.1.1"
-        election_frequency = 48
-        elections_allowed = no
+    ruling_party = communism
+    last_election = "2012.1.1"
+    election_frequency = 48
+    elections_allowed = no
 }
+
+set_popularities = {
+	communism = 48
+	socialism = 24
+	neutrality = 13
+	democratic = 12
+	fascism  = 3
+}
+
+set_autonomy = { target = BLR autonomy_state = Autonomy_Soviet_Socialist_Republic }
+set_autonomy = { target = GEO autonomy_state = Autonomy_Soviet_Socialist_Republic }
+set_autonomy = { target = ARM autonomy_state = Autonomy_Soviet_Socialist_Republic }
+set_autonomy = { target = AZR autonomy_state = Autonomy_Soviet_Socialist_Republic }
+set_autonomy = { target = KAZ autonomy_state = Autonomy_Soviet_Socialist_Republic }
+set_autonomy = { target = TMS autonomy_state = Autonomy_Soviet_Socialist_Republic }
+set_autonomy = { target = UZB autonomy_state = Autonomy_Soviet_Socialist_Republic }
+set_autonomy = { target = TAJ autonomy_state = Autonomy_Soviet_Socialist_Republic }
+set_autonomy = { target = KYR autonomy_state = Autonomy_Soviet_Socialist_Republic }
+set_autonomy = { target = NVR autonomy_state = Autonomy_Soviet_Socialist_Republic }

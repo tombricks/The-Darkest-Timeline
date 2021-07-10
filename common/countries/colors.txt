@@ -715,3 +715,7 @@ ZAP = {
 	color = rgb { 117 14 15 }
 	color_ui = rgb { 117 14 15 }	
 }
+NVR = {
+	color = rgb { 74 15 74 }
+	color_ui = rgb { 74 15 74 }	
+}

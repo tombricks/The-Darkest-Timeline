@@ -12,6 +12,7 @@ state={
 
 	history={
 		owner = UKR
+		add_claim_by = NVR
 		victory_points = {
 			11437 10 
 		}
