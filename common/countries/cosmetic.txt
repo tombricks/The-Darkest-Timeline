@@ -665,3 +665,8 @@ TBE_third_bulgarian_empire_neutrality = {
 	color = rgb { 138 249 195 }
 	color_ui = rgb { 138 249 195 }
 }
+
+USA_district = {
+	color = rgb { 20 133 237 }
+	color_ui = rgb { 87 160 255 }
+}

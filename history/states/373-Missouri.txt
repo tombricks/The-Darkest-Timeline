@@ -12,7 +12,8 @@ state={
 
 
 	history={
-		owner = USA
+		owner = MID
+		add_core_of = MID
 		buildings = {
 			infrastructure = 5
 			industrial_complex = 5

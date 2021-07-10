@@ -12,7 +12,8 @@ state={
 
 
 	history={
-		owner = USA
+		owner = APA
+		add_core_of = APA
 		buildings = {
 			infrastructure = 5
 			industrial_complex = 3

@@ -6,7 +6,8 @@ state={
 	state_category = rural
 
 	history={
-		owner = USA
+		owner = MID
+		add_core_of = MID
 		buildings = {
 			infrastructure = 4
 			industrial_complex = 1
