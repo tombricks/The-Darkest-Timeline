@@ -1,0 +1,14 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_SOV_CPSU_Reformists"
+		texturefile = "gfx/interface/ideas/SOV_CPSU_Reformists.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SOV_CPSU_Conservatives"
+		texturefile = "gfx/interface/ideas/SOV_CPSU_Conservatives.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SOV_CPSU_Nationalists"
+		texturefile = "gfx/interface/ideas/SOV_CPSU_Nationalists.dds"
+	}
+}

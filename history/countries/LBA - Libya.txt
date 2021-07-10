@@ -26,4 +26,7 @@ set_popularities = {
 }
 
 create_faction = "United States of Africa"
-puppet = TUN
+set_autonomy = {
+	target = TUN
+	autonomy_state = autonomy_puppet
+}

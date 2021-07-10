@@ -8,3 +8,10 @@
  USA_rust_belt_desc:0 "Our region used to be the industrial heartlands of the United States, but now industry is starting to move to other locations. We still have a significant amount of industry, but expanding it will be difficult"
  EUR_GRE_debt_crisis:0 "Greek Debt Crisis"
  EUR_GRE_debt_crisis_desc:0 "The Greek Debt Crisis has put a burden on our economics, halting the federalization of [EUR.GetNameDef]. We must deal with this issue so that we can go back to our true goals of European Unity."
+
+ SOV_CPSU_Reformists:0 "Reformists in the CPSU"
+ SOV_CPSU_Reformists_desc:0 ""
+ SOV_CPSU_Conservatives:0 "Conservatives in the CPSU"
+ SOV_CPSU_Conservatives_desc:0 ""
+ SOV_CPSU_Nationalists:0 "Nationalists in the CPSU"
+ SOV_CPSU_Nationalists_desc:0 ""

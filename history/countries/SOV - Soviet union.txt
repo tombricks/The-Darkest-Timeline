@@ -11,6 +11,12 @@ create_country_leader = {
 	picture = "Yegor_Ligachev.dds"
 }
 
+add_ideas = {
+	SOV_CPSU_Reformists
+	SOV_CPSU_Conservatives
+	SOV_CPSU_Nationalists
+}
+
 set_politics = {
     ruling_party = communism
     last_election = "2012.1.1"
@@ -23,9 +29,11 @@ set_popularities = {
 	socialism = 24
 	neutrality = 13
 	democratic = 12
-	fascism  = 3
+	fascism = 3
 }
 
+create_faction = "Moscow Treaty Organization"
+add_to_faction = SOV
 set_autonomy = { target = BLR autonomy_state = Autonomy_Soviet_Socialist_Republic }
 set_autonomy = { target = GEO autonomy_state = Autonomy_Soviet_Socialist_Republic }
 set_autonomy = { target = ARM autonomy_state = Autonomy_Soviet_Socialist_Republic }
