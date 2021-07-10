@@ -1,638 +1,855 @@
 ﻿l_english:
+# Germany
  GER:0 "Germany"
  GER_DEF:0 "Germany"
  GER_ADJ:0 "German"
+# Britain
  ENG:0 "Britain"
  ENG_DEF:0 "Britain"
  ENG_ADJ:0 "British"
+# Russia
  SOV:0 "Russia"
  SOV_DEF:0 "Russia"
  SOV_ADJ:0 "Russian"
+# America
  USA:0 "America"
  USA_DEF:0 "America"
  USA_ADJ:0 "American"
+# Sweden
  SWE:0 "Sweden"
  SWE_DEF:0 "Sweden"
  SWE_ADJ:0 "Swedish"
+# France
  FRA:0 "France"
  FRA_DEF:0 "France"
  FRA_ADJ:0 "French"
+# Luxembourg
  LUX:0 "Luxembourg"
  LUX_DEF:0 "Luxembourg"
  LUX_ADJ:0 "Luxembourg"
+# Belgium
  BEL:0 "Belgium"
  BEL_DEF:0 "Belgium"
  BEL_ADJ:0 "Belgian"
+# Netherlands
  HOL:0 "Netherlands"
  HOL_DEF:0 "the Netherlands"
  HOL_ADJ:0 "Dutch"
+# Czechia
  CZE:0 "Czechia"
  CZE_DEF:0 "Czechia"
  CZE_ADJ:0 "Czech"
+# Poland
  POL:0 "Poland"
  POL_DEF:0 "Poland"
  POL_ADJ:0 "Polish"
+# Austria
  AUS:0 "Austria"
  AUS_DEF:0 "Austria"
  AUS_ADJ:0 "Austrian"
+# Lithuania
  LIT:0 "Lithuania"
  LIT_DEF:0 "Lithuania"
  LIT_ADJ:0 "Lithuanian"
+# Estonia
  EST:0 "Estonia"
  EST_DEF:0 "Estonia"
  EST_ADJ:0 "Estonian"
+# Latvia
  LAT:0 "Latvia"
  LAT_DEF:0 "Latvia"
  LAT_ADJ:0 "Latvian"
+# Spain
  SPR:0 "Spain"
  SPR_DEF:0 "Spain"
  SPR_ADJ:0 "Spanish"
+# Italy
  ITA:0 "Italy"
  ITA_DEF:0 "Italy"
  ITA_ADJ:0 "Italian"
+# Romania
  ROM:0 "Romania"
  ROM_DEF:0 "Romania"
  ROM_ADJ:0 "Romanian"
+# Yugoslavia
  YUG:0 "Yugoslavia"
  YUG_DEF:0 "Yugoslavia"
  YUG_ADJ:0 "Yugoslavian"
+# Switzerland
  SWI:0 "Switzerland"
  SWI_DEF:0 "Switzerland"
  SWI_ADJ:0 "Swiss"
+# Turkey
  TUR:0 "Turkey"
  TUR_DEF:0 "Turkey"
  TUR_ADJ:0 "Turkish"
+# Greece
  GRE:0 "Greece"
  GRE_DEF:0 "Greece"
  GRE_ADJ:0 "Greek"
+# Albania
  ALB:0 "Albania"
  ALB_DEF:0 "Albania"
  ALB_ADJ:0 "Albanian"
+# Norway
  NOR:0 "Norway"
  NOR_DEF:0 "Norway"
  NOR_ADJ:0 "Norwegian"
+# Denmark
  DEN:0 "Denmark"
  DEN_DEF:0 "Denmark"
  DEN_ADJ:0 "Danish"
+# Bulgaria
  BUL:0 "Bulgaria"
  BUL_DEF:0 "Bulgaria"
  BUL_ADJ:0 "Bulgarian"
+# Portugal
  POR:0 "Portugal"
  POR_DEF:0 "Portugal"
  POR_ADJ:0 "Portuguese"
+# Finland
  FIN:0 "Finland"
  FIN_DEF:0 "Finland"
  FIN_ADJ:0 "Finnish"
+# Ireland
  IRE:0 "Ireland"
  IRE_DEF:0 "Ireland"
  IRE_ADJ:0 "Irish"
+# Hungary
  HUN:0 "Hungary"
  HUN_DEF:0 "Hungary"
  HUN_ADJ:0 "Hungarian"
+# Afghanistan
  AFG:0 "Afghanistan"
  AFG_DEF:0 "Afghanistan"
  AFG_ADJ:0 "Afghan"
+# Argentina
  ARG:0 "Argentina"
  ARG_DEF:0 "Argentina"
  ARG_ADJ:0 "Argentinean"
+# Bolivia
  BOL:0 "Bolivia"
  BOL_DEF:0 "Bolivia"
  BOL_ADJ:0 "Bolivian"
+# Brazil
  BRA:0 "Brazil"
  BRA_DEF:0 "Brazil"
  BRA_ADJ:0 "Brazilian"
+# Canada
  CAN:0 "Canada"
  CAN_DEF:0 "Canada"
  CAN_ADJ:0 "Canadian"
+# China
  CHI:0 "China"
  CHI_DEF:0 "China"
  CHI_ADJ:0 "Chinese"
+# China
  PRC:0 "China"
  PRC_DEF:0 "China"
  PRC_ADJ:0 "Chinese"
+# Chile
  CHL:0 "Chile"
  CHL_DEF:0 "Chile"
  CHL_ADJ:0 "Chilean"
+# Colombia
  COL:0 "Colombia"
  COL_DEF:0 "Colombia"
  COL_ADJ:0 "Colombian"
+# Costa Rica
  COS:0 "Costa Rica"
  COS_DEF:0 "Costa Rica"
  COS_ADJ:0 "Costa Rican"
+# Ecuador
  ECU:0 "Ecuador"
  ECU_DEF:0 "Ecuador"
  ECU_ADJ:0 "Ecuadorian"
+# El Salvador
  ELS:0 "El Salvador"
  ELS_DEF:0 "El Salvador"
  ELS_ADJ:0 "Salvadoran"
+# Guatemala
  GUA:0 "Guatemala"
  GUA_DEF:0 "Guatemala"
  GUA_ADJ:0 "Guatemalan"
+# Honduras
  HON:0 "Honduras"
  HON_DEF:0 "Honduras"
  HON_ADJ:0 "Honduran"
+# Iraq
  IRQ:0 "Iraq"
  IRQ_DEF:0 "Iraq"
  IRQ_ADJ:0 "Iraqi"
+# Japan
  JAP:0 "Japan"
  JAP_DEF:0 "Japan"
  JAP_ADJ:0 "Japanese"
+# Mexico
  MEX:0 "Mexico"
  MEX_DEF:0 "Mexico"
  MEX_ADJ:0 "Mexican"
+# Mongolia
  MON:0 "Mongolia"
  MON_DEF:0 "Mongolia"
  MON_ADJ:0 "Mongolian"
+# Nepal
  NEP:0 "Nepal"
  NEP_DEF:0 "Nepal"
  NEP_ADJ:0 "Nepali"
+# Nicaragua
  NIC:0 "Nicaragua"
  NIC_DEF:0 "Nicaragua"
  NIC_ADJ:0 "Nicaraguan"
+# Panama
  PAN:0 "Panama"
  PAN_DEF:0 "Panama"
  PAN_ADJ:0 "Panamanian"
+# Paraguay
  PAR:0 "Paraguay"
  PAR_DEF:0 "Paraguay"
  PAR_ADJ:0 "Paraguayan"
+# Iran
  PER:0 "Iran"
  PER_DEF:0 "Iran"
  PER_ADJ:0 "Iranian"
+# Philippines
  PHI:0 "Philippines"
  PHI_DEF:0 "the Philippines"
  PHI_ADJ:0 "Philippines"
+# Peru
  PRU:0 "Peru"
  PRU_DEF:0 "Peru"
  PRU_ADJ:0 "Peruvian"
+# South Africa
  SAF:0 "South Africa"
  SAF_DEF:0 "South Africa"
  SAF_ADJ:0 "South African"
+# Saudi Arabia
  SAU:1 "Saudi Arabia"
  SAU_ADJ:1 "Saudi Arabian"
  SAU_DEF:1 "Saudi Arabia"
+# Siam
  SIA:0 "Siam"
  SIA_DEF:0 "Siam"
  SIA_ADJ:0 "Siamese"
+# Sinkiang
  SIK:0 "Sinkiang"
  SIK_DEF:0 "Sinkiang"
  SIK_ADJ:0 "Sinkiang"
+# Tannu Tuva
  TAN:0 "Tannu Tuva"
  TAN_DEF:0 "Tannu Tuva"
  TAN_ADJ:0 "Tuvan"
+# Tibet
  TIB:0 "Tibet"
  TIB_DEF:0 "Tibet"
  TIB_ADJ:0 "Tibetan"
+# Venezuela
  VEN:0 "Venezuela"
  VEN_DEF:0 "Venezuela"
  VEN_ADJ:0 "Venezuelan"
+# Yunnan
  YUN:0 "Yunnan"
  YUN_DEF:0 "Yunnan"
  YUN_ADJ:0 "Yunnanese"
+# Australia
  AST:0 "Australia"
  AST_DEF:0 "Australia"
  AST_ADJ:0 "Australian"
+# New Zealand
  NZL:0 "New Zealand"
  NZL_DEF:0 "New Zealand"
  NZL_ADJ:0 "New Zealand"
+# Uruguay
  URG:0 "Uruguay"
  URG_DEF:0 "Uruguay"
  URG_ADJ:0 "Uruguayan"
+# Cuba
  CUB:0 "Cuba"
  CUB_DEF:0 "Cuba"
  CUB_ADJ:0 "Cuban"
+# Dominican Republic
  DOM:0 "Dominican Republic"
  DOM_DEF:0 "Dominican Republic"
  DOM_ADJ:0 "Dominican"
+# Haiti
  HAI:0 "Haiti"
  HAI_DEF:0 "Haiti"
  HAI_ADJ:0 "Haitian"
+# Oman
  OMA:0 "Oman"
  OMA_DEF:0 "Oman"
  OMA_ADJ:0 "Oman"
+# Yemen
  YEM:0 "Yemen"
  YEM_DEF:0 "Yemen"
  YEM_ADJ:0 "Yemeni"
+# Ethiopia
  ETH:0 "Ethiopia"
  ETH_DEF:0 "Ethiopia"
  ETH_ADJ:0 "Ethiopian"
+# Slovakia
  SLO:0 "Slovakia"
  SLO_DEF:0 "Slovakia"
  SLO_ADJ:0 "Slovakian"
+# Bhutan
  BHU:0 "Bhutan"
  BHU_DEF:0 "Bhutan"
  BHU_ADJ:0 "Bhutanese"
+# Liberia
  LIB:0 "Liberia"
  LIB_DEF:0 "Liberia"
  LIB_ADJ:0 "Liberian"
+# India
  RAJ:0 "India"
  RAJ_DEF:0 "India"
  RAJ_ADJ:0 "Indian"
+# Croatia
  CRO:0 "Croatia"
  CRO_DEF:0 "Croatia"
  CRO_ADJ:0 "Croatian"
+# Guangxi
  GXC:0 "Guangxi"
  GXC_DEF:0 "Guangxi"
  GXC_ADJ:0 "Guangxi"
+# Shanxi
  SHX:0 "Shanxi"
  SHX_DEF:0 "Shanxi"
  SHX_ADJ:0 "Shanxi"
+# Xibei San Ma
  XSM:0 "Xibei San Ma"
  XSM_DEF:0 "Xibei San Ma"
  XSM_ADJ:0 "Ma"
+# Mengkukuo
  MEN:0 "Mengkukuo"
  MEN_DEF:0 "Mengkukuo"
  MEN_ADJ:0 "Mengjiang"
+# Korea
  KOR:0 "Korea"
  KOR_DEF:0 "Korea"
  KOR_ADJ:0 "Korean"
+# Serbia
  SER:0 "Serbia"
  SER_DEF:0 "Serbia"
  SER_ADJ:0 "Serbian"
+# Iceland
  ICE:0 "Iceland"
  ICE_DEF:0 "Iceland"
  ICE_ADJ:0 "Icelandic"
+# Syria
  SYR:0 "Syria"
  SYR_DEF:0 "Syria"
  SYR_ADJ:0 "Syrian"
+# Lebanon
  LEB:0 "Lebanon"
  LEB_DEF:0 "Lebanon"
  LEB_ADJ:0 "Lebanese"
+# Jordan
  JOR:0 "Jordan"
  JOR_DEF:0 "Jordan"
  JOR_ADJ:0 "Jordanian"
+# Egypt
  EGY:0 "Egypt"
  EGY_DEF:0 "Egypt"
  EGY_ADJ:0 "Egyptian"
+# Libya
  LBA:0 "Libya"
  LBA_DEF:0 "Libya"
  LBA_ADJ:0 "Libyan"
+ LBA_socialism:0 "Great Socialist People's Libyan Arab Jamahiriya"
+ LBA_socialism_DEF:0 "the Great Socialist People's Libyan Arab Jamahiriya"
+ LBA_socialism_ADJ:0 "Libyan"
+# Germany
  WGR:0 "Germany"
  WGR_DEF:0 "Germany"
  WGR_ADJ:0 "West German"
+# Germany
  DDR:0 "Germany"
  DDR_DEF:0 "Germany"
  DDR_ADJ:0 "East German"
+# Palestine
  PAL:0 "Palestine"
  PAL_DEF:0 "Palestine"
  PAL_ADJ:0 "Palestinian"
+# Israel
  ISR:0 "Israel"
  ISR_DEF:0 "Israel"
  ISR_ADJ:0 "Israeli"
+# Vietnam
  VIN:0 "Vietnam"
  VIN_DEF:0 "Vietnam"
  VIN_ADJ:0 "Vietnamese"
+# Cambodia
  CAM:0 "Cambodia"
  CAM_DEF:0 "Cambodia"
  CAM_ADJ:0 "Cambodian"
+# Indonesia
  INS:0 "Indonesia"
  INS_DEF:0 "Indonesia"
  INS_ADJ:0 "Indonesian"
+# Malaysia
  MAL:0 "Malaysia"
  MAL_DEF:0 "Malaysia"
  MAL_ADJ:0 "Malaysian"
+# Laos
  LAO:0 "Laos"
  LAO_DEF:0 "Laos"
  LAO_ADJ:0 "Laotian"
+# Montenegro
  MNT:0 "Montenegro"
  MNT_DEF:0 "Montenegro"
  MNT_ADJ:0 "Montenegrin"
+# Ukraine
  UKR:0 "Ukraine"
  UKR_DEF:0 "Ukraine"
  UKR_ADJ:0 "Ukrainian"
+# Georgia
  GEO:0 "Georgia"
  GEO_DEF:0 "Georgia"
  GEO_ADJ:0 "Georgian"
+# Kazakhstan
  KAZ:0 "Kazakhstan"
  KAZ_DEF:0 "Kazakhstan"
  KAZ_ADJ:0 "Kazakh"
+# Azerbaijan
  AZR:0 "Azerbaijan"
  AZR_DEF:0 "Azerbaijan"
  AZR_ADJ:0 "Azerbaijani"
+# Armenia
  ARM:0 "Armenia"
  ARM_DEF:0 "Armenia"
  ARM_ADJ:0 "Armenian"
+# Belarus
  BLR:0 "Belarus"
  BLR_DEF:0 "Belarus"
  BLR_ADJ:0 "Belarusian"
+# Angola
  ANG:0 "Angola"
  ANG_DEF:0 "Angola"
  ANG_ADJ:0 "Angolan"
+# Mozambique
  MZB:0 "Mozambique"
  MZB_DEF:0 "Mozambique"
  MZB_ADJ:0 "Mozambican"
+# Zimbabwe
  ZIM:0 "Zimbabwe"
  ZIM_DEF:0 "Zimbabwe"
  ZIM_ADJ:0 "Zimbabwean"
+# Zaire
  COG:0 "Zaire"
  COG_DEF:0 "Zaire"
  COG_ADJ:0 "Zairian"
+# Kenya
  KEN:0 "Kenya"
  KEN_DEF:0 "Kenya"
  KEN_ADJ:0 "Kenyan"
+# Pakistan
  PAK:0 "Pakistan"
  PAK_DEF:0 "Pakistan"
  PAK_ADJ:0 "Pakistani"
+# Botswana
  BOT:0 "Botswana"
  BOT_DEF:0 "Botswana"
  BOT_ADJ:0 "Batswana"
+# China
  MAN:0 "China"
  MAN_DEF:0 "China"
  MAN_ADJ:0 "Manchu"
+# Bahamas
  BAH:0 "Bahamas"
  BAH_DEF:0 "the Bahamas"
  BAH_ADJ:0 "Bahamian"
+# Bangladesh
  BAN:0 "Bangladesh"
  BAN_DEF:0 "Bangladesh"
  BAN_ADJ:0 "Bangladeshi"
+# Belize
  BLZ:0 "Belize"
  BLZ_DEF:0 "Belize"
  BLZ_ADJ:0 "Belizean"
+# Burma
  BRM:0 "Burma"
  BRM_DEF:0 "Burma"
  BRM_ADJ:0 "Burmese"
+# Antilles
  CRC:0 "Antilles"
  CRC_DEF:0 "the Antilles"
  CRC_ADJ:0 "Antillean"
+# Guadeloupe
  GDL:0 "Guadeloupe"
  GDL_DEF:0 "Guadeloupe"
  GDL_ADJ:0 "Guadeloupean"
+# Guyana
  GYA:0 "Guyana"
  GYA_DEF:0 "Guyana"
  GYA_ADJ:0 "Guyanese"
+# Jamaica
  JAM:0 "Jamaica"
  JAM_DEF:0 "Jamaica"
  JAM_ADJ:0 "Jamaican"
+# Kyrgyzstan
  KYR:0 "Kyrgyzstan"
  KYR_DEF:0 "Kyrgyzstan"
  KYR_ADJ:0 "Kirghiz"
+# Madagascar
  MAD:0 "Madagascar"
  MAD_DEF:0 "Madagascar"
  MAD_ADJ:0 "Malagasy"
+# Moldova
  MOL:0 "Moldova"
  MOL_DEF:0 "Moldova"
  MOL_ADJ:0 "Moldovan"
+# Papua
  PNG:0 "Papua"
  PNG_DEF:0 "Papua"
  PNG_ADJ:0 "Papuan"
+# Puerto Rico
  PUE:0 "Puerto Rico"
  PUE_DEF:0 "Puerto Rico"
  PUE_ADJ:0 "Puerto Rican"
+# Qatar
  QAT:0 "Qatar"
  QAT_DEF:0 "Qatar"
  QAT_ADJ:0 "Qatari"
+# Scotland
  SCO:0 "Scotland"
  SCO_DEF:0 "Scotland"
  SCO_ADJ:0 "Scottish"
+# Sri Lanka
  SRL:0 "Sri Lanka"
  SRL_DEF:0 "Sri Lanka"
  SRL_ADJ:0 "Sri Lankan"
+# Suriname
  SUR:0 "Suriname"
  SUR_DEF:0 "Suriname"
  SUR_ADJ:0 "Surinamese"
+# Tajikistan
  TAJ:0 "Tajikistan"
  TAJ_DEF:0 "Tajikistan"
  TAJ_ADJ:0 "Tajik"
+# Trinidad and Tobago
  TRI:0 "Trinidad and Tobago"
  TRI_DEF:0 "Trinidad and Tobago"
  TRI_ADJ:0 "Trinidadian and Tobagonian"
+# Turkmenistan
  TMS:0 "Turkmenistan"
  TMS_DEF:0 "Turkmenistan"
  TMS_ADJ:0 "Turkmen"
+# Arab Emirates
  UAE:0 "Arab Emirates"
  UAE_DEF:0 "the Arab Emirates"
  UAE_ADJ:0 "Emirati"
+# Uzbekistan
  UZB:0 "Uzbekistan"
  UZB_DEF:0 "Uzbekistan"
  UZB_ADJ:0 "Uzbek"
+# Kuwait
  KUW:0 "Kuwait"
  KUW_DEF:0 "Kuwait"
  KUW_ADJ:0 "Kuwaiti"
+# Dixieland
  CSA:0 "Dixieland"
  CSA_DEF:0 "Dixieland"
  CSA_ADJ:0 "Dixie"
+# 'Merica
  USB:0 "'Merica"
  USB_DEF:0 "'Merica"
  USB_ADJ:0 "'Merican"
+# Cyprus
  CYP:0 "Cyprus"
  CYP_DEF:0 "Cyprus"
  CYP_ADJ:0 "Cypriot"
+# Malta
  MLT:0 "Malta"
  MLT_DEF:0 "Malta"
  MLT_ADJ:0 "Maltese"
+# Algeria
  ALG:0 "Algeria"
  ALG_DEF:0 "Algeria"
  ALG_ADJ:0 "Algerian"
+# Morocco
  MOR:0 "Morocco"
  MOR_DEF:0 "Morocco"
  MOR_ADJ:0 "Moroccan"
+# Tunisia
  TUN:0 "Tunisia"
  TUN_DEF:0 "Tunisia"
  TUN_ADJ:0 "Tunisian"
+ TUN_LBA_socialism:0 "Tunisian Arab Socialist Republic"
+ TUN_LBA_socialism_DEF:0 "the Tunisian Arab Socialist Republic"
+ TUN_LBA_socialism_ADJ:0 "Tunisian"
+# Sudan
  SUD:0 "Sudan"
  SUD_DEF:0 "Sudan"
  SUD_ADJ:0 "Sudanese"
+# Eritrea
  ERI:0 "Eritrea"
  ERI_DEF:0 "Eritrea"
  ERI_ADJ:0 "Eritrean"
+# Djibouti
  DJI:0 "Djibouti"
  DJI_DEF:0 "Djibouti"
  DJI_ADJ:0 "Djiboutian"
+# Somalia
  SOM:0 "Somalia"
  SOM_DEF:0 "Somalia"
  SOM_ADJ:0 "Somalian"
+# Uganda
  UGA:0 "Uganda"
  UGA_DEF:0 "Uganda"
  UGA_ADJ:0 "Ugandan"
+# Rwanda
  RWA:0 "Rwanda"
  RWA_DEF:0 "Rwanda"
  RWA_ADJ:0 "Rwandan"
+# Burundi
  BRD:0 "Burundi"
  BRD_DEF:0 "Burundi"
  BRD_ADJ:0 "Burundi"
+# Tanzania
  TZN:0 "Tanzania"
  TZN_DEF:0 "Tanzania"
  TZN_ADJ:0 "Tanzanian"
+# Zambia
  ZAM:0 "Zambia"
  ZAM_DEF:0 "Zambia"
  ZAM_ADJ:0 "Zambian"
+# Malawi
  MLW:0 "Malawi"
  MLW_DEF:0 "Malawi"
  MLW_ADJ:0 "Malawian"
+# Gabon
  GAB:0 "Gabon"
  GAB_DEF:0 "Gabon"
  GAB_ADJ:0 "Gabonese"
+# Congo
  RCG:0 "Congo"
  RCG_DEF:0 "the Congo"
  RCG_ADJ:0 "Congolese"
+# Equatorial Guinea
  EQG:0 "Equatorial Guinea"
  EQG_DEF:0 "Equatorial Guinea"
  EQG_ADJ:0 "Equatorial Guinean"
+# Cameroon
  CMR:0 "Cameroon"
  CMR_DEF:0 "Cameroon"
  CMR_ADJ:0 "Cameroonian"
+# Central Africa
  CAR:0 "Central Africa"
  CAR_DEF:0 "Central Africa"
  CAR_ADJ:0 "Central African"
+# Chad
  CHA:0 "Chad"
  CHA_DEF:0 "Chad"
  CHA_ADJ:0 "Chadian"
+# Nigeria
  NGA:0 "Nigeria"
  NGA_DEF:0 "Nigeria"
  NGA_ADJ:0 "Nigerian"
+# Benin
  DAH:0 "Benin"
  DAH_DEF:0 "Benin"
  DAH_ADJ:0 "Beninese"
+# Togo
  TOG:0 "Togo"
  TOG_DEF:0 "Togo"
  TOG_ADJ:0 "Togolese"
+# Ghana
  GHA:0 "Ghana"
  GHA_DEF:0 "Ghana"
  GHA_ADJ:0 "Ghanaian"
+# Côte d'Ivoire
  IVO:0 "Côte d'Ivoire"
  IVO_DEF:0 "Côte d'Ivoire"
  IVO_ADJ:0 "Ivorian"
+# Upper Volta
  VOL:0 "Upper Volta"
  VOL_DEF:0 "Upper Volta"
  VOL_ADJ:0 "Upper Voltan"
+# Mali
  MLI:0 "Mali"
  MLI_DEF:0 "Mali"
  MLI_ADJ:0 "Malian"
+# Sierra Leone
  SIE:0 "Sierra Leone"
  SIE_DEF:0 "Sierra Leone"
  SIE_ADJ:0 "Sierra Leonean"
+# Guinea
  GNA:0 "Guinea"
  GNA_DEF:0 "Guinea"
  GNA_ADJ:0 "Guinean"
+# Guinea-Bissau
  GNB:0 "Guinea-Bissau"
  GNB_DEF:0 "Guinea-Bissau"
  GNB_ADJ:0 "Bissau-Guinean"
+# Senegal
  SEN:0 "Senegal"
  SEN_DEF:0 "Senegal"
  SEN_ADJ:0 "Senegalese"
+# The Gambia
  GAM:0 "The Gambia"
  GAM_DEF:0 "The Gambia"
  GAM_ADJ:0 "Gambian"
+# Wales
  WLS:0 "Wales"
  WLS_DEF:0 "Wales"
  WLS_ADJ:0 "Welsh"
+# Niger
  NGR:0 "Niger"
  NGR_DEF:0 "Niger"
  NGR_ADJ:0 "Nigerien"
+# Mauritania
  MRT:0 "Mauritania"
  MRT_DEF:0 "Mauritania"
  MRT_ADJ:0 "Mauritanian"
+# Namibia
  NMB:0 "Namibia"
  NMB_DEF:0 "Namibia"
  NMB_ADJ:0 "Namibian"
+# Western Sahara
  WES:0 "Western Sahara"
  WES_DEF:0 "the Western Sahara"
  WES_ADJ:0 "Sahrawian"
+# Antilles
  BAS:0 "Antilles"
  BAS_DEF:0 "the Antilles"
  BAS_ADJ:0 "Antillian"
+# Guiana
  CAY:0 "Guiana"
  CAY_DEF:0 "Guiana"
  CAY_ADJ:0 "Guianan"
+# Maldives
  MLD:0 "Maldives"
  MLD_DEF:0 "Maldives"
  MLD_ADJ:0 "Maldivian"
+# Fiji
  FIJ:0 "Fiji"
  FIJ_DEF:0 "Fiji"
  FIJ_ADJ:0 "Fijian"
+# Tahiti
  TAH:0 "Tahiti"
  TAH_DEF:0 "Tahiti"
  TAH_ADJ:0 "Tahitian"
+# Micronesia
  FSM:0 "Micronesia"
  FSM_DEF:0 "Micronesia"
  FSM_ADJ:0 "Micronesian"
+# Mariana Islands
  GUM:0 "Mariana Islands"
  GUM_DEF:0 "the Mariana Islands"
  GUM_ADJ:0 "Mariana"
+# Solomon Islands
  SOL:0 "Solomon Islands"
  SOL_DEF:0 "the Solomon Islands"
  SOL_ADJ:0 "Solomon"
+# Samoa
  SAM:0 "Samoa"
  SAM_DEF:0 "Samoa"
  SAM_ADJ:0 "Samoan"
+# Hawai'i
  HAW:0 "Hawai'i"
  HAW_DEF:0 "Hawai'i"
  HAW_ADJ:0 "Hawai'ian"
+# Slovenia
  SLV:0 "Slovenia"
  SLV_DEF:0 "Slovenia"
  SLV_ADJ:0 "Slovenian"
+# Bosnia
  BOS:0 "Bosnia"
  BOS_DEF:0 "Bosnia"
  BOS_ADJ:0 "Bosnian"
+# Herzegovina
  HRZ:0 "Herzegovina"
  HRZ_DEF:0 "Herzegovina"
  HRZ_ADJ:0 "Herzegovinan"
+# Macedonia
  MAC:0 "Macedonia"
  MAC_DEF:0 "Macedonia"
  MAC_ADJ:0 "Macedonian"
+# Northern Ireland
  NIR:0 "Northern Ireland"
  NIR_DEF:0 "Northern Ireland"
  NIR_ADJ:0 "North Irish"
+# Spain
  SPA:0 "Spain"
  SPA_DEF:0 "Spain"
  SPA_ADJ:0 "Spanish"
+# Spain
  SPB:0 "Spain"
  SPB_DEF:0 "Spain"
  SPB_ADJ:0 "Spanish"
+# Spain
  SPC:0 "Spain"
  SPC_DEF:0 "Spain"
  SPC_ADJ:0 "Spanish"
+# Spain
  SPD:0 "Spain"
  SPD_DEF:0 "Spain"
  SPD_ADJ:0 "Spanish"
+# Basque Country
  NAV:0 "Basque Country"
  NAV_DEF:0 "the Basque Country"
  NAV_ADJ:0 "Basque"
+# Catalonia
  CAT:0 "Catalonia"
  CAT_DEF:0 "Catalonia"
  CAT_ADJ:0 "Catalan"
+# Galicia
  GLC:0 "Galicia"
  GLC_DEF:0 "Galicia"
  GLC_ADJ:0 "Galician"
+# Andalusia
  ADU:0 "Andalusia"
  ADU_DEF:0 "Andalusia"
  ADU_ADJ:0 "Andalusian"
+# Bavaria
  BAY:0 "Bavaria"
  BAY_DEF:0 "Bavaria"
  BAY_ADJ:0 "Bavarian"
+# Mecklenburg
  MEK:0 "Mecklenburg"
  MEK_DEF:0 "Mecklenburg"
  MEK_ADJ:0 "Mecklenburg"
+# Prussia
  PRE:0 "Prussia"
  PRE_DEF:0 "Prussia"
  PRE_ADJ:0 "Prussian"
+# Saxony
  SAX:0 "Saxony"
  SAX_DEF:0 "Saxony"
  SAX_ADJ:0 "Saxon"
+# Hannover
  HAN:0 "Hannover"
  HAN_DEF:0 "Hannover"
  HAN_ADJ:0 "Hanoverian"
+# Wurtemberg
  WUR:0 "Wurtemberg"
  WUR_DEF:0 "Wurtemberg"
  WUR_ADJ:0 "Wurtembergian"
+# Schleswig
  SHL:0 "Schleswig"
  SHL_DEF:0 "Schleswig"
  SHL_ADJ:0 "Schleswig"
+# Brittany
  BRI:0 "Brittany"
  BRI_DEF:0 "Brittany"
  BRI_ADJ:0 "Breton"
+# Occitania
  OCC:0 "Occitania"
  OCC_DEF:0 "Occitania"
  OCC_ADJ:0 "Occitan"
+# Corsica
  COR:0 "Corsica"
  COR_DEF:0 "Corsica"
  COR_ADJ:0 "Corsican"
+# Kosovo
  KOS:0 "Kosovo"
  KOS_DEF:0 "Kosovo"
  KOS_ADJ:0 "Kosovan"
+# Transylvania
  TRA:0 "Transylvania"
  TRA_DEF:0 "Transylvania"
  TRA_ADJ:0 "Transylvanian"
- 
+# Europe
  EUR:0 "Europe"
  EUR_DEF:0 "Europe"
  EUR_ADJ:0 "European"

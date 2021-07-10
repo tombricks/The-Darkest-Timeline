@@ -329,8 +329,8 @@ XSM = {
 }
 
 LBA = {
-	color = rgb { 200 180 90 }
-	color_ui = rgb { 200 180 90 }
+	color = rgb { 37 112 41 }
+	color_ui = rgb { 37 112 41 }
 }
 
 EGY = {
