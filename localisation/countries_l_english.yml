@@ -144,8 +144,8 @@
  CHI_DEF:0 "Taiwan"
  CHI_ADJ:0 "Taiwanese"
 # China
- PRC:0 "China"
- PRC_DEF:0 "China"
+ PRC:0 "People's Republic of China"
+ PRC_DEF:0 "the People's Republic of China"
  PRC_ADJ:0 "Chinese"
 # Chile
  CHL:0 "Chile"

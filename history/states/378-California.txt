@@ -48,7 +48,7 @@ state={
 		}
 		1939.1.1 = {
 			buildings = {
-				industrial_complex = 7
+				industrial_complex = 4
 			}
 		}
 	}

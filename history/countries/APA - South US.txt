@@ -5,6 +5,10 @@ USA = {
 	puppet = APA
 }
 
+add_ideas = {
+	USA_sudden_autonomy
+}
+
 set_research_slots = 3
 set_stability = 0.4
 set_war_support = 0.5

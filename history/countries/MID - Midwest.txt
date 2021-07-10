@@ -5,6 +5,11 @@ USA = {
 	puppet = MID
 }
 
+add_ideas = {
+	USA_sudden_autonomy
+	USA_rust_belt
+}
+
 set_research_slots = 3
 set_stability = 0.7
 set_war_support = 0.4
