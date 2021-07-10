@@ -707,3 +707,11 @@ EUR = {
 	color = rgb { 0 51 153 }
 	color_ui = rgb { 0 51 153 }
 }
+QUE = {
+	color = rgb { 60 87 124 }
+	color_ui = rgb { 60 87 124 }
+}
+ZAP = {
+	color = rgb { 117 14 15 }
+	color_ui = rgb { 117 14 15 }	
+}
