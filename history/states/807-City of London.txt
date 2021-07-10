@@ -1,0 +1,20 @@
+state={
+	id=807
+	name="STATE_807"
+	provinces={
+		13236 
+	}
+	state_category = city
+	history = {
+		owner = ENG
+		victory_points = {
+			13236 20
+		}
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 2
+		}
+	}
+	manpower=9401
+	buildings_max_level_factor=1.000
+}
