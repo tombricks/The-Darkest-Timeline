@@ -1,0 +1,74 @@
+focus_tree = {
+	id = federal_bitch_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			OR = {
+				tag = MID
+				tag = APA
+				tag = CAL
+				tag = TEX
+			}
+		}
+	}
+
+	default = no
+
+	focus = {
+		id = USA_FED_question_autonomy
+		icon = GFX_goal_generic
+		x = 5
+		y = 0
+		cost = 10
+
+		bypass = {
+			NOT = {
+				is_subject_of = USA
+			}
+		}
+
+		completion_reward = {
+			add_political_power = 120
+		}
+	}
+
+	focus = {
+		id = USA_FED_regionalism
+		icon = GFX_goal_generic
+		prerequisite = { focus = USA_FED_question_autonomy }
+		x = 2
+		y = 1
+		cost = 5
+
+		bypass = {
+			NOT = {
+				is_subject_of = USA
+			}
+		}
+
+		completion_reward = {
+			#unlock decisions to increase autonomy and radicalize the populace
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = USA_FED_federalism
+		icon = GFX_goal_generic
+		prerequisite = { focus = USA_FED_question_autonomy }
+		x = -2
+		y = 1
+		cost = 5
+
+		available = {
+			is_subject_of = USA
+		}
+
+		completion_reward = {
+			#unlock decisions to cooperate with the federal government and reduce autonomy
+			add_stability = 0.05
+		}
+	}
