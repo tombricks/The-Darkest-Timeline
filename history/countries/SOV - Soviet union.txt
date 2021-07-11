@@ -44,3 +44,25 @@ set_autonomy = { target = UZB autonomy_state = Autonomy_Soviet_Socialist_Republi
 set_autonomy = { target = TAJ autonomy_state = Autonomy_Soviet_Socialist_Republic }
 set_autonomy = { target = KYR autonomy_state = Autonomy_Soviet_Socialist_Republic }
 set_autonomy = { target = NVR autonomy_state = Autonomy_Soviet_Socialist_Republic }
+every_state = {
+	limit = {
+		OR = {
+			OWNER = { is_subject_of = SOV has_autonomy_state = Autonomy_Soviet_Socialist_Republic }
+			any_country = {
+				limit = {
+					is_subject_of = SOV
+					has_autonomy_state = Autonomy_Soviet_Socialist_Republic
+				}
+				PREV =  {
+					is_claimed_by = PREV
+				}
+			}
+		}
+	}
+	add_claim_by = SOV
+}
+diplomatic_relation = {
+    country = UKR
+    relation = non_aggression_pact
+    active = yes
+}
