@@ -1,0 +1,6 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_RMV_Nicholas_III"
+		texturefile = "gfx/leaders/RMV/Nicholas_III.dds"
+	}
+}

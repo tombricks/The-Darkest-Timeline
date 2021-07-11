@@ -1,0 +1,24 @@
+defined_text = { 
+	name = GetDualLeaderName
+	text = {
+		trigger = {
+			has_idea = RMV_Nicholas_III
+		}
+		localization_key = "Nicholas III"
+	}
+	text = {
+		localization_key = "done fucked"
+	}
+}
+defined_text = { 
+	name = GetDualLeaderGFX
+	text = {
+		trigger = {
+			has_idea = RMV_Nicholas_III
+		}
+		localization_key = "GFX_RMV_Nicholas_III"
+	}
+	text = {
+		localization_key = "GFX_leader_unknown"
+	}
+}

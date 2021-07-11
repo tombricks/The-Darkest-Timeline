@@ -28,6 +28,8 @@
  neutrality_desc:0 "Authoritarian Regime"
  authoritarianism_ideology:0 "Authoritarianism"
  authoritarianism_ideology_desc:0 ""
+ monarchism:0 "Monarchism"
+ monarchism_desc:0 ""
 
  fascism:0 "Fascist"
  fascism_noun:0 "Fascism"
@@ -53,3 +55,9 @@
  SOV_socialism_party_long:0 "Communist Party of the Soviet Union - Gorbachev Faction"
  SOV_fascism_party:0 "Pamyat"
  SOV_fascism_party_long:0 "National Patriotic Front \"Memory\""
+ RMV_neutrality_party:0 "MPR"
+ RMV_neutrality_party_long:0 "Monarchist Party of Russia"
+ RMV_fascism_party:0 "PRHRM"
+ RMV_fascism_party_long:0 "Party for the Reclaimation of the Holy Russian Motherland"
+ RMV_democratic_party:0 "MDPR"
+ RMV_democratic_party_long:0 "Monarchist Democratic Party of Russia"

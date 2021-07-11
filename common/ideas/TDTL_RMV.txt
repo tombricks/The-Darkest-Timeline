@@ -1,0 +1,13 @@
+ideas = {
+	hidden_ideas = {
+		RMV_Nicholas_III = {
+			
+			allowed = {
+				tag = RMV
+			}
+			
+			modifier = {
+			}
+		}
+	}
+}

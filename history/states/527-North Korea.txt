@@ -10,7 +10,9 @@ state={
 	}
 
 	history={
-		owner = JAP
+		owner = NKR
+		add_core_of = NKR
+		add_claim_by = KOR
 		buildings = {
 			infrastructure = 3
 			industrial_complex = 1

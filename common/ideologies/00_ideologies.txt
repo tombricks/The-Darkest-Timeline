@@ -147,6 +147,7 @@ ideologies = {
 		types = {
 		
 			authoritarianism_ideology  = { }
+			monarchism = { can_be_randomly_selected = no }
 			
 		}
 

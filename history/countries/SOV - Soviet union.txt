@@ -49,10 +49,8 @@ every_state = {
 		OR = {
 			OWNER = { is_subject_of = SOV has_autonomy_state = Autonomy_Soviet_Socialist_Republic }
 			any_country = {
-				limit = {
-					is_subject_of = SOV
-					has_autonomy_state = Autonomy_Soviet_Socialist_Republic
-				}
+				is_subject_of = SOV
+				has_autonomy_state = Autonomy_Soviet_Socialist_Republic
 				PREV =  {
 					is_claimed_by = PREV
 				}

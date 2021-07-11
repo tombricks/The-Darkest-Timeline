@@ -719,3 +719,15 @@ NVR = {
 	color = rgb { 74 15 74 }
 	color_ui = rgb { 74 15 74 }	
 }
+NKR = {
+	color = rgb { 50 51 153 }
+	color_ui = rgb { 50 51 153 }
+}
+SAO = {
+	color = rgb { 51 51 255 }
+	color_ui = rgb { 51 51 255 }
+}
+RMV = {
+	color = rgb { 0 0 200 }
+	color_ui = rgb { 0 0 200 }
+}

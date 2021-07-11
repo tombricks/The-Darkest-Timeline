@@ -1,5 +1,5 @@
 # CHI - China.txt
-capital = 613
+capital = 524
 set_stability = 0.6
 set_war_support = 0.6
 
