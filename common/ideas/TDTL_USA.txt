@@ -61,6 +61,106 @@ ideas = {
 
 		}
 
+		USA_import_tariffs = {
+
+			allowed = {
+				always = no
+			}
+
+			picture = generic_exploit_mines
+
+			modifier = {
+				production_speed_industrial_complex_factor = 0.1
+				local_resources_factor = 0.1
+			}
+
+		}
+
+		USA_increased_industrial_contributions = {
+
+			allowed = { always = no }
+
+			picture =  ast_all_in
+
+			cancel = {
+				NOT = {
+					is_subject_of = USA
+				}
+			}
+
+			removal_cost = -1
+
+			#Targeted modifier to send stuff to SOV
+			targeted_modifier = {
+				tag = USA
+				cic_to_target_factor = 0.1
+			}
+
+			modifier = {
+				political_power_factor = 0.1
+			}
+		}
+
+		USA_higher_taxes = {
+
+			allowed = { always = no }
+
+			picture =  generic_foreign_capital
+
+			cancel = {
+				NOT = {
+					is_subject_of = USA
+				}
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = -0.1
+			}
+		}
+
+		USA_new_huac = {
+
+			allowed = { always = no }
+
+			picture =  anti_soviet_pact
+
+			cancel = {
+				NOT = {
+					is_subject_of = USA
+				}
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				socialism_drift = -0.03
+				communism_drift = -0.07
+				drift_defence_factor = 0.25
+				intelligence_agency_defense = 0.1
+			}
+		}
+
+		USA_local_militias = {
+			
+			picture = YUG_local_militias
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription = 0.02
+			}
+		}
+
 	}
 
 }

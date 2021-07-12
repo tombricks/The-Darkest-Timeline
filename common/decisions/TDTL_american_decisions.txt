@@ -1,0 +1,319 @@
+TDTL_USA_regionalist_category = {
+	
+	USA_FED_strengthen_labor_unions = {
+
+		icon = generic_political_discourse
+
+		cost = 75
+
+		days_remove = 70
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				add = 1
+				communism > 0.2
+			}
+			modifier = {
+				add = 1
+				socialism > 0.2
+			}
+			modifier = {
+				factor = 2
+				has_completed_focus = USA_FED_capitalism_failed
+			}
+			modifier = {
+				factor = 0
+				has_political_power < 100
+			}
+		}
+
+		days_re_enable = 70
+
+		modifier = {
+			consumer_goods_factor = 0.05
+			communism_drift = 0.1
+			socialism_drift = 0.1
+		}
+
+		remove_effect = {
+			if = {
+				limit = { OR = { has_dlc = "Waking the Tiger" has_dlc = "Together for Victory" has_dlc = "Death or Dishonor" } }
+				add_autonomy_ratio = {
+					value = 0.1
+					localization = USA_FED_anti_federal_politics
+				}
+			}
+		}
+
+	}
+
+	USA_FED_new_kind_of_nationalism = {
+
+		icon = generic_civil_support
+
+		cost = 75
+
+		days_remove = 70
+
+		days_re_enable = 70
+
+		modifier = {
+			stability_factor = -0.05
+			fascism_drift = 0.1
+			neutrality_drift = 0.1
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				add = 1
+				fascism > 0.2
+			}
+			modifier = {
+				add = 1
+				neutrality > 0.2
+			}
+			modifier = {
+				add = 1
+				tag = TEX
+			}
+			modifier = {
+				factor = 0.5
+				has_completed_focus = USA_FED_capitalism_failed
+			}
+			modifier = {
+				factor = 0
+				has_political_power < 100
+			}
+		}
+
+		remove_effect = {
+			if = {
+				limit = { OR = { has_dlc = "Waking the Tiger" has_dlc = "Together for Victory" has_dlc = "Death or Dishonor" } }
+				add_autonomy_ratio = {
+					value = 0.1
+					localization = USA_FED_anti_federal_politics
+				}
+			}
+		}
+
+	}
+
+	USA_FED_disconnect_power_grid = {
+
+		icon = generic_construction
+
+		cost = 100
+
+		fire_only_once = yes
+
+		days_remove = 100
+
+		visible = {
+			NOT = {
+				has_country_flag = USA_FED_disconnected_from_power_grid
+			}
+		}
+
+		modifier = {
+			stability_factor = -0.05
+			production_speed_buildings_factor = -0.1
+		}
+
+		remove_effect = {
+			USA = { news_event = { id = TDTL_USA_event.1 } }
+			set_country_flag = USA_FED_disconnected_from_power_grid
+			add_tech_bonus = {
+				name = secret_bonus
+				bonus = 0.5
+				uses = 1
+				category = electronics
+			}
+			if = {
+				limit = { OR = { has_dlc = "Waking the Tiger" has_dlc = "Together for Victory" has_dlc = "Death or Dishonor" } }
+				add_autonomy_ratio = {
+					value = 0.15
+					localization = USA_FED_anti_federal_politics
+				}
+			}
+		}
+
+	}
+
+}
+
+TDTL_USA_federalist_category = {
+	
+	USA_FED_reconnect_power_grid = {
+
+		icon = generic_construction
+
+		cost = 100
+
+		visible = {
+			has_country_flag = USA_FED_disconnected_from_power_grid
+		}
+
+		fire_only_once = yes
+
+		complete_effect = {
+			USA = { country_event = { id = TDTL_USA_event.2 } }
+		}
+
+	}
+
+	USA_FED_acquire_funding_highways = {
+
+		icon = generic_construction
+
+		cost = 50
+
+		days_remove = 70
+
+		days_re_enable = 70
+
+		modifier = {
+			political_power_cost = 0.1
+		}
+
+		available = {
+			any_owned_state = {			
+				free_building_slots = {
+					building = infrastructure
+					size > 1
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		remove_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			if = {
+				limit = { OR = { has_dlc = "Waking the Tiger" has_dlc = "Together for Victory" has_dlc = "Death or Dishonor" } }
+				add_autonomy_ratio = {
+					value = -0.1
+					localization = USA_FED_pro_federal_politics
+				}
+			}
+		}
+	}
+
+	USA_FED_import_other_regions = {
+
+		icon = generic_political_discourse
+
+		cost = 50
+
+		days_remove = 70
+
+		days_re_enable = 70
+
+		modifier = {
+			min_export = 0.1
+			consumer_goods_factor = -0.05
+		}
+
+		available = {
+			USA = {
+				num_subjects > 1
+			}
+		}
+
+		fire_only_once = yes
+
+		remove_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+					}
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			if = {
+				limit = { OR = { has_dlc = "Waking the Tiger" has_dlc = "Together for Victory" has_dlc = "Death or Dishonor" } }
+				add_autonomy_ratio = {
+					value = -0.1
+					localization = USA_FED_pro_federal_politics
+				}
+			}
+		}
+
+	}
+
+	USA_FED_appeal_closer_union = {
+
+		icon = generic_political_discourse
+
+		cost = 100
+
+		available = {
+			has_autonomy_state = autonomy_puppet
+			compare_autonomy_progress_ratio < 0.1
+		}
+
+		visible = {
+			has_autonomy_state = autonomy_puppet
+		}
+
+		fire_only_once = yes
+
+		complete_effect = {
+			remove_ideas = USA_sudden_autonomy
+			add_popularity = {
+				ideology = ROOT
+				popularity = -0.08
+			}
+			USA = {
+				news_event = { id = TDTL_USA_event.5 }
+			}
+		}
+
+	}
+
+}

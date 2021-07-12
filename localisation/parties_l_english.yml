@@ -7,6 +7,7 @@
 
  socialism:0 "Socialist"
  socialism_noun:0 "Socialism"
+ socialism_drift:0 "Daily Socialism Support"
  socialism_desc:0 "Socialist Regime"
  socialism_ideology:0 "Socialism"
  socialism_ideology_desc:0 ""
@@ -34,6 +35,8 @@
  fascism:0 "Fascist"
  fascism_noun:0 "Fascism"
  fascism_desc:0 "Fascist Regime"
+ jihadism:0 "Jihadism"
+ jihadism_desc:0 ""
  fascism_ideology:0 "Fascism"
  fascism_ideology_desc:0 ""
 

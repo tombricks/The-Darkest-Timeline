@@ -20,7 +20,7 @@ focus_tree = {
 	focus = {
 		id = USA_FED_question_autonomy
 		icon = GFX_goal_generic
-		x = 5
+		x = 3
 		y = 0
 		cost = 10
 
@@ -37,9 +37,10 @@ focus_tree = {
 
 	focus = {
 		id = USA_FED_regionalism
-		icon = GFX_goal_generic
+		icon = GFX_goal_generic_demand_territory
 		prerequisite = { focus = USA_FED_question_autonomy }
-		x = 2
+		relative_position_id = USA_FED_question_autonomy
+		x = 3
 		y = 1
 		cost = 5
 
@@ -50,15 +51,16 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			#unlock decisions to increase autonomy and radicalize the populace
+			unlock_decision_category_tooltip = TDTL_USA_regionalist_category
 			add_political_power = 50
 		}
 	}
 
 	focus = {
 		id = USA_FED_federalism
-		icon = GFX_goal_generic
+		icon = GFX_focus_generic_self_management
 		prerequisite = { focus = USA_FED_question_autonomy }
+		relative_position_id = USA_FED_question_autonomy
 		x = -2
 		y = 1
 		cost = 5
@@ -68,7 +70,401 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			#unlock decisions to cooperate with the federal government and reduce autonomy
+			unlock_decision_category_tooltip = TDTL_USA_federalist_category
 			add_stability = 0.05
+		}
+	}
+
+	focus = {
+		id = USA_FED_lend_industry_USA
+		icon = GFX_goal_generic
+		prerequisite = { focus = USA_FED_federalism }
+		relative_position_id = USA_FED_federalism
+		x = -1
+		y = 1
+		cost = 5
+
+		available = {
+			is_subject_of = USA
+		}
+
+		completion_reward = {
+			if = {
+				limit = { OR = { has_dlc = "Waking the Tiger" has_dlc = "Together for Victory" has_dlc = "Death or Dishonor" } }
+				add_autonomy_ratio = {
+					value = -0.1
+					localization = USA_FED_pro_federal_politics
+				}
+			}
+			add_timed_idea = {
+				idea = USA_increased_industrial_contributions
+				days = 365
+			}
+		}
+	}
+
+	focus = {
+		id = USA_FED_increase_taxation
+		icon = GFX_goal_generic
+		prerequisite = { focus = USA_FED_federalism }
+		relative_position_id = USA_FED_federalism
+		x = 1
+		y = 1
+		cost = 10
+
+		available = {
+			is_subject_of = USA
+		}
+
+		completion_reward = {
+			set_temp_variable = { tax_anger = num_of_civilian_factories }
+			multiply_temp_variable = { tax_anger = -0.001 }
+			add_popularity = {
+				ideology = ROOT
+				popularity = tax_anger
+			}
+			add_timed_idea = {
+				idea = USA_higher_taxes
+				days = 730
+			}
+		}
+	}
+
+	focus = {
+		id = USA_FED_reestablish_local_branch_huac
+		icon = GFX_goal_generic_war_with_comintern
+		prerequisite = { focus = USA_FED_increase_taxation focus = USA_FED_lend_industry_USA }
+		mutually_exclusive = { focus = USA_FED_capitalism_failed }
+		relative_position_id = USA_FED_lend_industry_USA
+		x = 1
+		y = 1
+		cost = 10
+
+		available = {
+			is_subject_of = USA
+			NOT = {
+				OR = {
+					has_government = socialism
+					has_government = communism
+				}
+			}
+		}
+
+		completion_reward = {
+			add_ideas = USA_new_huac
+		}
+	}
+
+	focus = {
+		id = USA_FED_local_militias
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = USA_FED_regionalism }
+		relative_position_id = USA_FED_regionalism
+		x = 1
+		y = 1
+		cost = 10
+
+		completion_reward = {
+			add_ideas = USA_local_militias
+		}
+	}
+
+	focus = {
+		id = USA_FED_our_own_political_landscape
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = USA_FED_regionalism }
+		relative_position_id = USA_FED_regionalism
+		x = -1
+		y = 1
+		cost = 10
+
+		completion_reward = {
+			add_popularity = {
+				ideology = democratic
+				popularity = -0.1
+			}
+			add_political_power = 150
+		}
+	}
+
+	focus = {
+		id = USA_FED_capitalism_failed
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = USA_FED_our_own_political_landscape }
+		mutually_exclusive = { focus = USA_FED_reestablish_local_branch_huac }
+		mutually_exclusive = { focus = USA_FED_offer_corporate_benefits }
+		relative_position_id = USA_FED_our_own_political_landscape
+		x = 0
+		y = 1
+		cost = 10
+
+		completion_reward = {
+			add_popularity = {
+				ideology = communism
+				popularity = 0.1
+			}
+			add_popularity = {
+				ideology = socialism
+				popularity = 0.1
+			}
+		}
+	}
+
+	focus = {
+		id = USA_FED_offer_corporate_benefits
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = USA_FED_our_own_political_landscape }
+		mutually_exclusive = { focus = USA_FED_capitalism_failed }
+		relative_position_id = USA_FED_our_own_political_landscape
+		x = 2
+		y = 1
+		cost = 10
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = -0.05
+			}
+		}
+	}
+
+	focus = {
+		id = USA_FED_helping_build_self_sufficiency
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 12
+		y = 0
+		cost = 10
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = USA_FED_invite_federal_designers
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		prerequisite = { focus = USA_FED_helping_build_self_sufficiency }
+		mutually_exclusive = { focus = USA_FED_our_own_designs }
+		relative_position_id = USA_FED_helping_build_self_sufficiency
+		x = -1
+		y = 1
+		cost = 5
+
+		available = {
+			is_subject_of = USA
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 1.0
+				uses = 1
+				category = industry
+			}
+			if = {
+				limit = { OR = { has_dlc = "Waking the Tiger" has_dlc = "Together for Victory" has_dlc = "Death or Dishonor" } }
+				add_autonomy_ratio = {
+					value = -0.05
+					localization = USA_FED_pro_federal_politics
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = USA_FED_our_own_designs
+		icon = GFX_goal_generic_production2
+		prerequisite = { focus = USA_FED_helping_build_self_sufficiency }
+		mutually_exclusive = { focus = USA_FED_invite_federal_designers }
+		relative_position_id = USA_FED_helping_build_self_sufficiency
+		x = 1
+		y = 1
+		cost = 10
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 0.75
+				uses = 2
+				category = industry
+			}
+		}
+	}
+
+	focus = {
+		id = USA_FED_kickstart_military_industry
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = USA_FED_our_own_designs focus = USA_FED_invite_federal_designers }
+		relative_position_id = USA_FED_our_own_designs
+		x = 1
+		y = 1
+		cost = 10
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = USA_FED_expand_military_r_d_funding
+		icon = GFX_focus_research
+		prerequisite = { focus = USA_FED_kickstart_military_industry }
+		relative_position_id = USA_FED_kickstart_military_industry
+		x = 0
+		y = 1
+		cost = 10
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	focus = {
+		id = USA_FED_tariffs
+		icon = GFX_goal_generic_construct_civilian
+		prerequisite = { focus = USA_FED_our_own_designs focus = USA_FED_invite_federal_designers }
+		relative_position_id = USA_FED_our_own_designs
+		x = -1
+		y = 1
+		cost = 10
+
+		completion_reward = {
+			add_ideas = USA_import_tariffs
+			if = {
+				limit = { OR = { has_dlc = "Waking the Tiger" has_dlc = "Together for Victory" has_dlc = "Death or Dishonor" } }
+				add_autonomy_ratio = {
+					value = 0.05
+					localization = USA_FED_anti_federal_politics
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = USA_FED_develop_underdeveloped_regions
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = USA_FED_our_own_designs focus = USA_FED_invite_federal_designers }
+		relative_position_id = USA_FED_our_own_designs
+		x = -3
+		y = 1
+		cost = 10
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = USA_FED_construction
+		icon = GFX_focus_generic_industry_1
+		prerequisite = { focus = USA_FED_develop_underdeveloped_regions }
+		relative_position_id = USA_FED_develop_underdeveloped_regions
+		x = 0
+		y = 1
+		cost = 10
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}

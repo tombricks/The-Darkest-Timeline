@@ -190,6 +190,7 @@ ideologies = {
 		
 			fascism_ideology = { }
 			nazism = { can_be_randomly_selected = no }
+			jihadism = { can_be_randomly_selected = no }
 			
 		}
 		

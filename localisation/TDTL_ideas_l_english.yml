@@ -6,6 +6,7 @@
  USA_sudden_autonomy_desc:0 "Our region has suddenly been given a large amount of autonomy, and it will take a while for our bureacracy and people to get used to this."
  USA_rust_belt:0 "The Rust Belt"
  USA_rust_belt_desc:0 "Our region used to be the industrial heartlands of the United States, but now industry is starting to move to other locations. We still have a significant amount of industry, but expanding it will be difficult"
+ USA_import_tariffs:0 "Import Tariffs"
  EUR_GRE_debt_crisis:0 "Greek Debt Crisis"
  EUR_GRE_debt_crisis_desc:0 "The Greek Debt Crisis has put a burden on our economics, halting the federalization of [EUR.GetNameDef]. We must deal with this issue so that we can go back to our true goals of European Unity."
 

@@ -1,0 +1,102 @@
+add_namespace = TDTL_USA_event
+
+news_event = { #FROM disconnected from Federal Power Grid
+	id = TDTL_USA_event.1
+	title = TDTL_USA_event.1.t
+	desc = TDTL_USA_event.1.d
+	picture = GFX_report_event_physics_lab_01
+
+	is_triggered_only = yes
+
+	option = { #Oh, okay then :(
+		name = TDTL_USA_event.1.a
+	}
+}
+
+country_event = { #From wants to reconnect to the power grid
+	id = TDTL_USA_event.2
+	title = TDTL_USA_event.2.t
+	desc = TDTL_USA_event.2.d
+	picture = GFX_report_event_physics_lab_01
+
+	is_triggered_only = yes
+
+	option = { #Yeah welcome them back!
+		name = TDTL_USA_event.2.a
+		FROM = {
+			clr_country_flag = USA_FED_disconnected_from_power_grid
+			if = {
+				limit = { OR = { has_dlc = "Waking the Tiger" has_dlc = "Together for Victory" has_dlc = "Death or Dishonor" } }
+				add_autonomy_ratio = {
+					value = -0.1
+					localization = USA_FED_pro_federal_politics
+				}
+			}
+		}
+	}
+	option = { #No they made their choice
+		name = TDTL_USA_event.2.b
+		add_opinion_modifier = {
+			target = FROM
+			modifier = small_decrease
+		}
+		FROM = {
+			country_event = { id = TDTL_USA_event.3 }
+		}
+	}
+}
+
+country_event = { #Feds refuse to let us leech off of them :(
+	id = TDTL_USA_event.3
+	title = TDTL_USA_event.3.t
+	desc = TDTL_USA_event.3.d
+	picture = GFX_report_event_physics_lab_02
+
+	is_triggered_only = yes
+
+	option = { #dassad
+		name = TDTL_USA_event.3.a
+		add_opinion_modifier = {
+			target = USA
+			modifier = small_decrease
+		}
+	}
+}
+
+country_event = { #Reconnected with Federal Grid
+	id = TDTL_USA_event.4
+	title = TDTL_USA_event.4.t
+	desc = TDTL_USA_event.4.d
+	picture = GFX_report_event_physics_lab_02
+
+	is_triggered_only = yes
+
+	option = { #pog
+		name = TDTL_USA_event.4.a
+		add_tech_bonus = {
+			name = secret_bonus
+			bonus = 0.5
+			uses = 1
+			category = electronics
+		}
+	}
+}
+
+news_event = { #FROM becomes Regional District
+	id = TDTL_USA_event.5
+	title = TDTL_USA_event.5.t
+	desc = TDTL_USA_event.5.d
+	picture = GFX_report_event_usa_election_generic
+
+	is_triggered_only = yes
+
+	option = { #Closer to unification
+		name = TDTL_USA_event.5.a
+		hidden_effect = {
+			set_autonomy = {
+				target = FROM
+				autonomy_state = autonomy_integrated_puppet
+			}
+		}
+	}
+}

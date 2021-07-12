@@ -3,7 +3,7 @@ TDTL_formable_nations = {
 	reform_the_usa = {
 
 		available = {
-			custom_effect_tooltip = {
+			custom_trigger_tooltip = {
 				tooltip = controls_continental_usa
 				controls_state = 357
 				controls_state = 358 

@@ -1,4 +1,4 @@
-﻿capital = 391
+﻿capital = 395
 
 set_cosmetic_tag = USA_district
 USA = {
@@ -95,8 +95,8 @@ set_politics = {
 }
 set_popularities = {
 	democratic = 60
-	fascism = 20
-	communism = 20
+	neutrality = 20
+	socialism = 20
 }
 
 

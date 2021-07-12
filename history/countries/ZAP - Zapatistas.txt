@@ -9,3 +9,9 @@ set_politics = {
         election_frequency = 48
         elections_allowed = no
 }
+
+set_popularities = {
+	communism = 70
+	democratic = 10
+	socialism = 20
+}

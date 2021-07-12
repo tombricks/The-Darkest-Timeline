@@ -1,6 +1,7 @@
 ﻿capital = 375
 
 set_cosmetic_tag = USA_district
+set_country_flag = USA_FED_disconnected_from_power_grid
 USA = {
 	puppet = TEX
 }
@@ -93,30 +94,20 @@ set_politics = {
 	elections_allowed = yes
 }
 set_popularities = {
-	democratic = 70
-	fascism = 25
-	communism = 5
+	democratic = 75
+	fascism = 10
+	neutrality = 10
+	socialism = 5
 }
 
 
 create_country_leader = {
-	name = "James V. Allred"
+	name = "Rick Perry"
 	desc = "POLITICS_FRANKLIN_DELANO_ROOSEVELT_DESC"
 	picture = "gfx/leaders/Europe/portrait_europe_generic_2.dds"
 	expire = "1947.1.1"
-	ideology = liberalism
+	ideology = conservatism
 	traits = {
 		#
-	}
-}
-
-create_country_leader = {
-	name = "Hiram Wesley Evans"
-	desc = "POLITICS_WILLIAM_DUDLEY_PELLEY_DESC"
-	picture = "gfx/leaders/Europe/portrait_europe_generic_4.dds"
-	expire = "1965.1.1"
-	ideology = fascism_ideology
-	traits = {
-		
 	}
 }
