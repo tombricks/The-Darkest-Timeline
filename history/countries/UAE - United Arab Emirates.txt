@@ -1,5 +1,5 @@
 # UAE - United Arab Emirates.txt
-capital = 690
+capital = 658
 set_stability = 0.6
 set_war_support = 0.6
 
