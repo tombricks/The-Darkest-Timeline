@@ -1,0 +1,15 @@
+ideas = {
+	hidden_ideas = {
+		ENG_Elizabeth_II = {
+			
+			allowed = {
+				NOT = {
+					has_government = communism
+				}
+			}
+			
+			modifier = {
+			}
+		}
+	}
+}

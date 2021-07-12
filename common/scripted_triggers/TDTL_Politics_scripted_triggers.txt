@@ -1,5 +1,6 @@
 TDTL_Has_Dual_Leader = {
 	OR = {
 		has_idea = RMV_Nicholas_III
+		has_idea = ENG_Elizabeth_II
 	}
 }

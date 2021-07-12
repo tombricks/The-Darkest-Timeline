@@ -10,6 +10,10 @@ set_politics = {
 	elections_allowed = yes
 }
 
+add_ideas = {
+	ENG_Elizabeth_II
+}
+
 set_popularities = {
 	democratic = 42
 	socialism = 20
