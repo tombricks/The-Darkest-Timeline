@@ -90,17 +90,17 @@ political_actions = {
 
 	}
 
-    anti_fascist_raids = {
+	anti_fascist_raids = {
 
-    	icon = generic_civil_support
+		icon = generic_civil_support
 
-    	visible = {
+		visible = {
 			NOT = { has_government = fascism }
 		}
 
 		available = {
-            fascism > 0.1
-        }
+			fascism > 0.1
+		}
 	
 		modifier = {
 			fascism_drift = -0.05
@@ -120,19 +120,19 @@ political_actions = {
 		ai_will_do = {
 			base = 0
 		}
-    }
+	}
 
-    anti_democratic_raids = {
+	anti_democratic_raids = {
 
-    	icon = generic_civil_support
+		icon = generic_civil_support
 
-    	visible = {
+		visible = {
 			NOT = { has_government = democratic }
 		}
 
 		available = {
-            democratic > 0.1
-        }
+			democratic > 0.1
+		}
 	
 		modifier = {
 			democratic_drift = -0.05
@@ -152,19 +152,19 @@ political_actions = {
 		ai_will_do = {
 			factor = 0
 		}
-    }
+	}
 
-    anti_communist_raids = {
+	anti_communist_raids = {
 
-    	icon = generic_civil_support
+		icon = generic_civil_support
 
-    	visible = {
+		visible = {
 			NOT = { has_government = communism }
 		}
 
 		available = {
-            communism > 0.1
-        }
+			communism > 0.1
+		}
 	
 		modifier = {
 			communism_drift = -0.05
@@ -184,19 +184,19 @@ political_actions = {
 		ai_will_do = {
 			factor = 0
 		}
-    }
+	}
 
-    anti_socialist_raids = {
+	anti_socialist_raids = {
 
-    	icon = generic_civil_support
+		icon = generic_civil_support
 
-    	visible = {
+		visible = {
 			NOT = { has_government = socialism }
 		}
 
 		available = {
-            socialism > 0.1
-        }
+			socialism > 0.1
+		}
 	
 		modifier = {
 			socialism_drift = -0.05
@@ -216,8 +216,8 @@ political_actions = {
 		ai_will_do = {
 			factor = 0
 		}
-    }
-    
+	}
+	
 	ban_fascist_party = {
 
 		icon = generic_civil_support

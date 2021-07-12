@@ -31,7 +31,7 @@
 #	ai_strategy = {
 #		type = intelligence_agency_branch_desire_factor
 #		id = branch_defense
-#		value = -50    # -50% on the AI weight
+#		value = -50	# -50% on the AI weight
 #	}
 #}
 
@@ -650,20 +650,20 @@ default_area_priority = {
 }
 
 default_area_priority_non_africa = {
-    enable = {
-        NOT = { capital_scope = { is_on_continent = africa } }
-    }
+	enable = {
+		NOT = { capital_scope = { is_on_continent = africa } }
+	}
 
-    ai_strategy = {
-        type = area_priority
-        id = africa
-        value = -90
-    }
-    ai_strategy = {
-        type = area_priority
-        id = suez
-        value = -90
-    }
+	ai_strategy = {
+		type = area_priority
+		id = africa
+		value = -90
+	}
+	ai_strategy = {
+		type = area_priority
+		id = suez
+		value = -90
+	}
 }
 
 default_stockpile_management = {
@@ -916,12 +916,12 @@ more_upgrades_as_spymaster = {
 
 	ai_strategy = {
 		type = agency_ai_base_num_factories_factor
-		value = -50    # -50% on the define
+		value = -50	# -50% on the define
 	}
 
 	ai_strategy = {
 		type = agency_ai_per_upgrade_factories_factor
-		value = -25    # -25% on the define
+		value = -25	# -25% on the define
 	}
 }
 

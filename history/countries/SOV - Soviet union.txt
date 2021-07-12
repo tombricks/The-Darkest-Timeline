@@ -18,10 +18,10 @@ add_ideas = {
 }
 
 set_politics = {
-    ruling_party = communism
-    last_election = "2012.1.1"
-    election_frequency = 48
-    elections_allowed = no
+	ruling_party = communism
+	last_election = "2012.1.1"
+	election_frequency = 48
+	elections_allowed = no
 }
 
 set_popularities = {
@@ -60,7 +60,7 @@ every_state = {
 	add_claim_by = SOV
 }
 diplomatic_relation = {
-    country = UKR
-    relation = non_aggression_pact
-    active = yes
+	country = UKR
+	relation = non_aggression_pact
+	active = yes
 }

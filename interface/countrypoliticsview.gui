@@ -60,7 +60,7 @@ guiTypes = {
 			margin = { top = 6 left = 0 bottom = 5 right = 0}
 			
 			background = {
-				name = "Background"        
+				name = "Background"		
 				quadTextureSprite ="GFX_tiled_bg_1_scrollbar"
 			}
 			
@@ -834,9 +834,9 @@ guiTypes = {
 		}
 		
 		containerWindowType = {
-		    name = "traits_container"
-		    position = { x = 76 y = 0 }	
-		    show_position = { x = 0 y = 0 }
+			name = "traits_container"
+			position = { x = 76 y = 0 }	
+			show_position = { x = 0 y = 0 }
 			size = { width=170 height=100%% }
 			
 			instantTextboxType = {
@@ -916,9 +916,9 @@ guiTypes = {
 		}
 		
 		containerWindowType = {
-		    name = "traits_container"
-		    position = { x = 84 y = 0 }	
-		    show_position = { x = 0 y = 0 }
+			name = "traits_container"
+			position = { x = 84 y = 0 }	
+			show_position = { x = 0 y = 0 }
 			size = { width=170 height=100%% }
 			
 			instantTextboxType = {
@@ -1030,11 +1030,11 @@ guiTypes = {
 			}
 		
 		containerWindowType = {
-		    name = "subject_items_window"
-		    position = { x = -356 y = 78 }	
-		    show_position = { x = 2 y = 37 }
-		    show_animation_type = decelerated
-		    hide_animation_type = accelerated
+			name = "subject_items_window"
+			position = { x = -356 y = 78 }	
+			show_position = { x = 2 y = 37 }
+			show_animation_type = decelerated
+			hide_animation_type = accelerated
 			size = { width=548 height=100%% }
 			clipping = yes
 			verticalScrollbar = "right_vertical_slider"
