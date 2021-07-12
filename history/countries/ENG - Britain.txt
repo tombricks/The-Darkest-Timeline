@@ -4,8 +4,41 @@ set_stability = 0.6
 set_war_support = 0.6
 
 set_politics = {
-	ruling_party = neutrality
-	last_election = "2012.1.1"
-	election_frequency = 48
-	elections_allowed = no
+	ruling_party = democratic
+	last_election = "2010.5.6"
+	election_frequency = 60
+	elections_allowed = yes
+}
+
+set_popularities = {
+	democratic = 42
+	socialism = 20
+	communism = 6
+	fascism = 28
+	neutrality = 4
+}
+create_country_leader = {
+	name = "David Davis"
+	picture = "David_Davis.dds"
+	ideology = conservatism
+}
+create_country_leader = {
+	name = "Dennis Skinner"
+	picture = "Dennis_Skinner.dds"
+	ideology = socialism_ideology
+}
+create_country_leader = {
+	name = "Jeremy Corbyn"
+	picture = "Jeremy_Corbyn.dds"
+	ideology = communism_ideology
+}
+create_country_leader = {
+	name = "Nick Griffin"
+	picture = "Nick_Griffin.dds"
+	ideology = fascism_ideology
+}
+create_country_leader = {
+	name = "Elizabeth II"
+	picture = "Elizabeth_II.dds"
+	ideology = monarchism
 }
