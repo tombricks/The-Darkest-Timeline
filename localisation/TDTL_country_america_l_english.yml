@@ -2,6 +2,7 @@
  #tooltips
  USA_FED_anti_federal_politics:0 "Anti Federal Politics"
  USA_FED_pro_federal_politics:0 "Pro Federal Politics"
+ USA_lock_out_regional_decisions:0 "§RThis Will Prevent Pro-Regionalist Decisions From Being Made§!"
  #decisions
  TDTL_USA_federalist_category:0 "Federalism"
  TDTL_USA_federalist_category_desc:0 "The Federal Government has a right to govern its territories, no matter the amount of autonomy they have given us."
@@ -67,3 +68,4 @@
  USA_new_huac:0 "The New HCIS"
  USA_new_huac_desc:0 "We have re-established the House Committee on Internal Security to help combat socialist and communist movements within our borders."
  USA_local_militias:0 "Local Militias"
+ USA_defending_homeland:0 "Defending the Homeland"

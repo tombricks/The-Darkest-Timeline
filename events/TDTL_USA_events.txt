@@ -183,7 +183,7 @@ country_event = { #USA allows our independence
 	option = { #we will be an independent republic
 		name = TDTL_USA_event.9.a
 		trigger = {
-			democratic > 0.4
+			democratic > 0.3
 		}
 		set_temp_variable = { socialist_popularity = party_popularity@socialism }
 		divide_temp_variable = { socialist_popularity = 4.5 }
@@ -196,10 +196,10 @@ country_event = { #USA allows our independence
 		name = TDTL_USA_event.9.b
 		trigger = {
 			OR = {
-				socialism > 0.4
+				socialism > 0.3
 				AND = {
-					socialism > 0.3
-					communism > 0.1
+					socialism > 0.2
+					communism > 0.2
 				}
 			}
 		}
@@ -239,7 +239,7 @@ country_event = { #USA allows our independence
 	option = { #our nation must achieve greatness!
 		name = TDTL_USA_event.9.e
 		trigger = {
-			fascism > 0.4
+			fascism > 0.3
 		}
 		add_popularity = {
 			ideology = fascism
@@ -266,15 +266,16 @@ country_event = { #USA says no
 			has_government = democratic
 		}
 		add_political_power = -100
+		unlock_national_focus = USA_FED_autonomy_management
 	}
 	option = { #better revolt than reform
 		name = TDTL_USA_event.10.b
 		trigger = {
 			OR = {
-				socialism > 0.4
+				socialism > 0.3
 				AND = {
-					socialism > 0.3
-					communism > 0.1
+					socialism > 0.2
+					communism > 0.2
 				}
 				has_government = socialism
 				has_government = communism
@@ -295,6 +296,13 @@ country_event = { #USA says no
 			}
 		}
 		drop_cosmetic_tag = yes
+		set_country_flag = revolting_against_USA
+		every_country = {
+			limit = { has_war_with = ROOT has_country_flag = revolting_against_USA }
+			ROOT = {
+				white_peace = PREV
+			}
+		}
 		declare_war_on = {
 			target = USA
 			type = topple_government
@@ -325,6 +333,13 @@ country_event = { #USA says no
 			}
 		}
 		drop_cosmetic_tag = yes
+		set_country_flag = revolting_against_USA
+		every_country = {
+			limit = { has_war_with = ROOT has_country_flag = revolting_against_USA }
+			ROOT = {
+				white_peace = PREV
+			}
+		}
 		declare_war_on = {
 			target = USA
 			type = topple_government
@@ -350,9 +365,9 @@ country_event = { #USA says no
 		name = TDTL_USA_event.10.e
 		trigger = {
 			OR = {
-				fascism > 0.4
+				fascism > 0.3
 				AND = {
-					fascism > 0.3
+					fascism > 0.2
 					neutrality > 0.1
 				}
 				has_government = fascism
@@ -374,6 +389,13 @@ country_event = { #USA says no
 			}
 		}
 		drop_cosmetic_tag = yes
+		set_country_flag = revolting_against_USA
+		every_country = {
+			limit = { has_war_with = ROOT has_country_flag = revolting_against_USA }
+			ROOT = {
+				white_peace = PREV
+			}
+		}
 		declare_war_on = {
 			target = USA
 			type = topple_government
@@ -410,6 +432,7 @@ country_event = { #USA proposes compromise
 		trigger = {
 			has_government = democratic
 		}
+		unlock_national_focus = USA_FED_autonomy_management
 		USA = {
 			set_autonomy = {
 				target = ROOT
@@ -421,10 +444,10 @@ country_event = { #USA proposes compromise
 		name = TDTL_USA_event.10.b
 		trigger = {
 			OR = {
-				socialism > 0.4
+				socialism > 0.3
 				AND = {
-					socialism > 0.3
-					communism > 0.1
+					socialism > 0.2
+					communism > 0.2
 				}
 				has_government = socialism
 				has_government = communism
@@ -445,6 +468,13 @@ country_event = { #USA proposes compromise
 			}
 		}
 		drop_cosmetic_tag = yes
+		set_country_flag = revolting_against_USA
+		every_country = {
+			limit = { has_war_with = ROOT has_country_flag = revolting_against_USA }
+			ROOT = {
+				white_peace = PREV
+			}
+		}
 		declare_war_on = {
 			target = USA
 			type = topple_government
@@ -475,6 +505,13 @@ country_event = { #USA proposes compromise
 			}
 		}
 		drop_cosmetic_tag = yes
+		set_country_flag = revolting_against_USA
+		every_country = {
+			limit = { has_war_with = ROOT has_country_flag = revolting_against_USA }
+			ROOT = {
+				white_peace = PREV
+			}
+		}
 		declare_war_on = {
 			target = USA
 			type = topple_government
@@ -500,9 +537,9 @@ country_event = { #USA proposes compromise
 		name = TDTL_USA_event.10.e
 		trigger = {
 			OR = {
-				fascism > 0.4
+				fascism > 0.3
 				AND = {
-					fascism > 0.3
+					fascism > 0.2
 					neutrality > 0.1
 				}
 				has_government = fascism
@@ -521,6 +558,13 @@ country_event = { #USA proposes compromise
 			set_autonomy = {
 				target = ROOT
 				autonomy_state = autonomy_free
+			}
+		}
+		set_country_flag = revolting_against_USA
+		every_country = {
+			limit = { has_war_with = ROOT has_country_flag = revolting_against_USA }
+			ROOT = {
+				white_peace = PREV
 			}
 		}
 		drop_cosmetic_tag = yes

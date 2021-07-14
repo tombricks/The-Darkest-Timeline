@@ -200,6 +200,18 @@ TDTL_USA_federalist_category = {
 
 		icon = generic_construction
 
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				add = 2
+				has_autonomy_state = autonomy_integrated_puppet
+			}
+			modifier = {
+				factor = 0
+				has_political_power < 100
+			}
+		}
+
 		cost = 100
 
 		visible = {
@@ -223,6 +235,14 @@ TDTL_USA_federalist_category = {
 		days_remove = 70
 
 		days_re_enable = 70
+
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 0
+				has_political_power < 100
+			}
+		}
 
 		modifier = {
 			political_power_cost = 0.1
@@ -297,6 +317,18 @@ TDTL_USA_federalist_category = {
 
 		days_re_enable = 240
 
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 2
+				num_of_factories < 30
+			}
+			modifier = {
+				factor = 0
+				has_political_power < 100
+			}
+		}
+
 		modifier = {
 			min_export = 0.1
 			consumer_goods_factor = -0.05
@@ -341,6 +373,14 @@ TDTL_USA_federalist_category = {
 
 		days_re_enable = 100
 
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 0
+				has_political_power < 100
+			}
+		}
+
 		days_remove = 30
 
 		modifier = {
@@ -374,6 +414,10 @@ TDTL_USA_federalist_category = {
 		icon = generic_political_discourse
 
 		cost = 100
+
+		ai_will_do = {
+			factor = 1
+		}
 
 		available = {
 			has_autonomy_state = autonomy_puppet

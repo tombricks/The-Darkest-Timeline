@@ -24,6 +24,10 @@ focus_tree = {
 		y = 0
 		cost = 10
 
+		ai_will_do = {
+			factor = 3
+		}
+
 		bypass = {
 			NOT = {
 				is_subject_of = USA
@@ -43,6 +47,16 @@ focus_tree = {
 		x = 3
 		y = 1
 		cost = 5
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+			NOT = {
+				has_completed_focus = USA_FED_quell_regionalist_beliefs
+			}
+		}
 
 		bypass = {
 			NOT = {
@@ -65,6 +79,10 @@ focus_tree = {
 		y = 1
 		cost = 5
 
+		ai_will_do = {
+			factor = 3
+		}
+
 		available = {
 			is_subject_of = USA
 		}
@@ -77,12 +95,20 @@ focus_tree = {
 
 	focus = {
 		id = USA_FED_lend_industry_USA
-		icon = GFX_goal_generic
+		icon = GFX_focus_generic_industry_2
 		prerequisite = { focus = USA_FED_federalism }
 		relative_position_id = USA_FED_federalism
 		x = -1
 		y = 1
 		cost = 5
+
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 0
+				date < 2014.1.1
+			}
+		}
 
 		available = {
 			is_subject_of = USA
@@ -105,12 +131,20 @@ focus_tree = {
 
 	focus = {
 		id = USA_FED_increase_taxation
-		icon = GFX_goal_generic
+		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = USA_FED_federalism }
 		relative_position_id = USA_FED_federalism
 		x = 1
 		y = 1
 		cost = 10
+
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 0
+				date < 2014.1.1
+			}
+		}
 
 		available = {
 			is_subject_of = USA
@@ -157,7 +191,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_FED_local_militias
-		icon = GFX_goal_generic_demand_territory
+		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = USA_FED_regionalism }
 		relative_position_id = USA_FED_regionalism
 		x = 1
@@ -171,12 +205,20 @@ focus_tree = {
 
 	focus = {
 		id = USA_FED_our_own_political_landscape
-		icon = GFX_goal_generic_demand_territory
+		icon = GFX_goal_support_democracy
 		prerequisite = { focus = USA_FED_regionalism }
 		relative_position_id = USA_FED_regionalism
 		x = -1
 		y = 1
 		cost = 10
+
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 0
+				date < 2014.1.1
+			}
+		}
 
 		completion_reward = {
 			add_popularity = {
@@ -189,7 +231,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_FED_capitalism_failed
-		icon = GFX_goal_generic_demand_territory
+		icon = GFX_goal_support_communism
 		prerequisite = { focus = USA_FED_our_own_political_landscape }
 		mutually_exclusive = { focus = USA_FED_reestablish_local_branch_huac }
 		mutually_exclusive = { focus = USA_FED_offer_corporate_benefits }
@@ -255,6 +297,9 @@ focus_tree = {
 
 		available = {
 			is_subject_of = USA
+			NOT = {
+				has_completed_focus = USA_FED_reestablish_local_branch_huac
+			}
 			OR = {
 				has_completed_focus = USA_FED_capitalism_failed
 				has_completed_focus = USA_FED_offer_corporate_benefits
@@ -271,6 +316,48 @@ focus_tree = {
 			USA = {
 				country_event = { id = TDTL_USA_event.8 hours = 2 }
 			}
+		}
+	}
+
+	focus = {
+		id = USA_FED_defending_our_nation
+		icon = GFX_goal_generic_defence
+		prerequisite = { focus = USA_FED_our_own_nation }
+		relative_position_id = USA_FED_our_own_nation
+		x = 1
+		y = 1
+		cost = 5
+
+		available = {
+			has_war = yes
+		}
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = USA_defending_homeland
+				days = 365
+			}
+		}
+	}
+
+	focus = {
+		id = USA_FED_looking_outwards
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = USA_FED_our_own_nation }
+		relative_position_id = USA_FED_our_own_nation
+		x = -1
+		y = 1
+		cost = 5
+
+		available = {
+			NOT = {
+				is_subject_of = USA
+			}
+		}
+
+		completion_reward = {
+			set_rule = { can_send_volunteers = yes }
+			add_ideas = volunteer_corps_focus
 		}
 	}
 
@@ -306,7 +393,7 @@ focus_tree = {
 		relative_position_id = USA_FED_capitalism_failed
 		x = -4
 		y = 1
-		cost = 10
+		cost = 5
 
 		available = {
 			has_completed_focus = USA_FED_reestablish_local_branch_huac
@@ -320,6 +407,37 @@ focus_tree = {
 					value = -0.1
 					localization = USA_FED_pro_federal_politics
 				}
+			}
+			custom_effect_tooltip = USA_lock_out_regional_decisions
+		}
+	}
+
+	focus = {
+		id = USA_FED_arrest_extremists
+		icon = GFX_focus_CZE_german_puppet
+		prerequisite = { focus = USA_FED_quell_regionalist_beliefs }
+		relative_position_id = USA_FED_quell_regionalist_beliefs
+		x = -1
+		y = 1
+		cost = 10
+
+		available = {
+			is_subject_of = USA
+		}
+
+		completion_reward = {
+			add_political_power = 75
+			add_popularity = {
+				ideology = fascism
+				popularity = -0.05
+			}
+			add_popularity = {
+				ideology = socialism
+				popularity = -0.05
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = -0.05
 			}
 		}
 	}
@@ -367,7 +485,7 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = industrial_bonus
-				bonus = 1.0
+				bonus = 2.0
 				uses = 1
 				category = industry
 			}
@@ -546,6 +664,87 @@ focus_tree = {
 					level = 1
 					instant_build = yes
 				}
+			}
+		}
+	}
+
+	focus = {
+		id = USA_FED_our_own_military
+		icon = GFX_focus_generic_military_mission
+		x = 21
+		y = 0
+		cost = 10
+
+		completion_reward = {
+			army_experience = 10
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 1.0
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = USA_FED_equipment_effort
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = USA_FED_our_own_military }
+		relative_position_id = USA_FED_our_own_military
+		x = -2
+		y = 1
+		cost = 10
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				bonus = 0.75
+				uses = 2
+				category = infantry_weapons
+				category = artillery
+			}
+		}
+	}
+
+	focus = {
+		id = USA_FED_establish_air_force
+		icon = GFX_goal_generic_build_airforce
+		prerequisite = { focus = USA_FED_our_own_military }
+		relative_position_id = USA_FED_our_own_military
+		x = 2
+		y = 1
+		cost = 10
+
+		available = {
+			has_completed_focus = USA_FED_kickstart_military_industry
+		}
+
+		completion_reward = {
+			air_experience = 10
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = air_base
+						size > 1
+					}
+				}
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				name = fighter_bonus
+				bonus = 1.0
+				uses = 1
+				technology = early_fighter
+				technology = fighter1
+				technology = fighter2
+				technology = fighter3
+				technology = heavy_fighter1
+				technology = heavy_fighter2
+				technology = heavy_fighter3
 			}
 		}
 	}

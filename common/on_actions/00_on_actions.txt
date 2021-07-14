@@ -7,4 +7,19 @@ on_actions = {
 			}
 		}	
 	}
+	on_puppet = {
+		effect = {
+			if = { 
+				limit = { ROOT = { OR = { tag = MID tag = TEX tag = CAL tag = APA } FROM = { tag = USA } } }
+				ROOT = {
+					set_cosmetic_tag = USA_district
+					clr_country_flag = revolting_against_USA
+					load_focus_tree = { tree = federal_bitch_focus keep_completed = no }
+				}
+				FROM = {
+					set_autonomy = { target = ROOT autonomy_state = autonomy_integrated_puppet }
+				}
+			}
+		}
+	}
 }

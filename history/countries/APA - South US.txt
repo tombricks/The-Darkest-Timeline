@@ -100,11 +100,11 @@ set_popularities = {
 
 
 create_country_leader = {
-	name = "James Hubert Price"
+	name = "Sonny Perdue"
 	desc = "POLITICS_FRANKLIN_DELANO_ROOSEVELT_DESC"
 	picture = "gfx/leaders/Europe/portrait_europe_generic_2.dds"
 	expire = "1947.1.1"
-	ideology = liberalism
+	ideology = conservatism
 	traits = {
 		#
 	}

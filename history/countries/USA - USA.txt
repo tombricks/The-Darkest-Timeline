@@ -8,10 +8,10 @@ add_ideas = {
 }
 
 set_politics = {
-		 ruling_party = democratic
-		last_election = "2012.1.1"
-		election_frequency = 48
-		elections_allowed = no
+	ruling_party = democratic
+	last_election = "2008.11.4"
+	election_frequency = 48
+	elections_allowed = no
 }
 
 set_popularities = {
@@ -20,4 +20,15 @@ set_popularities = {
 	fascism = 10
 	neutrality = 10
 	socialism = 10
+}
+
+create_country_leader = {
+	name = "John Kerry"
+	desc = "POLITICS_FRANKLIN_DELANO_ROOSEVELT_DESC"
+	picture = "gfx/leaders/Europe/portrait_europe_generic_2.dds"
+	expire = "1947.1.1"
+	ideology = liberalism
+	traits = {
+		#
+	}
 }
