@@ -11,4 +11,8 @@ spriteTypes = {
 		name = "GFX_idea_SOV_CPSU_Nationalists"
 		texturefile = "gfx/interface/ideas/SOV_CPSU_Nationalists.dds"
 	}
+	spriteType = {
+		name = "GFX_idea_EUR_member"
+		texturefile = "gfx/interface/ideas/EUR_member.dds"
+	}
 }

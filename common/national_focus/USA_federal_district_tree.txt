@@ -244,6 +244,87 @@ focus_tree = {
 	}
 
 	focus = {
+		id = USA_FED_our_own_nation
+		icon = GFX_goal_generic_demand_territory
+		mutually_exclusive = { focus = USA_FED_autonomy_management }
+		mutually_exclusive = { focus = USA_FED_quell_regionalist_beliefs }
+		relative_position_id = USA_FED_capitalism_failed
+		x = 2
+		y = 1
+		cost = 10
+
+		available = {
+			is_subject_of = USA
+			OR = {
+				has_completed_focus = USA_FED_capitalism_failed
+				has_completed_focus = USA_FED_offer_corporate_benefits
+			}
+		}
+
+		bypass = {
+			NOT = {
+				is_subject_of = USA
+			}
+		}
+
+		completion_reward = {
+			USA = {
+				country_event = { id = TDTL_USA_event.8 hours = 2 }
+			}
+		}
+	}
+
+	focus = {
+		id = USA_FED_autonomy_management
+		icon = GFX_goal_generic_neutrality_focus
+		mutually_exclusive = { focus = USA_FED_our_own_nation }
+		mutually_exclusive = { focus = USA_FED_quell_regionalist_beliefs }
+		relative_position_id = USA_FED_capitalism_failed
+		x = -1
+		y = 1
+		cost = 5
+
+		available = {
+			OR = {
+				has_completed_focus = USA_FED_reestablish_local_branch_huac
+				has_completed_focus = USA_FED_offer_corporate_benefits
+			}
+			is_subject_of = USA
+		}
+
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = USA_FED_quell_regionalist_beliefs
+		icon = GFX_focus_CZE_german_puppet
+		mutually_exclusive = { focus = USA_FED_autonomy_management }
+		mutually_exclusive = { focus = USA_FED_our_own_nation }
+		relative_position_id = USA_FED_capitalism_failed
+		x = -4
+		y = 1
+		cost = 10
+
+		available = {
+			has_completed_focus = USA_FED_reestablish_local_branch_huac
+			is_subject_of = USA
+		}
+
+		completion_reward = {
+			if = {
+				limit = { OR = { has_dlc = "Waking the Tiger" has_dlc = "Together for Victory" has_dlc = "Death or Dishonor" } }
+				add_autonomy_ratio = {
+					value = -0.1
+					localization = USA_FED_pro_federal_politics
+				}
+			}
+		}
+	}
+
+	focus = {
 		id = USA_FED_helping_build_self_sufficiency
 		icon = GFX_goal_generic_construct_civ_factory
 		x = 12

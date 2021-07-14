@@ -141,6 +141,57 @@ TDTL_USA_regionalist_category = {
 
 	}
 
+	USA_FED_demand_more_autonomy = {
+
+		icon = generic_political_discourse
+
+		cost = 100
+
+		available = {
+			has_autonomy_state = autonomy_puppet
+			compare_autonomy_progress_ratio > 0.9
+		}
+
+		visible = {
+			has_autonomy_state = autonomy_puppet
+		}
+
+		fire_only_once = yes
+
+		complete_effect = {
+			add_stability = -0.05
+			USA = {
+				news_event = { id = TDTL_USA_event.6 }
+			}
+		}
+
+	}
+
+	USA_FED_reject_integrated_puppet = {
+
+		icon = generic_political_discourse
+
+		cost = 100
+
+		available = {
+			has_autonomy_state = autonomy_integrated_puppet
+			compare_autonomy_progress_ratio > 0.9
+		}
+
+		visible = {
+			has_autonomy_state = autonomy_integrated_puppet
+		}
+
+		fire_only_once = yes
+
+		complete_effect = {
+			USA = {
+				news_event = { id = TDTL_USA_event.7 }
+			}
+		}
+
+	}
+
 }
 
 TDTL_USA_federalist_category = {
@@ -185,8 +236,6 @@ TDTL_USA_federalist_category = {
 				}
 			}
 		}
-
-		fire_only_once = yes
 
 		remove_effect = {
 			random_owned_controlled_state = {
@@ -244,9 +293,9 @@ TDTL_USA_federalist_category = {
 
 		cost = 50
 
-		days_remove = 70
+		days_remove = 120
 
-		days_re_enable = 70
+		days_re_enable = 240
 
 		modifier = {
 			min_export = 0.1
@@ -258,8 +307,6 @@ TDTL_USA_federalist_category = {
 				num_subjects > 1
 			}
 		}
-
-		fire_only_once = yes
 
 		remove_effect = {
 			random_owned_controlled_state = {
@@ -279,6 +326,42 @@ TDTL_USA_federalist_category = {
 				limit = { OR = { has_dlc = "Waking the Tiger" has_dlc = "Together for Victory" has_dlc = "Death or Dishonor" } }
 				add_autonomy_ratio = {
 					value = -0.1
+					localization = USA_FED_pro_federal_politics
+				}
+			}
+		}
+
+	}
+
+	USA_FED_shut_down_pro_regionalist_groups = {
+
+		icon = generic_industry
+
+		cost = 50
+
+		days_re_enable = 100
+
+		days_remove = 30
+
+		modifier = {
+			master_ideology_drift = 0.05
+			stability_weekly = 0.001
+		}
+
+		available = {
+			is_subject_of = USA
+			has_completed_focus = USA_FED_quell_regionalist_beliefs
+		}
+
+		complete_effect = {
+			add_stability = -0.01
+		}
+
+		remove_effect = {
+			if = {
+				limit = { OR = { has_dlc = "Waking the Tiger" has_dlc = "Together for Victory" has_dlc = "Death or Dishonor" } }
+				add_autonomy_ratio = {
+					value = -0.05
 					localization = USA_FED_pro_federal_politics
 				}
 			}
@@ -308,6 +391,35 @@ TDTL_USA_federalist_category = {
 			add_popularity = {
 				ideology = ROOT
 				popularity = -0.08
+			}
+			USA = {
+				news_event = { id = TDTL_USA_event.5 }
+			}
+		}
+
+	}
+
+	USA_FED_reject_colony = {
+
+		icon = generic_political_discourse
+
+		cost = 100
+
+		available = {
+			has_autonomy_state = autonomy_colony
+			compare_autonomy_progress_ratio < 0.1
+		}
+
+		visible = {
+			has_autonomy_state = autonomy_colony
+		}
+
+		fire_only_once = yes
+
+		complete_effect = {
+			add_popularity = {
+				ideology = ROOT
+				popularity = -0.05
 			}
 			USA = {
 				news_event = { id = TDTL_USA_event.5 }

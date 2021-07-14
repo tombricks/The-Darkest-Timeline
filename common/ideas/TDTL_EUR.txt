@@ -31,6 +31,23 @@ ideas = {
 
 		}
 
+		EUR_member = {
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.1
+				production_speed_buildings_factor = 0.05
+				political_power_cost = 0.1
+				consumer_goods_factor = 0.05
+			}
+
+		}
+
 	}
 
 }

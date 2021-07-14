@@ -16,3 +16,6 @@
  SOV_CPSU_Conservatives_desc:0 ""
  SOV_CPSU_Nationalists:0 "Nationalists in the CPSU"
  SOV_CPSU_Nationalists_desc:0 ""
+
+ EUR_member:0 "European Union Member"
+ EUR_member_desc:0 "This country is a member of the European Union, though they are more separate than most members."

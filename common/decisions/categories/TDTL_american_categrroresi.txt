@@ -12,5 +12,6 @@ TDTL_USA_regionalist_category = {
 	visible = {
 		has_completed_focus = USA_FED_regionalism
 		is_subject_of = USA
+		NOT = { has_completed_focus = USA_FED_quell_regionalist_beliefs }
 	}
 }

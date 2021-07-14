@@ -100,3 +100,449 @@ news_event = { #FROM becomes Regional District
 		}
 	}
 }
+
+news_event = { #FROM becomes Autonomous District
+	id = TDTL_USA_event.6
+	title = TDTL_USA_event.6.t
+	desc = TDTL_USA_event.6.d
+	picture = GFX_report_event_usa_election_generic
+
+	is_triggered_only = yes
+
+	option = { #Closer to unification
+		name = TDTL_USA_event.6.a
+		hidden_effect = {
+			set_autonomy = {
+				target = FROM
+				autonomy_state = autonomy_colony
+			}
+		}
+	}
+}
+
+news_event = { #FROM becomes Federal District
+	id = TDTL_USA_event.7
+	title = TDTL_USA_event.7.t
+	desc = TDTL_USA_event.7.d
+	picture = GFX_report_event_usa_election_generic
+
+	is_triggered_only = yes
+
+	option = { #Closer to unification
+		name = TDTL_USA_event.7.a
+		hidden_effect = {
+			set_autonomy = {
+				target = FROM
+				autonomy_state = autonomy_puppet
+			}
+		}
+	}
+}
+
+country_event = { #FROM demands independence
+	id = TDTL_USA_event.8
+	title = TDTL_USA_event.8.t
+	desc = TDTL_USA_event.8.d
+	picture = GFX_report_event_usa_election_generic
+
+	is_triggered_only = yes
+
+	option = { #sure
+		name = TDTL_USA_event.8.a
+		set_autonomy = {
+			target = FROM
+			autonomy_state = autonomy_free
+		}
+		FROM = {
+			drop_cosmetic_tag = yes
+			country_event = { id = TDTL_USA_event.9 hours = 2 }
+		}
+	}
+	option = { #hell nah
+		name = TDTL_USA_event.8.b
+		FROM = {
+			country_event = { id = TDTL_USA_event.10 hours = 2 }
+		}
+	}
+	option = { #propose a compromise?
+		name = TDTL_USA_event.8.c
+		FROM = {
+			country_event = { id = TDTL_USA_event.11 hours = 2 }
+		}
+	}
+}
+
+country_event = { #USA allows our independence
+	id = TDTL_USA_event.9
+	title = TDTL_USA_event.9.t
+	desc = TDTL_USA_event.9.d
+	picture = GFX_report_event_usa_election_generic
+
+	is_triggered_only = yes
+
+	option = { #we will be an independent republic
+		name = TDTL_USA_event.9.a
+		trigger = {
+			democratic > 0.4
+		}
+		set_temp_variable = { socialist_popularity = party_popularity@socialism }
+		divide_temp_variable = { socialist_popularity = 4.5 }
+		add_popularity = {
+			ideology = democratic
+			popularity = socialist_popularity
+		}
+	}
+	option = { #we will be a socialist republic
+		name = TDTL_USA_event.9.b
+		trigger = {
+			OR = {
+				socialism > 0.4
+				AND = {
+					socialism > 0.3
+					communism > 0.1
+				}
+			}
+		}
+		set_temp_variable = { communism_popularity = party_popularity@communism }
+		divide_temp_variable = { communist_popularity = 4 }
+		add_popularity = {
+			ideology = socialism
+			popularity = communism_popularity
+		}
+		set_politics = {
+			ruling_party = socialism
+			elections_allowed = yes
+		}
+	}
+	option = { #we must strengthen our government
+		name = TDTL_USA_event.9.c
+		trigger = {
+			OR = {
+				neutrality > 0.3
+				AND = {
+					communism < 0.4
+					socialism < 0.4
+					democratic < 0.4
+					fascism < 0.4
+				}
+			}
+		}
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.05
+		}
+		set_politics = {
+			ruling_party = neutrality
+			elections_allowed = yes
+		}
+	}
+	option = { #our nation must achieve greatness!
+		name = TDTL_USA_event.9.e
+		trigger = {
+			fascism > 0.4
+		}
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.05
+		}
+		set_politics = {
+			ruling_party = fascism
+			elections_allowed = no
+		}
+	}
+}
+
+country_event = { #USA says no
+	id = TDTL_USA_event.10
+	title = TDTL_USA_event.10.t
+	desc = TDTL_USA_event.10.d
+	picture = GFX_report_event_usa_election_generic
+
+	is_triggered_only = yes
+
+	option = { #okay :(
+		name = TDTL_USA_event.10.a
+		trigger = {
+			has_government = democratic
+		}
+		add_political_power = -100
+	}
+	option = { #better revolt than reform
+		name = TDTL_USA_event.10.b
+		trigger = {
+			OR = {
+				socialism > 0.4
+				AND = {
+					socialism > 0.3
+					communism > 0.1
+				}
+				has_government = socialism
+				has_government = communism
+			}
+		}
+		add_popularity = {
+			ideology = communism
+			popularity = party_popularity@socialism
+		}
+		set_politics = {
+			ruling_party = communism
+			elections_allowed = no
+		}
+		USA = {
+			set_autonomy = {
+				target = ROOT
+				autonomy_state = autonomy_free
+			}
+		}
+		drop_cosmetic_tag = yes
+		declare_war_on = {
+			target = USA
+			type = topple_government
+		}
+		add_war_support = 0.3
+		if = {
+			limit = { has_completed_focus = USA_FED_local_militias }
+			every_owned_state = {
+				limit = { is_capital = yes }
+				create_unit = {
+					division = "division_template = \"Infantry Division\"	start_experience_factor = 0.1	start_equipment_factor = 1"
+					owner = ROOT
+					count = 2
+					allow_spawning_on_enemy_provs = yes
+					country_score = {
+						base = 100
+					}
+				}
+			}
+		}
+	}
+	option = { #time for our own revolutionary war
+		name = TDTL_USA_event.10.c
+		USA = {
+			set_autonomy = {
+				target = ROOT
+				autonomy_state = autonomy_free
+			}
+		}
+		drop_cosmetic_tag = yes
+		declare_war_on = {
+			target = USA
+			type = topple_government
+		}
+		add_war_support = 0.3
+		if = {
+			limit = { has_completed_focus = USA_FED_local_militias }
+			every_owned_state = {
+				limit = { is_capital = yes }
+				create_unit = {
+					division = "division_template = \"Infantry Division\"	start_experience_factor = 0.1	start_equipment_factor = 1"
+					owner = ROOT
+					count = 2
+					allow_spawning_on_enemy_provs = yes
+					country_score = {
+						base = 100
+					}
+				}
+			}
+		}
+	}
+	option = { #we shall achieve national greatness
+		name = TDTL_USA_event.10.e
+		trigger = {
+			OR = {
+				fascism > 0.4
+				AND = {
+					fascism > 0.3
+					neutrality > 0.1
+				}
+				has_government = fascism
+				has_government = neutrality
+			}
+		}
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.05
+		}
+		set_politics = {
+			ruling_party = fascism
+			elections_allowed = no
+		}
+		USA = {
+			set_autonomy = {
+				target = ROOT
+				autonomy_state = autonomy_free
+			}
+		}
+		drop_cosmetic_tag = yes
+		declare_war_on = {
+			target = USA
+			type = topple_government
+		}
+		add_war_support = 0.3
+		if = {
+			limit = { has_completed_focus = USA_FED_local_militias }
+			every_owned_state = {
+				limit = { is_capital = yes }
+				create_unit = {
+					division = "division_template = \"Infantry Division\"	start_experience_factor = 0.1	start_equipment_factor = 1"
+					owner = ROOT
+					count = 2
+					allow_spawning_on_enemy_provs = yes
+					country_score = {
+						base = 100
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = { #USA proposes compromise
+	id = TDTL_USA_event.11
+	title = TDTL_USA_event.11.t
+	desc = TDTL_USA_event.11.d
+	picture = GFX_report_event_usa_election_generic
+
+	is_triggered_only = yes
+
+	option = { #sounds good
+		name = TDTL_USA_event.11.a
+		trigger = {
+			has_government = democratic
+		}
+		USA = {
+			set_autonomy = {
+				target = ROOT
+				autonomy_state = autonomy_dominion
+			}
+		}
+	}
+	option = { #better revolt than reform
+		name = TDTL_USA_event.10.b
+		trigger = {
+			OR = {
+				socialism > 0.4
+				AND = {
+					socialism > 0.3
+					communism > 0.1
+				}
+				has_government = socialism
+				has_government = communism
+			}
+		}
+		add_popularity = {
+			ideology = communism
+			popularity = party_popularity@socialism
+		}
+		set_politics = {
+			ruling_party = communism
+			elections_allowed = no
+		}
+		USA = {
+			set_autonomy = {
+				target = ROOT
+				autonomy_state = autonomy_free
+			}
+		}
+		drop_cosmetic_tag = yes
+		declare_war_on = {
+			target = USA
+			type = topple_government
+		}
+		add_war_support = 0.3
+		if = {
+			limit = { has_completed_focus = USA_FED_local_militias }
+			every_owned_state = {
+				limit = { is_capital = yes }
+				create_unit = {
+					division = "division_template = \"Infantry Division\"	start_experience_factor = 0.1	start_equipment_factor = 1"
+					owner = ROOT
+					count = 2
+					allow_spawning_on_enemy_provs = yes
+					country_score = {
+						base = 100
+					}
+				}
+			}
+		}
+	}
+	option = { #time for our own revolutionary war
+		name = TDTL_USA_event.10.c
+		USA = {
+			set_autonomy = {
+				target = ROOT
+				autonomy_state = autonomy_free
+			}
+		}
+		drop_cosmetic_tag = yes
+		declare_war_on = {
+			target = USA
+			type = topple_government
+		}
+		add_war_support = 0.3
+		if = {
+			limit = { has_completed_focus = USA_FED_local_militias }
+			every_owned_state = {
+				limit = { is_capital = yes }
+				create_unit = {
+					division = "division_template = \"Infantry Division\"	start_experience_factor = 0.1	start_equipment_factor = 1"
+					owner = ROOT
+					count = 2
+					allow_spawning_on_enemy_provs = yes
+					country_score = {
+						base = 100
+					}
+				}
+			}
+		}
+	}
+	option = { #we shall achieve national greatness
+		name = TDTL_USA_event.10.e
+		trigger = {
+			OR = {
+				fascism > 0.4
+				AND = {
+					fascism > 0.3
+					neutrality > 0.1
+				}
+				has_government = fascism
+				has_government = neutrality
+			}
+		}
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.05
+		}
+		set_politics = {
+			ruling_party = fascism
+			elections_allowed = no
+		}
+		USA = {
+			set_autonomy = {
+				target = ROOT
+				autonomy_state = autonomy_free
+			}
+		}
+		drop_cosmetic_tag = yes
+		declare_war_on = {
+			target = USA
+			type = topple_government
+		}
+		add_war_support = 0.3
+		if = {
+			limit = { has_completed_focus = USA_FED_local_militias }
+			every_owned_state = {
+				limit = { is_capital = yes }
+				create_unit = {
+					division = "division_template = \"Infantry Division\"	start_experience_factor = 0.1	start_equipment_factor = 1"
+					owner = ROOT
+					count = 2
+					allow_spawning_on_enemy_provs = yes
+					country_score = {
+						base = 100
+					}
+				}
+			}
+		}
+	}
+}
