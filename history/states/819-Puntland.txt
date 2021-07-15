@@ -1,0 +1,23 @@
+state=
+{
+	id=819
+	name="STATE_819"
+	manpower = 1984321
+	
+	state_category = rural
+	
+	history={
+		owner = SOM
+		add_core_of = SOM
+		victory_points = {
+			4909 1 
+		}
+		buildings = {
+			infrastructure = 4
+		}
+	}
+	provinces=
+	{
+		1964 1966 4909 10818 10891
+	}
+}

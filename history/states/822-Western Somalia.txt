@@ -1,0 +1,24 @@
+state=
+{
+	id=822
+	name="STATE_822"
+	manpower = 5000000
+	resources={
+	rubber=2 # was: 2
+	}
+	
+	state_category = pastoral
+
+	history=
+	{
+		owner = ETH
+		buildings = {
+			infrastructure = 4
+		}
+		add_core_of = ETH
+	}
+
+	provinces=
+	{
+4995 12714 12757 12812 	}
+}

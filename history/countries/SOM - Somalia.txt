@@ -4,8 +4,26 @@ set_stability = 0.6
 set_war_support = 0.6
 
 set_politics = {
-		 ruling_party = neutrality
-		last_election = "2012.1.1"
-		election_frequency = 48
-		elections_allowed = no
+	ruling_party = democratic
+	last_election = "1993.5.24"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	democratic = 60
+	neutrality = 20
+	socialism = 15
+	communism = 5
+}
+
+
+create_country_leader = {
+	name = "Andi Shirdon"
+	desc = "POLITICS_FRANKLIN_DELANO_ROOSEVELT_DESC"
+	picture = "gfx/leaders/Africa/portrait_africa_generic_2.dds"
+	expire = "2015.1.1"
+	ideology = social_democracy
+	traits = {
+		#
+	}
 }

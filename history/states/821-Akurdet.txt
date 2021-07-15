@@ -1,0 +1,20 @@
+state=
+{
+	id=821
+	name="STATE_821"
+	manpower = 1100000
+	
+	state_category = rural
+	
+	history=
+	{
+		owner = ERI
+		add_core_of = ERI
+		buildings = {
+			infrastructure = 4
+		}
+	}
+	provinces={
+		5017 5047 12723
+	}
+}
