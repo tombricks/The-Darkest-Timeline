@@ -5,6 +5,18 @@ on_actions = {
 				limit = { NOT = { has_country_flag = has_starting_oob } }
 				load_oob = "FILLER_2012"
 			}
+			every_country = {
+				limit = { OR = { tag = SEN tag = MLI tag = IVO tag = TOG tag = DAH tag = NGR tag = CHA tag = CMR tag = CAR tag = RCG tag = GAB } }
+				add_ideas = african_francafrique
+				add_opinion_modifier = { target = FRA modifier = large_increase }
+			}
+			every_country = {
+				limit = { has_idea = african_francafrique }
+				FRA = {
+					add_ideas = FRA_francafrique
+					add_opinion_modifier = { target = PREV modifier = large_increase }
+				}
+			}
 		}	
 	}
 	on_puppet = {

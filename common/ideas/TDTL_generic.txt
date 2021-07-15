@@ -1,0 +1,61 @@
+ideas = {
+	
+	country = {
+
+		UN_international_commission_against_impunity = {
+
+			picture = international_court
+
+			allowed = {
+				always = no
+			}
+
+			cancel = {
+				OR = {
+					has_country_flag = left_the_UN
+					has_global_flag = UN_collapsed
+				}
+			}
+
+			modifier = {
+				stability_weekly = 0.001
+				political_power_cost = 0.1
+			}
+
+		}
+
+		FRA_francafrique = {
+
+			picture = FRA_undividable
+
+			allowed = {
+				always = no
+			}
+
+			modifier = {
+				political_power_cost = 0.1
+				consumer_goods_factor = -0.05
+				send_volunteers_tension = -0.3
+			}
+
+		}
+
+		african_francafrique = {
+
+			picture = FRA_undividable
+
+			allowed = {
+				always = no
+			}
+
+			modifier = {
+				political_power_cost = 0.1
+				stability_factor = 0.05
+				consumer_goods_factor = -0.05
+			}
+
+		}
+
+	}
+
+}

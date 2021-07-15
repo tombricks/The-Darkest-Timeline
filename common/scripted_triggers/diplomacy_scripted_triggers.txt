@@ -613,19 +613,6 @@ DIPLOMACY_SEND_VOLUNTEERS_ENABLE_TRIGGER = {
 				option = ALWAYS_FREE
 			}
 		}
-		if = {
-			limit = {
-				NOT = { tag = SPC }
-				FROM = {
-					tag = SPC
-					has_completed_focus = SPR_regional_defense_council_of_aragon
-				}
-			}
-			custom_trigger_tooltip = {
-				tooltip = RULE_VOLUNTEERS_NOT_ANARCHISTS_TT
-				NOT = { FROM = { tag = SPC } }
-			}
-		}
 		else = {
 			always = yes
 		}

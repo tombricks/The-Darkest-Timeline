@@ -88,7 +88,7 @@ set_convoys = 50
 
 set_politics = {
 	ruling_party = democratic
-	last_election = "1932.11.8"
+	last_election = "2011.11.8"
 	election_frequency = 48
 	elections_allowed = yes
 }
@@ -103,7 +103,7 @@ create_country_leader = {
 	name = "Sonny Perdue"
 	desc = "POLITICS_FRANKLIN_DELANO_ROOSEVELT_DESC"
 	picture = "gfx/leaders/Europe/portrait_europe_generic_2.dds"
-	expire = "1947.1.1"
+	expire = "2015.1.1"
 	ideology = conservatism
 	traits = {
 		#

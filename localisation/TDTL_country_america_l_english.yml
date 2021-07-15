@@ -19,6 +19,7 @@
  USA_FED_reject_colony:0 "Become a Federal District"
  USA_FED_reject_integrated_puppet:0 "Become a Federal District"
  USA_FED_shut_down_pro_regionalist_groups:0 "Shut Down Pro-Regionalist Groups"
+ USA_FED_utilize_federal_power:0 "Utilize Federal Power"
  #events
  TDTL_USA_event.1.t:0 "[FROM.GetName] Disconnects from the Federal Power Grid"
  TDTL_USA_event.1.d:0 "Apparently on an independent streak, the leaders of [FROM.GetNameDef] have decided to disconnect from the federal power grid in order to be more independent from us. This childish move has disrupted their lives somewhat, but they carry on anyways."
@@ -62,6 +63,10 @@
  TDTL_USA_event.11.t:0 "The Federal Government Proposes a Compromise"
  TDTL_USA_event.11.d:0 "In an interesting turn of events, the Federal Government has proposed a compromise between the two sides of independence and subjecthood. [FROM.GetLeader] has suggested that we become a near-independent state that, while still subject to the Federal Government, has much more autonomy than we currently have."
  TDTL_USA_event.11.a:0 "An Intriguing Proposal That We Will Accept"
+ TDTL_USA_event.12.t:0 "[FROM.GetName] Requests to Rejoin the Federal Government"
+ TDTL_USA_event.12.d:0 "After a series of actions and reforms limiting their autonomy, the time has finally come where the [FROM.GetAdjective] people are willing to politically re-unite with us."
+ TDTL_USA_event.12.a:0 "Step By Step, We Recover"
+ TDTL_USA_event.12.b:0 "No We Are Not Ready"
  #ideas
  USA_increased_industrial_contributions:0 "Industrial Contributions to the Federal Government"
  USA_higher_taxes:0 "Raised Taxes"

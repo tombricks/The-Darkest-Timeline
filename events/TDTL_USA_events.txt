@@ -590,3 +590,25 @@ country_event = { #USA proposes compromise
 		}
 	}
 }
+
+country_event = { #FROM requests annexation
+	id = TDTL_USA_event.12
+	title = TDTL_USA_event.12.t
+	desc = TDTL_USA_event.12.d
+	picture = GFX_report_event_usa_election_generic
+
+	is_triggered_only = yes
+
+	option = { #Abso-freaking-lutely
+		name = TDTL_USA_event.12.a
+		add_political_power = -50
+		annex_country = {
+			target = FROM
+			transfer_troops = yes
+		}
+	}
+	option = { #Nah
+		name = TDTL_USA_event.12.b
+		ai_chance = { factor = 0 }
+	}
+}

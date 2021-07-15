@@ -17,5 +17,9 @@
  SOV_CPSU_Nationalists:0 "Nationalists in the CPSU"
  SOV_CPSU_Nationalists_desc:0 ""
 
- EUR_member:0 "European Union Member"
+ EUR_member:0 "European Union Membe"
  EUR_member_desc:0 "This country is a member of the European Union, though they are more separate than most members."
+ UN_international_commission_against_impunity:0 "International Commision Against Impunity in [ROOT.GetNameDef]"
+ UN_international_commission_against_impunity_desc:0 "The UN has been tasked with a commission in this country to help enforce international and national law, along with rooting out corruption"
+ FRA_francafrique:0 "Françafrique"
+ african_francafrique:0 "Françafrique"

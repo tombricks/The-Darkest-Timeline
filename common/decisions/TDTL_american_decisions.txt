@@ -237,7 +237,16 @@ TDTL_USA_federalist_category = {
 		days_re_enable = 70
 
 		ai_will_do = {
-			factor = 2
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {			
+					free_building_slots = {
+						building = infrastructure
+						size < 2
+					}
+				}
+			}
 			modifier = {
 				factor = 0
 				has_political_power < 100
@@ -321,7 +330,11 @@ TDTL_USA_federalist_category = {
 			factor = 1
 			modifier = {
 				factor = 2
-				num_of_factories < 30
+				num_of_factories < 20
+			}
+			modifier = {
+				factor = 0.5
+				num_of_factories > 30
 			}
 			modifier = {
 				factor = 0
@@ -341,19 +354,47 @@ TDTL_USA_federalist_category = {
 		}
 
 		remove_effect = {
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = industrial_complex
-						size > 0
-					}
-				}
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
+			add_offsite_building = { type = industrial_complex level = 1 }
+			if = {
+				limit = { OR = { has_dlc = "Waking the Tiger" has_dlc = "Together for Victory" has_dlc = "Death or Dishonor" } }
+				add_autonomy_ratio = {
+					value = -0.1
+					localization = USA_FED_pro_federal_politics
 				}
 			}
+		}
+
+	}
+
+	USA_FED_utilize_federal_power = {
+
+		icon = generic_political_discourse
+
+		cost = 10
+
+		days_remove = 100
+
+		days_re_enable = 260
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_political_power > 100
+			}
+		}
+
+		modifier = {
+			political_power_cost = -0.5
+		}
+
+		available = {
+			USA = {
+				political_power_daily > 0.5
+			}
+		}
+
+		complete_effect = {
 			if = {
 				limit = { OR = { has_dlc = "Waking the Tiger" has_dlc = "Together for Victory" has_dlc = "Death or Dishonor" } }
 				add_autonomy_ratio = {

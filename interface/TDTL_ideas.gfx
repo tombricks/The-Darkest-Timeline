@@ -15,4 +15,8 @@ spriteTypes = {
 		name = "GFX_idea_EUR_member"
 		texturefile = "gfx/interface/ideas/EUR_member.dds"
 	}
+	spriteType = {
+		name = "GFX_idea_international_court"
+		texturefile = "gfx/interface/ideas/UN_international_court.dds"
+	}
 }
