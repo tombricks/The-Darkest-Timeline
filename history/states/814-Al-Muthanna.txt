@@ -1,0 +1,22 @@
+
+state={
+	id=814
+	name="STATE_814"
+	provinces={
+		8001 10744 10876 12879 
+	}
+	history = {
+		owner = IRQ
+		buildings = {
+			infrastructure = 1
+
+		}
+		victory_points = {
+			8001 3 
+		}
+		add_core_of = IRQ
+	}
+	state_category = wasteland
+	manpower=0
+	buildings_max_level_factor=1.000
+}

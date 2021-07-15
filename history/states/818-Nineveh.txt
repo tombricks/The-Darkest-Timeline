@@ -1,0 +1,24 @@
+
+state={
+	id=818
+	name="STATE_818"
+	provinces={
+		1938 10106 10804 
+	}
+	history = {
+		owner = IRQ
+		buildings = {
+			infrastructure = 2
+			arms_factory = 1
+			industrial_complex = 1
+
+		}
+		victory_points = {
+			10106 5 
+		}
+		add_core_of = IRQ
+	}
+	state_category = town
+	manpower=0
+	buildings_max_level_factor=1.000
+}

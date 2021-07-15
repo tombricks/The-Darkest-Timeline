@@ -1,0 +1,34 @@
+
+state={
+	id=815
+	name="STATE_815"
+	provinces={
+		78 2004 2089 7977 7994 12726 
+	}
+
+	history={
+		owner = IRQ
+		buildings = {
+			infrastructure = 2
+			arms_factory = 1
+			industrial_complex = 1
+
+			2089 = {
+				naval_base = 1
+
+			}
+		}
+		victory_points = {
+			2089 5 
+		}
+		victory_points = {
+			7994 1 
+		}
+		add_core_of = IRQ
+		add_claim_by = KUR
+
+	}
+	state_category = town
+	manpower=0
+	buildings_max_level_factor=1.000
+}

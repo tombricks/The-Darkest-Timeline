@@ -1,0 +1,24 @@
+
+state={
+	id=811
+	name="STATE_811"
+	provinces={
+		1549 1578 10882 
+	}
+	history={
+		owner = SYR
+		buildings = {
+			infrastructure = 2
+			arms_factory = 1
+			industrial_complex = 1
+		}
+		victory_points = {
+			1549 1 
+		}
+		add_core_of = SYR
+		add_core_of = KUR
+	}
+	state_category = town
+	manpower=1512000
+	buildings_max_level_factor=1.000
+}
