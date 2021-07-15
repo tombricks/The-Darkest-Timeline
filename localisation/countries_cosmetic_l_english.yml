@@ -71,6 +71,9 @@
  NVR_SOV_Autonomy_Soviet_Socialist_Republic_DEF:0 "the Novorossiyan SSR"
  NVR_SOV_Autonomy_Soviet_Socialist_Republic_ADJ:0 "Novorossiyan"
 
+ PNT_SOM_autonomy_puppet:0 "Puntland State of Somalia"
+ PNT_SOM_autonomy_puppet_DEF:0 "Puntland State of Somalia"
+
  #formable nations
  united_central_america:0 "Federal Republic of Central America"
  united_central_america_DEF:0 "the Federal Republic of Central America"

@@ -1,12 +1,15 @@
-# SOM - Somalia.txt
-capital = 559
+capital = 819
 set_stability = 0.6
 set_war_support = 0.6
 
+SOM = {
+	set_autonomy = { target = PNT autonomy_state = autonomy_puppet }
+}
+
 set_politics = {
 	ruling_party = democratic
-	last_election = "2012.9.10"
-	election_frequency = 48
+	last_election = "2009.1.8"
+	election_frequency = 60
 	elections_allowed = yes
 }
 set_popularities = {
@@ -18,11 +21,11 @@ set_popularities = {
 
 
 create_country_leader = {
-	name = "Andi Shirdon"
+	name = "Abdirahman Mohamud Farole"
 	desc = "POLITICS_FRANKLIN_DELANO_ROOSEVELT_DESC"
 	picture = "gfx/leaders/Africa/portrait_africa_generic_2.dds"
 	expire = "2015.1.1"
-	ideology = social_democracy
+	ideology = conservatism
 	traits = {
 		#
 	}

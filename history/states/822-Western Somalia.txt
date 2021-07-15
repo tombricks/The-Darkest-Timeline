@@ -11,7 +11,8 @@ state=
 
 	history=
 	{
-		owner = ETH
+		owner = WSM
+		add_core_of = WSM
 		buildings = {
 			infrastructure = 4
 		}

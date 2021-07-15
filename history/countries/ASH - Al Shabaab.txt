@@ -1,28 +1,24 @@
-# SOM - Somalia.txt
 capital = 559
-set_stability = 0.6
-set_war_support = 0.6
+set_stability = 0.4
+set_war_support = 0.8
 
 set_politics = {
-	ruling_party = democratic
-	last_election = "2012.9.10"
+	ruling_party = fascism
+	last_election = "2007.9.10"
 	election_frequency = 48
-	elections_allowed = yes
+	elections_allowed = no
 }
 set_popularities = {
-	democratic = 60
-	neutrality = 20
-	socialism = 15
-	communism = 5
+	fascism = 100
 }
 
 
 create_country_leader = {
-	name = "Andi Shirdon"
+	name = "Ahmed Abdi Godane"
 	desc = "POLITICS_FRANKLIN_DELANO_ROOSEVELT_DESC"
 	picture = "gfx/leaders/Africa/portrait_africa_generic_2.dds"
 	expire = "2015.1.1"
-	ideology = social_democracy
+	ideology = jihadism
 	traits = {
 		#
 	}

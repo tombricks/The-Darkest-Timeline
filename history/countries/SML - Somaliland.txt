@@ -1,27 +1,24 @@
 # SOM - Somalia.txt
 capital = 559
-set_stability = 0.6
+set_stability = 0.7
 set_war_support = 0.6
 
 set_politics = {
 	ruling_party = democratic
-	last_election = "2012.9.10"
-	election_frequency = 48
+	last_election = "2010.7.27"
+	election_frequency = 60
 	elections_allowed = yes
 }
 set_popularities = {
-	democratic = 60
-	neutrality = 20
-	socialism = 15
-	communism = 5
+	democratic = 100
 }
 
 
 create_country_leader = {
-	name = "Andi Shirdon"
+	name = "Ahmed Mohamed Mohamoud"
 	desc = "POLITICS_FRANKLIN_DELANO_ROOSEVELT_DESC"
 	picture = "gfx/leaders/Africa/portrait_africa_generic_2.dds"
-	expire = "2015.1.1"
+	expire = "2021.1.1"
 	ideology = social_democracy
 	traits = {
 		#

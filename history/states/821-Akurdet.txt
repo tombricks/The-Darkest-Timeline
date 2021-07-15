@@ -8,7 +8,8 @@ state=
 	
 	history=
 	{
-		owner = ERI
+		owner = ERD
+		add_core_of = ERD
 		add_core_of = ERI
 		buildings = {
 			infrastructure = 4
