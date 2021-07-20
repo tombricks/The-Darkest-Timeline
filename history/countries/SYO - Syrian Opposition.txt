@@ -1,0 +1,26 @@
+# SYO - Syrian Opposition.txt
+oob = "SYO_2012"
+capital = 677
+set_stability = 0.55
+set_war_support = 0.75
+
+set_politics = {
+	ruling_party = democratic
+	last_election = "2007.5.27"
+	election_frequency = 84
+	elections_allowed = no
+}
+
+set_popularities = {
+	democratic = 62
+	neutrality = 31
+	fascism = 7
+}
+
+create_country_leader = {
+	name = "Moaz al-Khatib"
+	picture = "Moaz_al_Khatib.dds"
+	ideology = conservatism
+}
+
+declare_war_on = { target = SYR type = civil_war }

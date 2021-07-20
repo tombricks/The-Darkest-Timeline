@@ -13,6 +13,8 @@ state={
 			industrial_complex = 1
 		}
 		add_core_of = SYR
+		add_core_of = SYO
+		controller = SYO
 	}
 	state_category = town
 	manpower=1501000

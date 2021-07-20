@@ -1,0 +1,30 @@
+# ISI - Islamic State.txt # Islamic Emirate after the Conquest of Iraq
+oob = "SYO_2012"
+capital = 811
+set_stability = 0.5
+set_war_support = 1.0
+
+set_politics = {
+	ruling_party = fascism
+	last_election = "2007.5.27"
+	election_frequency = 84
+	elections_allowed = no
+}
+
+set_popularities = {
+	fascism = 100
+}
+
+add_ideas = {
+	ISI_Recruitment
+}
+
+create_country_leader = {
+	name = "Abu Bakr al-Baghdadi"
+	picture = "Abu_Bakr_al_Baghdadi.dds"
+	ideology = jihadism
+}
+
+declare_war_on = { target = SYR type = annex_everything }
+declare_war_on = { target = SYO type = annex_everything }
+declare_war_on = { target = IRQ type = annex_everything }

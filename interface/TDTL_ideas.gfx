@@ -19,4 +19,8 @@ spriteTypes = {
 		name = "GFX_idea_international_court"
 		texturefile = "gfx/interface/ideas/UN_international_court.dds"
 	}
+	spriteType = {
+		name = "GFX_idea_ISI_Recruitment"
+		texturefile = "gfx/interface/ideas/ISI_Recruitment.dds"
+	}
 }

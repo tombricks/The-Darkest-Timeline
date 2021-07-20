@@ -13,7 +13,9 @@ state={
 
 		}
 		add_core_of = IRQ
-
+		ISI = {
+			set_province_controller = 12372
+		}
 	}
 
 	provinces={

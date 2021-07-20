@@ -1,11 +1,25 @@
 # SYR - Syria.txt
+oob = "SYR_2012"
 capital = 554
-set_stability = 0.6
-set_war_support = 0.6
+set_stability = 0.75
+set_war_support = 0.75
 
 set_politics = {
-		 ruling_party = neutrality
-		last_election = "2012.1.1"
-		election_frequency = 48
-		elections_allowed = no
+	ruling_party = socialism
+	last_election = "2007.5.27"
+	election_frequency = 84
+	elections_allowed = no
+}
+
+set_popularities = {
+	socialism = 83
+	neutrality = 11
+	fascism = 5
+	communism = 1
+}
+
+create_country_leader = {
+	name = "Bashar al-Assad"
+	picture = "Bashar_al_Assad.dds"
+	ideology = socialism_ideology
 }

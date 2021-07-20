@@ -361,6 +361,13 @@
  SYR:0 "Syria"
  SYR_DEF:0 "Syria"
  SYR_ADJ:0 "Syrian"
+ SYR_socialism:0 "Syrian Arab Republic"
+ SYR_socialism_DEF:0 "the Syrian Arab Republic"
+ SYR_socialism_ADJ:0 "Syrian"
+# Syrian Opposition
+ SYO:0 "Syrian Opposition"
+ SYO_DEF:0 "the Syrian Opposition"
+ SYO_ADJ:0 "Syrian Opposition"
 # Lebanon
  LEB:0 "Lebanon"
  LEB_DEF:0 "Lebanon"
@@ -939,3 +946,7 @@
  SML:0 "Somaliland"
  SML_DEF:0 "Somaliland"
  SML_ADJ:0 "Somali"
+# Islamic State
+ ISI:0 "Islamic State of Iraq and al-Sham"
+ ISI_DEF:0 "the Islamic State of Iraq and al-Sham"
+ ISI_ADJ:0 "ISIS"
