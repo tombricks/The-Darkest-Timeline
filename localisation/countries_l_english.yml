@@ -616,8 +616,8 @@
  DJI_DEF:0 "Djibouti"
  DJI_ADJ:0 "Djiboutian"
 # Somalia
- SOM:0 "Somalia"
- SOM_DEF:0 "Somalia"
+ SOM:0 "Federal Government of Somalia"
+ SOM_DEF:0 "the Federal Government of Somalia"
  SOM_ADJ:0 "Somalian"
 # Uganda
  UGA:0 "Uganda"
@@ -950,3 +950,13 @@
  ISI:0 "Islamic State of Iraq and al-Sham"
  ISI_DEF:0 "the Islamic State of Iraq and al-Sham"
  ISI_ADJ:0 "ISIS"
+ #Federal Arab Republic
+ FAR:0 "Federal Arab Republic"
+ FAR_DEF:0 "the Federal Arab Republic"
+ FAR_ADJ:0 "Arabic"
+ FAR_communism:0 "Federal Arab Socialist Republic"
+ FAR_communism_DEF:0 "the Federal Arab Socialist Republic"
+ FAR_communism_ADJ:0 "Arabic"
+ FAR_socialism:0 "Federal Arab Socialist Republic"
+ FAR_socialism_DEF:0 "the Federal Arab Socialist Republic"
+ FAR_socialism_ADJ:0 "Arabic"

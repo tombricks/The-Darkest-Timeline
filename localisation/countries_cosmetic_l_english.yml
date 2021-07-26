@@ -73,6 +73,8 @@
 
  PNT_SOM_autonomy_puppet:0 "Puntland State of Somalia"
  PNT_SOM_autonomy_puppet_DEF:0 "Puntland State of Somalia"
+ UN_trust_SML:0 "Trust Territory of Somaliland"
+ UN_trust_SML_DEF:0 "the Trust Territory of Somaliland"
 
  #formable nations
  united_central_america:0 "Federal Republic of Central America"

@@ -1,13 +1,22 @@
 # LBA - Libya.txt
-capital = 450
+capital = 448
 set_stability = 0.6
 set_war_support = 0.6
 
 set_politics = {
-	ruling_party = neutrality
+	ruling_party = communism
 	last_election = "2012.1.1"
 	election_frequency = 48
 	elections_allowed = no
+}
+
+declare_war_on = {
+	target = ALG
+	type = annex_everything
+}
+declare_war_on = {
+	target = LBA
+	type = annex_everything
 }
 
 create_country_leader = {
@@ -22,5 +31,5 @@ create_country_leader = {
 }
 
 set_popularities = {
-	neutrality = 100
+	socialism = 100
 }

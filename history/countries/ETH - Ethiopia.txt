@@ -3,6 +3,11 @@ capital = 271
 set_stability = 0.6
 set_war_support = 0.6
 
+create_faction = nile_alliance
+add_to_faction = ETH
+add_to_faction = SUD
+add_to_faction = EGY
+
 set_politics = {
 	ruling_party = neutrality
 	last_election = "2011.11.8"

@@ -3,6 +3,10 @@ capital = 446
 set_stability = 0.6
 set_war_support = 0.6
 
+ETH = {
+	puppet = EGY
+}
+
 set_politics = {
 		 ruling_party = neutrality
 		last_election = "2012.1.1"

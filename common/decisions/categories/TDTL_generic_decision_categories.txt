@@ -1,0 +1,4 @@
+TDTL_foreign_intervention = {
+	icon = generic_arms_trade
+	allowed = { always = yes }
+}

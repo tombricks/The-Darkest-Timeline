@@ -1,0 +1,168 @@
+TDTL_foreign_intervention = {
+	
+	TDTL_hire_mercenaries = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			has_war = yes
+		}
+
+		cost = 100
+
+		days_re_enable = 100
+
+		days_remove = -1
+
+		remove_trigger = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = has_hired_mercs
+				}
+			}
+		}
+
+		modifier = {
+			consumer_goods_factor = 0.05
+		}
+
+		complete_effect = {
+			set_country_flag = has_hired_mercs
+			activate_mission = TDTL_hired_mercenaries
+			hidden_effect = {
+				load_oob = Mercenaries
+				set_division_template_lock = {
+					division_template = "Mercenary Infantry"
+					is_locked = yes
+				}
+				set_division_template_lock = {
+					division_template = "Motorized Mercenaries"
+					is_locked = yes
+				}
+				add_equipment_to_stockpile = {
+					type = artillery_equipment 
+					amount = 200
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment 
+					amount = 200
+				}
+				add_equipment_to_stockpile = {
+					type = motorized_equipment 
+					amount = 1000
+				}
+			}
+			random_owned_controlled_state = {
+				limit = { is_capital = yes }
+				create_unit = {
+					division = "division_template = \"Motorized Mercenaries\"	start_experience_factor = 0.2	start_equipment_factor = 1"
+					owner = ROOT
+					allow_spawning_on_enemy_provs = yes
+					count = 2
+					country_score = {
+						base = 100
+					}
+				}
+				create_unit = {
+					division = "division_template = \"Mercenary Infantry\"	start_experience_factor = 0.2	start_equipment_factor = 1"
+					owner = ROOT
+					allow_spawning_on_enemy_provs = yes
+					count = 2
+					country_score = {
+						base = 100
+					}
+				}
+			}
+		}
+
+	}
+
+	TDTL_hired_mercenaries = {
+
+		icon = generic_industry
+
+		activation = {
+			has_country_flag = has_hired_mercs
+		}
+
+		is_good = yes
+
+		available = {
+			has_war = no
+		}
+
+		days_mission_timeout = 180
+
+		timeout_effect = {
+			clr_country_flag = has_hired_mercs
+			delete_unit_template_and_units = {
+				division_template = "Motorized Mercenaries"
+				disband = no
+			}
+			delete_unit_template_and_units = {
+				division_template = "Mercenary Infantry"
+				disband = no
+			}
+		}
+
+		complete_effect = {
+			clr_country_flag = has_hired_mercs
+			delete_unit_template_and_units = {
+				division_template = "Motorized Mercenaries"
+				disband = no
+			}
+			delete_unit_template_and_units = {
+				division_template = "Mercenary Infantry"
+				disband = no
+			}
+		}
+
+	}
+
+	TDTL_extend_mercenary_assignment = {
+
+		icon = generic_industry
+
+		visible = {
+			has_active_mission = TDTL_hired_mercenaries
+		}
+
+		cost = 75
+
+		days_re_enable = 365
+
+		complete_effect = {
+			add_days_mission_timeout = {
+				mission = TDTL_hired_mercenaries
+				days = 180
+			}
+		}
+
+	}
+
+	TDTL_cancel_mercenary_assignment = {
+
+		visible = {
+			has_active_mission = TDTL_hired_mercenaries
+		}
+
+		cost = 25
+
+		days_re_enable = 365
+
+		complete_effect = {
+			remove_mission = TDTL_hired_mercenaries
+			clr_country_flag = has_hired_mercs
+			delete_unit_template_and_units = {
+				division_template = "Motorized Mercenaries"
+				disband = no
+			}
+			delete_unit_template_and_units = {
+				division_template = "Mercenary Infantry"
+				disband = no
+			}
+		}
+
+	}
+
+}
