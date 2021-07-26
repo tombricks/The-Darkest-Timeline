@@ -6,29 +6,21 @@ TDTL_foreign_intervention = {
 
 		available = {
 			has_war = yes
+			has_tech = gw_artillery 
+			has_tech = motorised_infantry 
 		}
 
 		cost = 100
 
 		days_re_enable = 100
 
-		days_remove = -1
-
-		remove_trigger = {
-			hidden_trigger = {
-				NOT = {
-					has_country_flag = has_hired_mercs
-				}
-			}
-		}
+		days_remove = 365
 
 		modifier = {
 			consumer_goods_factor = 0.05
 		}
 
 		complete_effect = {
-			set_country_flag = has_hired_mercs
-			activate_mission = TDTL_hired_mercenaries
 			hidden_effect = {
 				load_oob = Mercenaries
 				set_division_template_lock = {
@@ -38,18 +30,6 @@ TDTL_foreign_intervention = {
 				set_division_template_lock = {
 					division_template = "Motorized Mercenaries"
 					is_locked = yes
-				}
-				add_equipment_to_stockpile = {
-					type = artillery_equipment 
-					amount = 200
-				}
-				add_equipment_to_stockpile = {
-					type = support_equipment 
-					amount = 200
-				}
-				add_equipment_to_stockpile = {
-					type = motorized_equipment 
-					amount = 1000
 				}
 			}
 			random_owned_controlled_state = {
@@ -75,91 +55,128 @@ TDTL_foreign_intervention = {
 			}
 		}
 
-	}
-
-	TDTL_hired_mercenaries = {
-
-		icon = generic_industry
-
-		activation = {
-			has_country_flag = has_hired_mercs
+		remove_effect = {
+			delete_unit_template_and_units = {
+				division_template = "Mercenary Infantry"
+				disband = no
+			}
+			delete_unit_template_and_units = {
+				division_template = "Motorized Mercenaries"
+				disband = no
+			}
 		}
 
-		is_good = yes
+	}
+
+	SOM_demand_SML = {
+
+		icon = generic_political_discourse
+
+		cost = 150
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				add = 1
+				has_stability > 0.75
+			}
+			modifier = {
+				add = 1
+				has_government = fascism
+			}
+		}
+
+		visible = {
+			tag = SOM
+			SML = {
+				exists = yes
+				is_subject = no
+				has_cosmetic_tag = UN_trust_SML
+			}
+		}
+
+		complete_effect = {
+			SML = {
+				country_event = { id = TDTL_UN_event.1 hours = 2 }
+			}
+		}
+
+	}
+
+	SML_release_somaliland = {
+
+		icon = generic_nationalism
+
+		cost = 150
+
+		visible = {
+			tag = SML
+			is_subject = no
+			has_cosmetic_tag = UN_trust_SML
+			NOT = {
+				has_country_flag = SML_giving_to_somalia
+			}
+		}
 
 		available = {
-			has_war = no
-		}
-
-		days_mission_timeout = 180
-
-		timeout_effect = {
-			clr_country_flag = has_hired_mercs
-			delete_unit_template_and_units = {
-				division_template = "Motorized Mercenaries"
-				disband = no
-			}
-			delete_unit_template_and_units = {
-				division_template = "Mercenary Infantry"
-				disband = no
-			}
+			has_stability > 0.7
 		}
 
 		complete_effect = {
-			clr_country_flag = has_hired_mercs
-			delete_unit_template_and_units = {
-				division_template = "Motorized Mercenaries"
-				disband = no
+			set_country_flag = SML_releasing
+			drop_cosmetic_tag = yes
+			set_politics = {
+				ruling_party = democratic
+				elections_allowed = yes
 			}
-			delete_unit_template_and_units = {
-				division_template = "Mercenary Infantry"
-				disband = no
+			retire_ideology_leader = neutrality
+			create_country_leader = {
+				name = "Jama Haji Ahmed"
+				desc = "POLITICS_YEEBIO_WOLDAI_DESC"
+				picture = "Portrait_Ethiopia_Haile_Selassie.dds"
+				expire = "2040.1.1"
+				ideology = authoritarianism_ideology
+				traits = {
+					#
+				}
+			}
+			SOM = {
+				country_event = { id = TDTL_UN_event.5 hours = 6 }
 			}
 		}
 
 	}
 
-	TDTL_extend_mercenary_assignment = {
+	SML_give_to_somalia = {
 
-		icon = generic_industry
+		icon = generic_political_discourse
+
+		cost = 150
 
 		visible = {
-			has_active_mission = TDTL_hired_mercenaries
-		}
-
-		cost = 75
-
-		days_re_enable = 365
-
-		complete_effect = {
-			add_days_mission_timeout = {
-				mission = TDTL_hired_mercenaries
-				days = 180
+			tag = SML
+			is_subject = no
+			has_cosmetic_tag = UN_trust_SML
+			SOM = {
+				exists = yes
+				is_subject = no
+			}
+			NOT = {
+				has_country_flag = SML_releasing
 			}
 		}
 
-	}
-
-	TDTL_cancel_mercenary_assignment = {
-
-		visible = {
-			has_active_mission = TDTL_hired_mercenaries
+		available = {
+			has_stability > 0.6
+			NOT = {
+				has_war_with = SOM
+			}
 		}
 
-		cost = 25
-
-		days_re_enable = 365
-
 		complete_effect = {
-			remove_mission = TDTL_hired_mercenaries
-			clr_country_flag = has_hired_mercs
-			delete_unit_template_and_units = {
-				division_template = "Motorized Mercenaries"
-				disband = no
-			}
-			delete_unit_template_and_units = {
-				division_template = "Mercenary Infantry"
-				disband = no
+			set_country_flag = SML_giving_to_somalia
+			SOM = {
+				country_event = { id = TDTL_UN_event.2 }
 			}
 		}
 

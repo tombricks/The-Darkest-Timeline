@@ -768,6 +768,7 @@ WSM = {
 FAR = {
 	color = rgb { 173 27 24 }
 	color_ui = rgb { 173 27 24 }
+}
 SOS = {
 	color = rgb { 130 71 16 }
 	color_ui = rgb { 130 71 16 }
@@ -783,4 +784,12 @@ SCO = {
 WLS = {
 	color = rgb { 32 148 32 }
 	color_ui = rgb { 130 125 61 }
+}
+EAF = {
+	color = rgb { 118 171 220 }
+	color_ui = rgb { 118 171 220 }
+}
+UNE = {
+	color = rgb { 8 191 248 }
+	color_ui = rgb { 8 191 248 }
 }

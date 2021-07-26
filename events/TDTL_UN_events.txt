@@ -1,0 +1,151 @@
+add_namespace = TDTL_UN_event
+
+country_event = { #Somalia demands Somaliland returned
+	id = TDTL_UN_event.1
+	title = TDTL_UN_event.1.t
+	desc = TDTL_UN_event.1.d
+	picture = GFX_report_event_physics_lab_01
+
+	is_triggered_only = yes
+
+	option = { #Okay
+		name = TDTL_UN_event.1.a
+		SOM = {
+			country_event = { id = TDTL_UN_event.2 hours = 2 }
+		}
+	}
+	option = { #As long as we can have some independence 
+		name = TDTL_UN_event.1.b
+		trigger = { SOM = { NOT = { has_country_flag = SOM_complete_annexation } } }
+		SOM = {
+			country_event = { id = TDTL_UN_event.3 hours = 2 }
+		}
+	}
+	option = { #No
+		name = TDTL_UN_event.1.c
+		SOM = {
+			country_event = { id = TDTL_UN_event.4 hours = 2 }
+		}
+	}
+}
+
+country_event = { #Somaliland accepts
+	id = TDTL_UN_event.2
+	title = TDTL_UN_event.2.t
+	desc = TDTL_UN_event.2.d
+	picture = GFX_report_event_physics_lab_01
+
+	is_triggered_only = yes
+
+	option = { #full annexation
+		name = TDTL_UN_event.2.a
+		annex_country = {
+			target = SML
+			transfer_troops = yes
+		}
+		every_state = {
+			limit = { is_core_of = SML }
+			add_core_of = SOM
+		}
+	}
+	option = { #integrate into Puntland
+		name = TDTL_UN_event.2.b
+		trigger = { PNT = { exists = yes is_subject_of = SOM } }
+		PNT = {
+			annex_country = {
+				target = SML
+				transfer_troops = yes
+			}
+			every_state = {
+				limit = { is_core_of = SML }
+				add_core_of = PNT
+			}
+		}
+	}
+	option = { #Create regional government there
+		name = TDTL_UN_event.2.c
+		SML = {
+			drop_cosmetic_tag = yes
+			hidden_effect = {
+				set_cosmetic_tag = SOM_states
+			}
+		}
+		set_autonomy = {
+			target = SML
+			autonomy_state = autonomy_puppet
+		}
+	}
+}
+
+country_event = { #Somaliland wants limited autonomy
+	id = TDTL_UN_event.3
+	title = TDTL_UN_event.3.t
+	desc = TDTL_UN_event.3.d
+	picture = GFX_report_event_physics_lab_01
+
+	is_triggered_only = yes
+
+	option = { #demand complete annexation
+		name = TDTL_UN_event.3.a
+		set_country_flag = SOM_complete_annexation
+		SML = {
+			country_event = { id = TDTL_UN_event.1 hours = 2 }
+		}
+	}
+	option = { #Sure
+		name = TDTL_UN_event.3.b
+		SML = {
+			drop_cosmetic_tag = yes
+			hidden_effect = {
+				set_cosmetic_tag = SOM_states
+			}
+		}
+		set_autonomy = {
+			target = SML
+			autonomy_state = autonomy_puppet
+		}
+	}
+}
+
+country_event = { #Somaliland says no >:(
+	id = TDTL_UN_event.4
+	title = TDTL_UN_event.4.t
+	desc = TDTL_UN_event.4.d
+	picture = GFX_report_event_physics_lab_01
+
+	is_triggered_only = yes
+
+	option = { #fine I see how it is
+		name = TDTL_UN_event.4.a
+		
+	}
+	option = { #We must take them down
+		name = TDTL_UN_event.4.b
+		create_wargoal = {
+			type = annex_everything
+			target = SML
+			expire = 0
+		}
+	}
+}
+
+country_event = { #Somaliland is freed
+	id = TDTL_UN_event.5
+	title = TDTL_UN_event.5.t
+	desc = TDTL_UN_event.5.d
+	picture = GFX_report_event_physics_lab_01
+
+	is_triggered_only = yes
+
+	option = { #fine I see how it is
+		name = TDTL_UN_event.4.a
+	}
+	option = { #We must take them down
+		name = TDTL_UN_event.4.b
+		create_wargoal = {
+			type = annex_everything
+			target = SML
+			expire = 0
+		}
+	}
+}

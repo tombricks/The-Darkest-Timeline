@@ -37,7 +37,11 @@
  TEX_USA_autonomy_autonomous_district_DEF:0 "the Autonomous District of Texas"
 
  PNT_SOM_autonomy_puppet:0 "Puntland State of Somalia"
- PNT_SOM_autonomy_puppet_DEF:0 "Puntland State of Somalia"
+ PNT_SOM_autonomy_puppet_DEF:0 "the Puntland State of Somalia"
+ SML_SOM_autonomy_puppet:0 "Somaliland State of Somalia"
+ SML_SOM_autonomy_puppet_DEF:0 "the Somaliland State of Somalia"
+ WSM_SOM_autonomy_puppet_DEF:0 "the Ogaden State of Somalia"
+ WSM_SOM_autonomy_puppet:0 "Ogaden State of Somalia"
  UN_trust_SML:0 "Trust Territory of Somaliland"
  UN_trust_SML_DEF:0 "the Trust Territory of Somaliland"
 

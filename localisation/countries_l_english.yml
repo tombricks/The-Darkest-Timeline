@@ -968,3 +968,11 @@
  ABK:0 "Abkhazia"
  ABK_DEF:0 "Abkhazia"
  ABK_ADJ:0 "Abkhazian"
+ # East Africa
+ EAF:0 "East African Federation"
+ EAF_DEF:0 "the East African Federation"
+ EAF_ADJ:0 "East African"
+ #UN Egypt
+ UNE:0 "United Nations Interim Administration in Egypt"
+ UNE_DEF:0 "the United Nations Interim Administration in Egypt"
+ UNE_ADJ:0 "United Nations"

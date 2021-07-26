@@ -1,40 +1,39 @@
-# SOM - Somalia.txt
-capital = 559
+capital = 548
 set_stability = 0.6
 set_war_support = 0.6
 
 set_politics = {
-	ruling_party = neutrality
+	ruling_party = socialism
 	last_election = "2012.1.1"
 	election_frequency = 48
 	elections_allowed = yes
 }
 
 set_popularities = {
-	neutrality = 30
-	socialism = 20
-	democratic = 30
+	democratic = 20
+	neutrality = 20
+	socialism = 40
 	communism = 10
 	fascism = 10
 }
 
 create_country_leader = {
-	name = "Mohamed Faqih"
+	name = "Samia Hassan"
 	desc = "POLITICS_YEEBIO_WOLDAI_DESC"
 	picture = "Portrait_Ethiopia_Haile_Selassie.dds"
 	expire = "2040.1.1"
-	ideology = authoritarianism_ideology 
+	ideology = socialism_ideology
 	traits = {
 		#
 	}
 }
 
 create_country_leader = {
-	name = "Abdullahi Nuur"
+	name = "Muhoozi Kainerugaba"
 	desc = "POLITICS_YEEBIO_WOLDAI_DESC"
 	picture = "Portrait_Ethiopia_Haile_Selassie.dds"
 	expire = "2040.1.1"
-	ideology = liberalism
+	ideology = authoritarianism_ideology 
 	traits = {
 		#
 	}

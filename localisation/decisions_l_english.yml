@@ -38,4 +38,8 @@
  reform_the_usa:0 "Reform the United States"
  unite_central_america:0 "Unite Central America"
  controls_continental_usa:0 "Controls the Continental United States"
+ SOM_demand_SML:0 "Demand the Reincorporation of Somaliland"
+ SML_release_somaliland:0 "Establish Somaliland as an Independent Nation"
+ SML_give_to_somalia:0 "Transfer Somaliland to [SOM.GetNameDef]"
+ TDTL_hire_mercenaries:0 "Hire Mercenaries"
  
