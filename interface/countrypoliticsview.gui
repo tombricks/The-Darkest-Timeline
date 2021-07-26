@@ -46,24 +46,19 @@ guiTypes = {
 		iconType ={
 			name ="pol_faction_icon"
 			spriteType = "GFX_pol_factions_strip"
-			position = { x= 19 y = 305 }
+			position = { x= 19 y = 308 }
 			Orientation = "UPPER_LEFT"
 			frame = 1
 		}
 
 		containerWindowType = {
 			name = "chart_explanation"
-			position = { x = 334 y = 297 }
-			size = { width = 216 height = 80 }
+			position = { x = 334 y = 290 }
+			size = { width = 216 height = 120 }
 			clipping = yes
 			verticalScrollbar = "right_vertical_slider"
-			margin = { top = 6 left = 0 bottom = 5 right = 0}
-			
-			background = {
-				name = "Background"		
-				quadTextureSprite ="GFX_tiled_bg_1_scrollbar"
-			}
-			
+			margin = { top = 6 left = 0 bottom = 16 right = 0}
+
 			gridBoxType = {
 				name = "parties_grid"
 				position = { x = -55 y = 0 }
@@ -76,7 +71,7 @@ guiTypes = {
 		
 		containerWindowType = {
 			name = "political_pie_chart"
-			position = { x= 270 y = 304 }
+			position = { x= 270 y = 310 }
 			size = { width=100 height=100 }
 			clipping = no
 
@@ -156,8 +151,9 @@ guiTypes = {
 			instantTextboxType = {
 				name = "ideology"
 				position = { x = 9 y = 8 }
-				font = "hoi_18mbs"
+				font = "hoi_18bs"
 				text = "ideology"
+				format = center
 				maxWidth = 155
 				maxHeight = 20
 			}
@@ -165,10 +161,11 @@ guiTypes = {
 			instantTextboxType = {
 				name = "elections"
 				position = { x = 9 y = 34 }
-				font = "hoi_16mbs"
+				font = "hoi_18bs"
 				text = "elections"
 				maxWidth = 155
 				maxHeight = 20
+				format = center
 			}
 			
 			instantTextboxType = {
@@ -194,15 +191,9 @@ guiTypes = {
 						
 		containerWindowType = {
 			name = "autonomy_progress_view"
-			position = { x = 170 y = 242 }
+			position = { x = 170 y = 246 }
 			size = { width = 255 height = 60 }
 			clipping = no
-
-			background = {
-				name = "Background"		
-				quadTextureSprite ="GFX_subject_overlay"
-			}
-			
 			instantTextboxType = {
 				name = "current_autonomy_name"
 				position = { x = 110 y = 8 }
@@ -285,7 +276,7 @@ guiTypes = {
 		
 		containerWindowType = {
 			name = "active_goal"
-			position = { x = 179 y = 48 }
+			position = { x = -1790 y = 48 }
 			size = { width = 330 height = 50 }
 			clipping = no
 						
@@ -389,13 +380,13 @@ guiTypes = {
 		}
 		containerWindowType = {
 			name = "national_spirit"
-			position = { x = 81 y = 153 }
+			position = { x = 83 y = 58 }
 			size = { width = 360 height = 50 }
 			clipping = no
 						
 			instantTextboxType = {
 				name = "title"
-				position = { x = 110 y = -2 }
+				position = { x = 130 y = -2 }
 				font = "hoi_18mbs"
 				text = "POLITICS_NATIONAL_SPIRIT"
 				maxWidth = 200
@@ -406,10 +397,10 @@ guiTypes = {
 			
 			containerWindowType = {
 				name = "national_spirit_container"
-				position = { x = 90 y = 19 }
-				size = { width = 365 height = 68 }
-				
-				verticalScrollbar = "right_vertical_slider"
+				position = { x = 98 y = 19 }
+				size = { width = 350 height = 145 }
+				clipping = yes
+				verticalScrollbar = "left_vertical_slider"
 				
 				background = {
 					name = "Background"
@@ -418,17 +409,19 @@ guiTypes = {
 				
 				gridboxtype = {
 					name = "spirit_grid"
-					position = { x = 12 y = 0 }
-					size = { width = 350 height = 100%% }
-					slotsize = { width = 60 height = 68 }
-					max_slots = { x = 8 y = 1 }
+					position = { x = 24 y = 0 }
+					size = { width = 340 height = 100%% }
+					slotsize = { width = 65 height = 68 }
+					max_slots = { x = 5 y = 2 }
+					max_slots_horizontal = 5
 					format = "UPPER_LEFT"
 				}
 				gridboxtype = {
 					name = "spirit_grid_over_defined"
-					size = { width = 350 height = 100%% }
-					slotsize = { width = 33 height = 32 }
-					max_slots_horizontal = 10
+					size = { width = 340 height = 100%% }
+					slotsize = { width = 65 height = 68 }
+					position = { x = 20 y = 0 }
+					max_slots_horizontal = 5
 					format = "UPPER_LEFT"
 				}
 			}
