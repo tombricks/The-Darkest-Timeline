@@ -1,12 +1,12 @@
 autonomy_state = {
-	id = autonomy_puppet
+	id = autonomy_federal_district
 	
-	default = yes
-	is_puppet = yes
+	default = no
+	is_puppet = no
 	
-	min_freedom_level = 0.6
+	min_freedom_level = 0.4
 	
-	manpower_influence = 0.5
+	manpower_influence = 0.9
 	
 	rule = {
 		can_not_declare_war = yes
@@ -26,11 +26,11 @@ autonomy_state = {
 	}
 	
 	ai_subject_wants_higher = {
-		factor = 1.0
+		factor = 0.25
 	}
 	
 	ai_overlord_wants_lower = {
-		factor = 1.0
+		factor = 0.5
 	}
 
 	ai_overlord_wants_garrison = {
@@ -38,7 +38,8 @@ autonomy_state = {
 	}
 
 	allowed = {
-		NOT = { OR = { tag = MID tag = TEX tag = CAL tag = APA } OVERLORD = { tag = USA } }
+		OR = { tag = MID tag = TEX tag = CAL tag = APA } 
+		OVERLORD = { tag = USA }
 	}
 
 	#ROOT is puppet - FROM is potential OVERLORD

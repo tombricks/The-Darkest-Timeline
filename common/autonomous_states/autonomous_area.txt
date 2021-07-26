@@ -39,6 +39,7 @@ autonomy_state = {
 	}
 
 	allowed = {
+		NOT = { OR = { tag = MID tag = TEX tag = CAL tag = APA } OVERLORD = { tag = USA } }
 	}
 
 	#ROOT is puppet - FROM is potential OVERLORD

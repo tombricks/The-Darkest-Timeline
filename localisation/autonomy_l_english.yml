@@ -1,4 +1,7 @@
 ﻿l_english:
+ autonomy_autonomous_district:0 "Autonomous District"
+ autonomy_federal_district:0 "Federal District"
+ autonomy_regional_district:0 "Regional District"
  autonomy_puppet:0 "Puppet"
  autonomy_autonomous_area:0 "Autonomous Area"
  autonomy_military_administration:0 "Military Administration"

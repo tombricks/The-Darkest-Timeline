@@ -11,7 +11,8 @@ state={
 	}
 
 	history={
-		owner = CAN
+		owner = QUE
+		add_claim_by = CAN
 		buildings = {
 			infrastructure = 6
 			arms_factory = 2

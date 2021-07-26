@@ -141,6 +141,37 @@ TDTL_USA_regionalist_category = {
 
 	}
 
+	USA_FED_establish_local_militias = {
+
+		icon = generic_prepare_civil_war
+
+		cost = 100
+
+		fire_only_once = yes
+
+		days_remove = 50
+
+		modifier = {
+			war_support_weekly = 0.002
+			weekly_manpower = -100
+		}
+
+		complete_effect = {
+			if = {
+				limit = { OR = { has_dlc = "Waking the Tiger" has_dlc = "Together for Victory" has_dlc = "Death or Dishonor" } }
+				add_autonomy_ratio = {
+					value = 0.05
+					localization = USA_FED_anti_federal_politics
+				}
+			}
+		}
+
+		remove_effect = {
+			add_ideas = USA_local_militias
+		}
+
+	}
+
 	USA_FED_demand_more_autonomy = {
 
 		icon = generic_political_discourse
@@ -148,12 +179,12 @@ TDTL_USA_regionalist_category = {
 		cost = 100
 
 		available = {
-			has_autonomy_state = autonomy_puppet
+			has_autonomy_state = autonomy_federal_district
 			compare_autonomy_progress_ratio > 0.9
 		}
 
 		visible = {
-			has_autonomy_state = autonomy_puppet
+			has_autonomy_state = autonomy_federal_district
 		}
 
 		fire_only_once = yes
@@ -174,12 +205,12 @@ TDTL_USA_regionalist_category = {
 		cost = 100
 
 		available = {
-			has_autonomy_state = autonomy_integrated_puppet
+			has_autonomy_state = autonomy_regional_district
 			compare_autonomy_progress_ratio > 0.9
 		}
 
 		visible = {
-			has_autonomy_state = autonomy_integrated_puppet
+			has_autonomy_state = autonomy_regional_district
 		}
 
 		fire_only_once = yes
@@ -188,6 +219,82 @@ TDTL_USA_regionalist_category = {
 			USA = {
 				news_event = { id = TDTL_USA_event.7 }
 			}
+		}
+
+	}
+
+	USA_FED_create_own_political_identity = {
+
+		icon = generic_political_discourse
+
+		cost = 75
+
+		fire_only_once = yes
+
+		days_remove = 70
+
+		visible = {
+			NOT = {
+				has_country_flag = USA_FED_integrating
+			}
+		}
+
+		modifier = {
+			political_power_cost = 0.1
+			democratic_drift = -0.2
+		}
+
+		complete_effect = {
+			if = {
+				limit = { OR = { has_dlc = "Waking the Tiger" has_dlc = "Together for Victory" has_dlc = "Death or Dishonor" } }
+				add_autonomy_ratio = {
+					value = 0.1
+					localization = USA_FED_anti_federal_politics
+				}
+			}
+			set_country_flag = USA_FED_created_own_political_stuff
+			custom_effect_tooltip = USA_FED_unlock_radical_regionalist_decisions
+		}
+
+	}
+
+	USA_FED_demand_independence = {
+
+		icon = generic_civil_support
+
+		cost = 150
+
+		fire_only_once = yes
+
+		visible = {
+			has_country_flag = USA_FED_created_own_political_stuff
+		}
+
+		complete_effect = {
+			USA = {
+				country_event = { id = TDTL_USA_event.8 hours = 2 }
+			}
+		}
+
+	}
+
+	USA_FED_the_failings_capitalism = {
+
+		icon = generic_civil_support
+
+		cost = 75
+
+		fire_only_once = yes
+
+		visible = {
+			has_country_flag = USA_FED_created_own_political_stuff
+		}
+
+		days_remove = 100
+
+		modifier = {
+			communism_drift = 0.1
+			socialism_drift = 0.1
 		}
 
 	}
@@ -204,7 +311,7 @@ TDTL_USA_federalist_category = {
 			factor = 0
 			modifier = {
 				add = 2
-				has_autonomy_state = autonomy_integrated_puppet
+				has_autonomy_state = autonomy_regional_district
 			}
 			modifier = {
 				factor = 0
@@ -406,6 +513,49 @@ TDTL_USA_federalist_category = {
 
 	}
 
+	USA_FED_collaborate_anti_socialist_actions = {
+
+		icon = oppression
+
+		cost = 100
+
+		fire_only_once = yes
+
+		available = {
+			is_subject_of = USA
+			USA = {
+				NOT = {
+					OR = {
+						has_government = communism
+						has_government = socialism
+					}
+				}
+			}
+			OR = {
+				socialism > 0.2
+				communism > 0.2
+			}
+			NOT = {
+				OR = {
+					has_government = communism
+					has_government = socialism
+				}
+			}
+		}
+
+		complete_effect = {
+			if = {
+				limit = { OR = { has_dlc = "Waking the Tiger" has_dlc = "Together for Victory" has_dlc = "Death or Dishonor" } }
+				add_autonomy_ratio = {
+					value = -0.05
+					localization = USA_FED_pro_federal_politics
+				}
+			}
+			add_ideas = USA_new_huac
+		}
+
+	}
+
 	USA_FED_shut_down_pro_regionalist_groups = {
 
 		icon = generic_industry
@@ -431,7 +581,6 @@ TDTL_USA_federalist_category = {
 
 		available = {
 			is_subject_of = USA
-			has_completed_focus = USA_FED_quell_regionalist_beliefs
 		}
 
 		complete_effect = {
@@ -461,12 +610,12 @@ TDTL_USA_federalist_category = {
 		}
 
 		available = {
-			has_autonomy_state = autonomy_puppet
+			has_autonomy_state = autonomy_federal_district
 			compare_autonomy_progress_ratio < 0.1
 		}
 
 		visible = {
-			has_autonomy_state = autonomy_puppet
+			has_autonomy_state = autonomy_federal_district
 		}
 
 		fire_only_once = yes
@@ -491,12 +640,12 @@ TDTL_USA_federalist_category = {
 		cost = 100
 
 		available = {
-			has_autonomy_state = autonomy_colony
+			has_autonomy_state = autonomy_autonomous_district
 			compare_autonomy_progress_ratio < 0.1
 		}
 
 		visible = {
-			has_autonomy_state = autonomy_colony
+			has_autonomy_state = autonomy_autonomous_district
 		}
 
 		fire_only_once = yes
@@ -508,6 +657,163 @@ TDTL_USA_federalist_category = {
 			}
 			USA = {
 				news_event = { id = TDTL_USA_event.5 }
+			}
+		}
+
+	}
+
+	USA_FED_quell_regionalist_movements = {
+
+		icon = oppression
+
+		cost = 150
+
+		available = {
+			OR = {
+				has_autonomy_state = autonomy_regional_district
+				AND = {
+					has_autonomy_state = autonomy_federal_district
+					compare_autonomy_progress_ratio < 0.25
+				}
+			}
+		}
+
+		complete_effect = {
+			set_country_flag = USA_quell_regionalist_beliefs 
+			if = {
+				limit = { OR = { has_dlc = "Waking the Tiger" has_dlc = "Together for Victory" has_dlc = "Death or Dishonor" } }
+				add_autonomy_ratio = {
+					value = -0.1
+					localization = USA_FED_pro_federal_politics
+				}
+			}
+			custom_effect_tooltip = USA_lock_out_regional_decisions
+		}
+
+	}
+
+	USA_FED_step_into_line = {
+
+		icon = generic_political_discourse
+
+		cost = 75
+
+		fire_only_once = yes
+
+		days_remove = 70
+
+		visible = {
+			NOT = {
+				has_country_flag = USA_FED_created_own_political_stuff
+			}
+		}
+
+		modifier = {
+			political_power_cost = 0.1
+			master_ideology_drift = 0.1
+		}
+
+		complete_effect = {
+			if = {
+				limit = { OR = { has_dlc = "Waking the Tiger" has_dlc = "Together for Victory" has_dlc = "Death or Dishonor" } }
+				add_autonomy_ratio = {
+					value = -0.1
+					localization = USA_FED_pro_federal_politics
+				}
+			}
+			set_country_flag = USA_FED_integrating
+			custom_effect_tooltip = USA_FED_unlock_integration_decisions
+		}
+
+	}
+
+	USA_FED_lend_industry_to_feds = {
+
+		icon = generic_political_discourse
+
+		cost = 75
+
+		fire_only_once = yes
+
+		visible = {
+			has_country_flag = USA_FED_integrating
+		}
+
+		complete_effect = {
+			if = {
+				limit = { OR = { has_dlc = "Waking the Tiger" has_dlc = "Together for Victory" has_dlc = "Death or Dishonor" } }
+				add_autonomy_ratio = {
+					value = -0.1
+					localization = USA_FED_pro_federal_politics
+				}
+			}
+			add_timed_idea = {
+				idea = USA_increased_industrial_contributions
+				days = 365
+			}
+		}
+
+	}
+
+	USA_FED_lend_further_integrate_militaries = {
+
+		icon = generic_industry
+
+		cost = 75
+
+		fire_only_once = yes
+
+		visible = {
+			has_country_flag = USA_FED_integrating
+		}
+
+		complete_effect = {
+			if = {
+				limit = { OR = { has_dlc = "Waking the Tiger" has_dlc = "Together for Victory" has_dlc = "Death or Dishonor" } }
+				add_autonomy_ratio = {
+					value = -0.1
+					localization = USA_FED_pro_federal_politics
+				}
+			}
+			army_experience = 20
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+			USA = {
+				army_experience = 20
+				add_tech_bonus = {
+					name = land_doc_bonus
+					bonus = 0.5
+					uses = 1
+					category = land_doctrine
+				}
+			}
+		}
+
+	}
+
+	USA_FED_ask_annexation = {
+
+		icon = generic_political_discourse
+
+		cost = 150
+
+		fire_only_once = yes
+
+		available = {
+			has_autonomy_state = autonomy_regional_district
+		}
+
+		visible = {
+			has_country_flag = USA_FED_integrating
+		}
+
+		complete_effect = {
+			USA = {
+				country_event = { id = TDTL_USA_event.12 hours = 5 }
 			}
 		}
 

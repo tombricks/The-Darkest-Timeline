@@ -2,7 +2,6 @@ TDTL_USA_federalist_category = {
 	icon = generic_formable_nations
 	allowed = { OR = { tag = MID tag = TEX tag = APA tag = CAL } }
 	visible = {
-		has_completed_focus = USA_FED_federalism
 		is_subject_of = USA
 	}
 }
@@ -10,8 +9,7 @@ TDTL_USA_regionalist_category = {
 	icon = generic_formable_nations
 	allowed = { OR = { tag = MID tag = TEX tag = APA tag = CAL } }
 	visible = {
-		has_completed_focus = USA_FED_regionalism
 		is_subject_of = USA
-		NOT = { has_completed_focus = USA_FED_quell_regionalist_beliefs }
+		NOT = { has_country_flag = USA_quell_regionalist_beliefs }
 	}
 }

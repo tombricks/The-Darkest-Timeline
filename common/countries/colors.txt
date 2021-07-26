@@ -766,8 +766,8 @@ WSM = {
 	color_ui = rgb { 71 169 20 }
 }
 FAR = {
-	color = rgb { 240 135 119 }
-	color_ui = rgb { 240 135 119 }
+	color = rgb { 173 27 24 }
+	color_ui = rgb { 173 27 24 }
 SOS = {
 	color = rgb { 130 71 16 }
 	color_ui = rgb { 130 71 16 }

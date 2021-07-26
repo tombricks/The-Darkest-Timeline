@@ -128,6 +128,21 @@ spriteTypes = {
 		name = "GFX_autonomy_collaboration_government_icon"
 		textureFile = "gfx/interface/autonomy/autonomy_collaboration_government.dds"
 	}
+
+	spriteType = {
+		name = "GFX_autonomy_autonomous_district_icon"
+		textureFile = "gfx/interface/autonomy/autonomy_autonomous_district.dds"
+	}
+
+	spriteType = {
+		name = "GFX_autonomy_regional_district_icon"
+		textureFile = "gfx/interface/autonomy/autonomy_regional_district.dds"
+	}
+
+	spriteType = {
+		name = "GFX_autonomy_federal_district_icon"
+		textureFile = "gfx/interface/autonomy/autonomy_federal_district.dds"
+	}
 	
 	spriteType = {
 		name = "GFX_autonomy_level_button"

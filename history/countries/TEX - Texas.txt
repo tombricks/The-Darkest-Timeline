@@ -17,5 +17,5 @@ add_ideas = {
 	USA_sudden_autonomy
 }
 USA = {
-	set_autonomy = { target = PREV autonomy_state = autonomy_autonomous_area }
+	set_autonomy = { target = PREV autonomy_state = autonomy_federal_district }
 }

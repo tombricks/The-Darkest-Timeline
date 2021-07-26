@@ -95,7 +95,7 @@ news_event = { #FROM becomes Regional District
 		hidden_effect = {
 			set_autonomy = {
 				target = FROM
-				autonomy_state = autonomy_integrated_puppet
+				autonomy_state = autonomy_regional_district
 			}
 		}
 	}
@@ -114,7 +114,7 @@ news_event = { #FROM becomes Autonomous District
 		hidden_effect = {
 			set_autonomy = {
 				target = FROM
-				autonomy_state = autonomy_colony
+				autonomy_state = autonomy_autonomous_district
 			}
 		}
 	}
@@ -133,7 +133,7 @@ news_event = { #FROM becomes Federal District
 		hidden_effect = {
 			set_autonomy = {
 				target = FROM
-				autonomy_state = autonomy_puppet
+				autonomy_state = autonomy_federal_district
 			}
 		}
 	}
