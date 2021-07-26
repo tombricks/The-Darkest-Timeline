@@ -13,19 +13,12 @@ state={
 			industrial_complex = 1
 		}
 		add_core_of = SYR
-		add_core_of = SYO
 		add_core_of = KUR
 		victory_points = {
 			3942 1 
 		}
 		victory_points = {
 			6883 1 
-		}
-		ISI = {
-			set_province_controller = 1634
-		}
-		SYO = {
-			set_province_controller = 6883
 		}
 
 	}

@@ -12,7 +12,8 @@ state={
 	}
 
 	history={
-		owner = AUS
+		owner = EUR
+		add_core_of = EUR
 		buildings = {
 			infrastructure = 6
 			industrial_complex = 3

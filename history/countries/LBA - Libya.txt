@@ -9,18 +9,3 @@ set_politics = {
 	election_frequency = 48
 	elections_allowed = no
 }
-
-create_country_leader = {
-	name = "Muammar Gaddafi"
-	desc = ""
-	picture = "Muammar_Gaddafi.dds"
-	expire = "2021.1.1"
-	ideology = gaddafism
-	traits = {
-		#
-	}
-}
-
-set_popularities = {
-	neutrality = 100
-}

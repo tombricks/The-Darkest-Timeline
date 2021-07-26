@@ -11,11 +11,6 @@ state={
 			industrial_complex = 1
 		}
 		add_core_of = SYR
-		add_core_of = SYO
-		SYO = {
-			set_province_controller = 7513
-			set_province_controller = 12316
-		}
 	}
 
 	provinces={

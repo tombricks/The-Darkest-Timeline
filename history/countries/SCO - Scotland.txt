@@ -4,8 +4,17 @@ set_stability = 0.6
 set_war_support = 0.6
 
 set_politics = {
-		 ruling_party = neutrality
-		last_election = "2012.1.1"
-		election_frequency = 48
-		elections_allowed = no
+	ruling_party = democratic
+	last_election = "2034.5.7"
+	election_frequency = 60
+	elections_allowed = yes
+}
+
+set_popularities = {
+	democratic = 100 #
+}
+
+add_ideas = {
+	ENG_Arthur_II
+	ENG_Commonwealth_of_Nations
 }

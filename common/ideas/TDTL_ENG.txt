@@ -1,6 +1,32 @@
 ideas = {
 	hidden_ideas = {
-		ENG_Elizabeth_II = {
+	}
+
+	country = {
+		ENG_Nationalism = {
+			allowed = {
+				tag = ENG
+			}
+
+			modifier = {
+				fascism_drift = 0.015
+				neutrality_drift = 0.015
+				stability_factor = -0.1
+			}
+		}
+
+		ENG_Reclaimation = {
+			allowed = {
+				tag = ENG
+			}
+
+			modifier = {
+				justify_war_goal_time = -0.25
+				war_support_factor = 0.25
+			}
+		}
+
+		ENG_Arthur_II = {
 			
 			allowed = {
 				NOT = {
@@ -9,6 +35,29 @@ ideas = {
 			}
 			
 			modifier = {
+			}
+		}
+
+		ENG_City_of_London = {
+			allowed = {
+				tag = ENG
+			}
+
+			modifier = {
+				political_power_gain = 0.25
+				research_speed_factor = 0.1
+			}
+		}
+
+		ENG_Commonwealth_of_Nations = {
+			allowed = {
+			}
+
+			modifier = {
+				political_power_gain = 0.05	
+				trade_opinion_factor = 0.1
+				democratic_acceptance = 25
+				justify_war_goal_time = -0.1
 			}
 		}
 	}

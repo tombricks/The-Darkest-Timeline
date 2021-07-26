@@ -1,6 +1,7 @@
 ﻿l_english:
  autonomy_puppet:0 "Puppet"
- Autonomy_Soviet_Socialist_Republic:0 "Soviet Socialist Republic"
+ autonomy_autonomous_area:0 "Autonomous Area"
+ autonomy_military_administration:0 "Military Administration"
  autonomy_annex:0 "Annexed"
  autonomy_integrated_puppet:0 "Integrated Puppet"
  autonomy_collaboration_government:0 "Collaboration Government"

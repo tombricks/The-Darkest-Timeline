@@ -1,26 +1,22 @@
 spriteTypes = {
 	spriteType = {
-		name = "GFX_idea_SOV_CPSU_Reformists"
-		texturefile = "gfx/interface/ideas/SOV_CPSU_Reformists.dds"
+		name = "GFX_idea_ENG_Nationalism"
+		texturefile = "gfx/interface/ideas/ENG_Nationalism.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_SOV_CPSU_Conservatives"
-		texturefile = "gfx/interface/ideas/SOV_CPSU_Conservatives.dds"
+		name = "GFX_idea_ENG_Reclaimation"
+		texturefile = "gfx/interface/ideas/ENG_Reclaimation.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_SOV_CPSU_Nationalists"
-		texturefile = "gfx/interface/ideas/SOV_CPSU_Nationalists.dds"
+		name = "GFX_idea_ENG_Arthur_II"
+		texturefile = "gfx/interface/ideas/ENG_Arthur_II.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_EUR_member"
-		texturefile = "gfx/interface/ideas/EUR_member.dds"
+		name = "GFX_idea_ENG_City_of_London"
+		texturefile = "gfx/interface/ideas/ENG_City_of_London.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_international_court"
-		texturefile = "gfx/interface/ideas/UN_international_court.dds"
-	}
-	spriteType = {
-		name = "GFX_idea_ISI_Recruitment"
-		texturefile = "gfx/interface/ideas/ISI_Recruitment.dds"
+		name = "GFX_idea_ENG_Commonwealth_of_Nations"
+		texturefile = "gfx/interface/ideas/ENG_Commonwealth_of_Nations.dds"
 	}
 }

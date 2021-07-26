@@ -7,8 +7,7 @@ state={
 	state_category = city
 
 	history={
-		owner = EUR
-		add_core_of = EUR
+		owner = SPR
 		add_core_of = GLC
 		victory_points = {
 			758 5

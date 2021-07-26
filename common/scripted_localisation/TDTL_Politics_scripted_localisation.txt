@@ -1,35 +1,13 @@
 defined_text = { 
 	name = GetDualLeaderName
-	text = {
-		trigger = {
-			has_idea = RMV_Nicholas_III
-		}
-		localization_key = "Nicholas III"
-	}
-	text = {
-		trigger = {
-			has_idea = ENG_Elizabeth_II
-		}
-		localization_key = "Elizabeth II"
-	}
+	text = { trigger = { has_idea = ENG_Arthur_II } localization_key = "Arthur II" }
 	text = {
 		localization_key = "done fucked"
 	}
 }
 defined_text = { 
 	name = GetDualLeaderGFX
-	text = {
-		trigger = {
-			has_idea = RMV_Nicholas_III
-		}
-		localization_key = "GFX_RMV_Nicholas_III"
-	}
-	text = {
-		trigger = {
-			has_idea = ENG_Elizabeth_II
-		}
-		localization_key = "GFX_ENG_Elizabeth_II"
-	}
+	text = { trigger = { has_idea = ENG_Arthur_II } localization_key = "GFX_ENG_Arthur_II" }
 	text = {
 		localization_key = "GFX_leader_unknown"
 	}

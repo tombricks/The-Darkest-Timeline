@@ -1,4 +1,4 @@
-# KOR - North Korea.txt
+# NKR - North Korea.txt
 capital = 527
 set_stability = 0.6
 set_war_support = 0.6

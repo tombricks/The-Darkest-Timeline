@@ -1,0 +1,39 @@
+# ENG - England.txt
+capital = 126
+set_stability = 0.65
+set_war_support = 0.75
+
+set_politics = {
+	ruling_party = democratic
+	last_election = "2034.5.7"
+	election_frequency = 60
+	elections_allowed = yes
+}
+
+set_popularities = {
+	communism = 11 # ECPGB
+	socialism = 16 # Labour-Left
+	democratic = 40 # Tories
+	neutrality = 3 # ML-UK
+	fascism = 30 # ENP 
+}
+
+create_country_leader = {
+	name = "Tom Pursglove"
+	picture = "Tom Pursglove.dds"
+	ideology = liberalism
+}
+
+create_country_leader = {
+	name = "Tommy Robinson"
+	picture = "Tommy Robinson.dds"
+	ideology = fascism_ideology
+}
+
+add_ideas = {
+	ENG_Arthur_II
+	ENG_Commonwealth_of_Nations
+	ENG_Nationalism
+	ENG_Reclaimation
+	ENG_City_of_London
+}

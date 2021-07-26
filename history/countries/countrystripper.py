@@ -2,7 +2,7 @@ import os
 listfile = ""
 for filename in os.listdir("."):
 	filechanged = False
-	if ".txt" not in filename or "EUR - Europe.txt" in filename:
+	if ".txt" not in filename:
 		continue
 	file = open("./"+filename, "r", encoding="utf8")
 	filearr = file.readlines()

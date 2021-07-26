@@ -1,0 +1,25 @@
+
+state={
+	id=826
+	name="STATE_826"
+	provinces={
+		222 310 319 341 3298 6459 7482 9275 11222 
+	}
+	history = {
+		owner = SOV
+		add_core_of = SOV
+		add_core_of = LAT
+		victory_points = {
+			310 1 
+		}
+		buildings = {
+			infrastructure = 4
+			310 = {
+				bunker = 2
+			}
+		}
+	}
+	state_category = large_town
+	manpower=575000
+	buildings_max_level_factor=1.000
+}

@@ -1,27 +1,11 @@
+# WSM - West Somalia.txt
 capital = 822
 set_stability = 0.6
 set_war_support = 0.6
 
 set_politics = {
-	ruling_party = neutrality
-	last_election = "2010.1.1"
-	election_frequency = 48
-	elections_allowed = no
-}
-set_popularities = {
-	democratic = 30
-	neutrality = 60
-	fascism = 10
-}
-
-
-create_country_leader = {
-	name = "Hassan Dahir Aweis Shiikhuna"
-	desc = "POLITICS_FRANKLIN_DELANO_ROOSEVELT_DESC"
-	picture = "gfx/leaders/Africa/portrait_africa_generic_2.dds"
-	expire = "2015.1.1"
-	ideology = authoritarianism_ideology
-	traits = {
-		#
-	}
+		 ruling_party = neutrality
+		last_election = "2012.1.1"
+		election_frequency = 48
+		elections_allowed = no
 }

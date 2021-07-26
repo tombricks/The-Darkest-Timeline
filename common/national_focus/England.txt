@@ -1,0 +1,26 @@
+focus_tree = {
+	id = ENG_Focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			OR = {
+				tag = ENG
+			}
+		}
+	}
+
+	default = no
+
+	continuous_focus_position = { x = 1100 y = 1000 }
+
+	focus = {
+		id = ENG_Tackle_the_Inner_England_Issue
+		icon = GFX_focus_ENG_Tackle_the_Inner_England_Issue
+		x = 0
+		y = 0
+		cost = 10
+	}
+}

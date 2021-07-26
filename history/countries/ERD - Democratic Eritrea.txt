@@ -1,41 +1,11 @@
-# ERI - Eritrea.txt
+# ERD - Democratic Eritrea.txt
 capital = 821
 set_stability = 0.6
 set_war_support = 0.6
 
 set_politics = {
-	ruling_party = democratic
-	last_election = "2008.5.24"
-	election_frequency = 48
-	elections_allowed = yes
-}
-set_popularities = {
-	democratic = 40
-	socialism = 20
-	communism = 20
-	neutrality = 10
-	fascism = 10
-}
-
-
-create_country_leader = {
-	name = "Tewelde Ghebreselassie"
-	desc = "POLITICS_FRANKLIN_DELANO_ROOSEVELT_DESC"
-	picture = "gfx/leaders/Europe/portrait_europe_generic_2.dds"
-	expire = "2015.1.1"
-	ideology = social_democracy
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Hussein Kelifah"
-	desc = "POLITICS_FRANKLIN_DELANO_ROOSEVELT_DESC"
-	picture = "gfx/leaders/Europe/portrait_europe_generic_2.dds"
-	expire = "2015.1.1"
-	ideology = marxism_leninism
-	traits = {
-		#
-	}
+		 ruling_party = neutrality
+		last_election = "2012.1.1"
+		election_frequency = 48
+		elections_allowed = no
 }

@@ -5,12 +5,12 @@ GER = {
 	color_ui = rgb { 138 155 116 }
 }
 ENG = {
-	color = rgb { 201 56 93 }
-	color_ui = rgb { 255 73 121 }
+	color = rgb { 191 86 86 }
+	color_ui = rgb { 191 86 86 }
 }
 SOV = {
-	color = rgb { 125 13 24 }
-	color_ui = rgb { 163 17 31 }
+	color = rgb { 130 71 78 }
+	color_ui = rgb { 130 71 78 }
 }
 SWE = {
 	color = rgb { 36 132 247 }
@@ -106,8 +106,8 @@ FIN = {
 	color_ui = rgb { 255 255 255 }
 }
 IRE = {
-	color = rgb { 80 159 90 }
-	color_ui = rgb { 104 207 117 }
+	color = rgb { 38 136 66 }
+	color_ui = rgb { 38 136 66 }
 }
 HUN = {
 	color = rgb { 249 126 98 }
@@ -429,8 +429,8 @@ MNT = {
 }
 
 BLR = {
-	color = rgb { 180 220 190 }
-	color_ui = rgb { 180 220 190 }
+	color = rgb { 127 108 102 }
+	color_ui = rgb { 127 108 102 }
 }
 MAN = {
 	color = rgb { 255 120 71 }
@@ -714,8 +714,8 @@ SHL = {
 	color_ui = rgb { 51 51 255 }
 }
 EUR = {
-	color = rgb { 0 51 153 }
-	color_ui = rgb { 0 51 153 }
+	color = rgb { 0 66 150 }
+	color_ui = rgb { 0 66 150 }
 }
 QUE = {
 	color = rgb { 60 87 124 }
@@ -726,8 +726,8 @@ ZAP = {
 	color_ui = rgb { 117 14 15 }	
 }
 NVR = {
-	color = rgb { 74 15 74 }
-	color_ui = rgb { 74 15 74 }	
+	color = rgb { 167 71 113 }
+	color_ui = rgb { 167 71 113 }	
 }
 NKR = {
 	color = rgb { 50 51 153 }
@@ -768,4 +768,19 @@ WSM = {
 FAR = {
 	color = rgb { 240 135 119 }
 	color_ui = rgb { 240 135 119 }
+SOS = {
+	color = rgb { 130 71 16 }
+	color_ui = rgb { 130 71 16 }
+}
+ABK = {
+	color = rgb { 165 144 111 }
+	color_ui = rgb { 165 144 111 }
+}
+SCO = {
+	color = rgb { 199 149 61 }
+	color_ui = rgb { 199 149 61 }
+}
+WLS = {
+	color = rgb { 32 148 32 }
+	color_ui = rgb { 130 125 61 }
 }

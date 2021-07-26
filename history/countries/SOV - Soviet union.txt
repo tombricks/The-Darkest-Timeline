@@ -1,66 +1,30 @@
 # SOV - Soviet union.txt
 capital = 219
-set_stability = 0.55
-set_war_support = 0.75
-
-set_cosmetic_tag = SOV_UNION_communism
-
-create_country_leader = {
-	name = "Yegor Ligachev"
-	ideology = marxism_leninism
-	picture = "Yegor_Ligachev.dds"
-}
-
-add_ideas = {
-	SOV_CPSU_Reformists
-	SOV_CPSU_Conservatives
-	SOV_CPSU_Nationalists
-}
+set_stability = 0.6
+set_war_support = 0.6
 
 set_politics = {
-	ruling_party = communism
+	ruling_party = fascism
 	last_election = "2012.1.1"
 	election_frequency = 48
 	elections_allowed = no
 }
 
-set_popularities = {
-	communism = 48
-	socialism = 24
-	neutrality = 13
-	democratic = 12
-	fascism = 3
+create_country_leader = {
+	name = "Yevgeny Lavlinsky"
+	picture = "Yevgeny Lavlinsky.dds"
+	ideology = fascism_ideology
 }
 
-create_faction = "Moscow Treaty Organization"
+set_autonomy = { target = ABK autonomy_state = autonomy_puppet }
+set_autonomy = { target = SOS autonomy_state = autonomy_puppet }
+
+create_faction = "Eurasian Community"
 add_to_faction = SOV
-set_autonomy = { target = BLR autonomy_state = Autonomy_Soviet_Socialist_Republic }
-set_autonomy = { target = GEO autonomy_state = Autonomy_Soviet_Socialist_Republic }
-set_autonomy = { target = ARM autonomy_state = Autonomy_Soviet_Socialist_Republic }
-set_autonomy = { target = AZR autonomy_state = Autonomy_Soviet_Socialist_Republic }
-set_autonomy = { target = KAZ autonomy_state = Autonomy_Soviet_Socialist_Republic }
-set_autonomy = { target = TMS autonomy_state = Autonomy_Soviet_Socialist_Republic }
-set_autonomy = { target = UZB autonomy_state = Autonomy_Soviet_Socialist_Republic }
-set_autonomy = { target = TAJ autonomy_state = Autonomy_Soviet_Socialist_Republic }
-set_autonomy = { target = KYR autonomy_state = Autonomy_Soviet_Socialist_Republic }
-set_autonomy = { target = NVR autonomy_state = Autonomy_Soviet_Socialist_Republic }
-every_state = {
-	limit = {
-		OR = {
-			OWNER = { is_subject_of = SOV has_autonomy_state = Autonomy_Soviet_Socialist_Republic }
-			any_country = {
-				is_subject_of = SOV
-				has_autonomy_state = Autonomy_Soviet_Socialist_Republic
-				PREV =  {
-					is_claimed_by = PREV
-				}
-			}
-		}
-	}
-	add_claim_by = SOV
-}
-diplomatic_relation = {
-	country = UKR
-	relation = non_aggression_pact
-	active = yes
-}
+add_to_faction = SOS
+add_to_faction = ABK
+add_to_faction = PER
+add_to_faction = SER
+add_to_faction = BLR
+add_to_faction = NVR
+add_to_faction = EST

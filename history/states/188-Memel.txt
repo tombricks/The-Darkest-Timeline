@@ -11,8 +11,7 @@ state=
 		victory_points = {
 			3288 1
 		}
-		owner = EUR
-		add_core_of = EUR
+		owner = LIT
 		buildings = {
 			infrastructure = 5
 			industrial_complex = 1

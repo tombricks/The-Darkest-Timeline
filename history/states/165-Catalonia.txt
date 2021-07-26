@@ -7,8 +7,7 @@ state={
 	state_category = large_city
 
 	history={
-		owner = EUR
-		add_core_of = EUR
+		owner = CAT
 		add_core_of = CAT
 		victory_points = {
 			9764 30
@@ -29,6 +28,7 @@ state={
 			}
 		}
 		add_core_of = SPR
+		add_claim_by = SPR
 	}
 
 	provinces={
