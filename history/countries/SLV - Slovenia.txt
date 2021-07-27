@@ -7,13 +7,23 @@ set_politics = {
 	ruling_party = neutrality
 	last_election = "2012.1.1"
 	election_frequency = 48
-	elections_allowed = no
+	elections_allowed = yes
 }
 
 set_popularities = {
-	neutrality = 40
-	democratic = 15
-	socialism = 15
-	fascism = 15
-	communism = 15
+	neutrality = 45
+	fascism = 25
+	democratic = 20
+	socialism = 10
+}
+
+create_country_leader = {
+	name = "Janez Jelinčič"
+	desc = "POLITICS_YEEBIO_WOLDAI_DESC"
+	picture = "Portrait_Ethiopia_Haile_Selassie.dds"
+	expire = "2040.1.1"
+	ideology = populism
+	traits = {
+		#
+	}
 }

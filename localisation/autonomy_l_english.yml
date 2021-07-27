@@ -3,6 +3,7 @@
  autonomy_federal_district:0 "Federal District"
  autonomy_regional_district:0 "Regional District"
  autonomy_puppet:0 "Puppet"
+ autonomy_eu_member:0 "European Union Member"
  autonomy_autonomous_area:0 "Autonomous Area"
  autonomy_military_administration:0 "Military Administration"
  autonomy_annex:0 "Annexed"

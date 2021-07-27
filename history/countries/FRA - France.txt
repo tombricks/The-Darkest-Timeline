@@ -7,13 +7,40 @@ set_politics = {
 	ruling_party = neutrality
 	last_election = "2012.1.1"
 	election_frequency = 48
-	elections_allowed = no
+	elections_allowed = yes
 }
 
+add_ideas = FRA_investments_africa 
+
 set_popularities = {
-	neutrality = 40
-	democratic = 15
-	socialism = 15
-	fascism = 15
-	communism = 15
+	neutrality = 30
+	democratic = 25
+	socialism = 25
+	fascism = 10
+	communism = 10
+}
+
+puppet = MLI
+puppet = GNA
+puppet = IVO
+
+create_country_leader = {
+	name = "Jordan Bardella"
+	desc = ""
+	picture = "Muammar_Gaddafi.dds"
+	expire = "2021.1.1"
+	ideology = fascism_ideology
+	traits = {
+		#
+	}
+}
+create_country_leader = {
+	name = "Lilian Bocuse"
+	desc = ""
+	picture = "Muammar_Gaddafi.dds"
+	expire = "2021.1.1"
+	ideology = populism
+	traits = {
+		#
+	}
 }

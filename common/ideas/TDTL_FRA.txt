@@ -1,0 +1,23 @@
+ideas = {
+
+	country = {
+
+		FRA_investments_africa = {
+
+			picture = investments_in_africa
+
+			allowed = {
+				always = no
+			}
+
+			modifier = {
+				political_power_cost = 0.1
+				war_support_factor = 0.05
+				send_volunteers_tension = -0.3
+			}
+
+		}
+
+	}
+
+}

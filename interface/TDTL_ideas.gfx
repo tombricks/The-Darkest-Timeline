@@ -19,4 +19,8 @@ spriteTypes = {
 		name = "GFX_idea_ENG_Commonwealth_of_Nations"
 		texturefile = "gfx/interface/ideas/ENG_Commonwealth_of_Nations.dds"
 	}
+	spriteType = {
+		name = "GFX_idea_investments_in_africa"
+		texturefile = "gfx/interface/ideas/investments_africa.dds"
+	}
 }

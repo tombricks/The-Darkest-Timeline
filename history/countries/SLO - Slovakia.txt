@@ -13,7 +13,18 @@ set_politics = {
 set_popularities = {
 	neutrality = 40
 	democratic = 15
-	socialism = 15
-	fascism = 15
-	communism = 15
+	socialism = 10
+	fascism = 30
+	communism = 5
+}
+
+create_country_leader = {
+	name = "László Toroczkai"
+	desc = "POLITICS_YEEBIO_WOLDAI_DESC"
+	picture = "Portrait_Ethiopia_Haile_Selassie.dds"
+	expire = "2040.1.1"
+	ideology = authoritarianism_ideology
+	traits = {
+		#
+	}
 }

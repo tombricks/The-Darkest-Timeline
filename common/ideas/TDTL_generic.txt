@@ -24,38 +24,6 @@ ideas = {
 
 		}
 
-		FRA_francafrique = {
-
-			picture = FRA_undividable
-
-			allowed = {
-				always = no
-			}
-
-			modifier = {
-				political_power_cost = 0.1
-				consumer_goods_factor = -0.05
-				send_volunteers_tension = -0.3
-			}
-
-		}
-
-		african_francafrique = {
-
-			picture = FRA_undividable
-
-			allowed = {
-				always = no
-			}
-
-			modifier = {
-				political_power_cost = 0.1
-				stability_factor = 0.05
-				consumer_goods_factor = -0.05
-			}
-
-		}
-
 	}
 
 }

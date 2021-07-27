@@ -40,6 +40,7 @@ autonomy_state = {
 	allowed = {
 		NOT = { OR = { tag = MID tag = TEX tag = CAL tag = APA } OVERLORD = { tag = USA } }
 		NOT = { OR = { has_country_flag = autonomous_area_puppet_flag has_country_flag = military_administration_puppet_flag } }
+		NOT = { OR = { tag = FRA tag = SPR tag = POR tag = CAT tag = GLC tag = SWI tag = ENG tag = IRE tag = ITA tag = POL tag = CRO tag = SLO tag = CZE tag = SLV tag = CRO tag = SER tag = BOS tag = MAC tag = GRE tag = TUR tag = ROM tag = TRA tag = MOL tag = UKR tag = DEN tag = SWE tag = NOR tag = FIN tag = EST tag = LIT tag = LAT tag = BLR tag = BUL tag = HUN } OVERLORD = { tag = EUR } }
 	}
 
 	#ROOT is puppet - FROM is potential OVERLORD

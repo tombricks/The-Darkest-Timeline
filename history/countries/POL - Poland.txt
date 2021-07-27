@@ -4,16 +4,32 @@ set_stability = 0.6
 set_war_support = 0.6
 
 set_politics = {
-	ruling_party = neutrality
+	ruling_party = fascism
 	last_election = "2012.1.1"
 	election_frequency = 48
 	elections_allowed = no
 }
 
 set_popularities = {
-	neutrality = 40
+	fascism = 50
+	neutrality = 20
 	democratic = 15
 	socialism = 15
-	fascism = 15
-	communism = 15
+}
+
+create_faction = anti_union_pact
+add_to_faction = POL
+add_to_faction = HUN
+add_to_faction = SLO
+add_to_faction = SLV
+
+create_country_leader = {
+	name = "Adam Andruszkiewicz"
+	desc = "POLITICS_YEEBIO_WOLDAI_DESC"
+	picture = "Portrait_Ethiopia_Haile_Selassie.dds"
+	expire = "2040.1.1"
+	ideology = fascism_ideology 
+	traits = {
+		#
+	}
 }

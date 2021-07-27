@@ -1,0 +1,58 @@
+autonomy_state = {
+	id = autonomy_eu_member
+	
+	default = no
+	is_puppet = yes
+	use_overlord_color = yes
+	
+	min_freedom_level = 0.5
+	
+	manpower_influence = 0.6
+	
+	rule = {
+		can_not_declare_war = yes
+		can_decline_call_to_war = no
+		can_be_spymaster = no
+		contributes_operatives = no
+		can_create_collaboration_government = no
+	}
+	
+	modifier = {
+		autonomy_manpower_share = 0.9
+		can_master_build_for_us = 1
+		extra_trade_to_overlord_factor = 1.0
+		overlord_trade_cost_factor = -0.9
+		autonomy_gain = -1
+		research_sharing_per_country_bonus_factor = -0.5
+	}
+	
+	ai_subject_wants_higher = {
+		factor = 0
+	}
+	
+	ai_overlord_wants_lower = {
+		factor = 1.0
+	}
+
+	ai_overlord_wants_garrison = {
+		always = no
+	}
+
+	allowed = {
+		OR = { tag = FRA tag = SPR tag = POR tag = CAT tag = GLC tag = SWI tag = ENG tag = IRE tag = ITA tag = POL tag = CRO tag = SLO tag = CZE tag = SLV tag = CRO tag = SER tag = BOS tag = MAC tag = GRE tag = TUR tag = ROM tag = TRA tag = MOL tag = UKR tag = DEN tag = SWE tag = NOR tag = FIN tag = EST tag = LIT tag = LAT tag = BLR tag = BUL tag = HUN } 
+		OVERLORD = { tag = EUR }
+	}
+
+	#ROOT is puppet - FROM is potential OVERLORD
+	use_for_peace_conference_weight = {
+		base = 0
+	}
+
+	can_take_level = {
+		#trigger here
+	}
+
+	can_lose_level = {
+		#trigger here
+	}
+}

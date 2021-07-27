@@ -52,6 +52,7 @@ autonomy_state = {
 			}
 			OVERLORD = { not = { tag = JAP } }
 		}
+		NOT = { OR = { tag = FRA tag = SPR tag = POR tag = CAT tag = GLC tag = SWI tag = ENG tag = IRE tag = ITA tag = POL tag = CRO tag = SLO tag = CZE tag = SLV tag = CRO tag = SER tag = BOS tag = MAC tag = GRE tag = TUR tag = ROM tag = TRA tag = MOL tag = UKR tag = DEN tag = SWE tag = NOR tag = FIN tag = EST tag = LIT tag = LAT tag = BLR tag = BUL tag = HUN } OVERLORD = { tag = EUR } }
 	}
 	
 	can_take_level = {
