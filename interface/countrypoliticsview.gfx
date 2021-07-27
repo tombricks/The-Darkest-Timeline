@@ -143,6 +143,16 @@ spriteTypes = {
 		name = "GFX_autonomy_federal_district_icon"
 		textureFile = "gfx/interface/autonomy/autonomy_federal_district.dds"
 	}
+
+	spriteType = {
+		name = "GFX_autonomy_autonomous_area_icon"
+		textureFile = "gfx/interface/autonomy/autonomy_autonomous_area.dds"
+	}
+
+	spriteType = {
+		name = "GFX_autonomy_military_administration_icon"
+		textureFile = "gfx/interface/autonomy/autonomy_military_administration.dds"
+	}
 	
 	spriteType = {
 		name = "GFX_autonomy_level_button"

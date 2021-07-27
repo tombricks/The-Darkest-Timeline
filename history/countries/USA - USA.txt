@@ -10,6 +10,14 @@ set_politics = {
 		elections_allowed = yes
 }
 
+set_popularities = {
+	democratic = 80
+	democratic = 5
+	socialism = 5
+	fascism = 5
+	communism = 5
+}
+
 add_ideas = {
 	USA_stock_market_destroyed
 }

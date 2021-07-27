@@ -2,3 +2,35 @@ TDTL_foreign_intervention = {
 	icon = generic_arms_trade
 	allowed = { always = yes }
 }
+TDTL_rising_ideologies = {
+	icon = generic_political_actions
+	allowed = { always = yes }
+	visible = {
+		OR = {
+			AND = {
+				NOT = { has_government = fascism }
+				fascism > 0.2
+			}
+			AND = {
+				NOT = { has_government = democratic }
+				democratic > 0.2
+			}
+			AND = {
+				NOT = { has_government = socialism }
+				socialism > 0.2
+			}
+			AND = {
+				NOT = { has_government = neutrality }
+				neutrality > 0.2
+			}
+			AND = {
+				NOT = { has_government = communism }
+				communism > 0.2
+			}
+		}
+	}
+}
+TDTL_generic_industry_tree = {
+	icon = generic_industry
+	allowed = { always = yes }
+}

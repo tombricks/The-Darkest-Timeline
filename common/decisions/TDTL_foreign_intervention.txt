@@ -82,6 +82,10 @@ TDTL_foreign_intervention = {
 			}
 			modifier = {
 				add = 1
+				date > 2014.2.12
+			}
+			modifier = {
+				add = 1
 				has_government = fascism
 			}
 		}

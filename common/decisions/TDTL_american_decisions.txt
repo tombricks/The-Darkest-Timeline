@@ -19,10 +19,6 @@ TDTL_USA_regionalist_category = {
 				socialism > 0.2
 			}
 			modifier = {
-				factor = 2
-				has_completed_focus = USA_FED_capitalism_failed
-			}
-			modifier = {
 				factor = 0
 				has_political_power < 100
 			}
@@ -77,10 +73,6 @@ TDTL_USA_regionalist_category = {
 			modifier = {
 				add = 1
 				tag = TEX
-			}
-			modifier = {
-				factor = 0.5
-				has_completed_focus = USA_FED_capitalism_failed
 			}
 			modifier = {
 				factor = 0
@@ -151,6 +143,22 @@ TDTL_USA_regionalist_category = {
 
 		days_remove = 50
 
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				add = 1
+				neutrality > 0.15
+			}
+			modifier = {
+				add = 1
+				fascism > 0.1
+			}
+			modifier = {
+				add = 1
+				communism > 0.1
+			}
+		}
+
 		modifier = {
 			war_support_weekly = 0.002
 			weekly_manpower = -100
@@ -185,6 +193,10 @@ TDTL_USA_regionalist_category = {
 
 		visible = {
 			has_autonomy_state = autonomy_federal_district
+		}
+
+		ai_will_do = {
+			factor = 1
 		}
 
 		fire_only_once = yes
@@ -232,6 +244,22 @@ TDTL_USA_regionalist_category = {
 		fire_only_once = yes
 
 		days_remove = 70
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				add = 1
+				democratic < 0.45
+			}
+			modifier = {
+				add = 1
+				has_opinion = { target = USA value < -10 }
+			}
+			modifier = {
+				factor = 0
+				has_political_power < 150
+			}
+		}
 
 		visible = {
 			NOT = {
@@ -481,13 +509,13 @@ TDTL_USA_federalist_category = {
 
 		days_remove = 100
 
-		days_re_enable = 260
+		days_re_enable = 265
 
 		ai_will_do = {
-			factor = 1
+			factor = 0
 			modifier = {
-				factor = 0
-				has_political_power > 100
+				factor = 1
+				has_political_power < 25
 			}
 		}
 
@@ -505,7 +533,7 @@ TDTL_USA_federalist_category = {
 			if = {
 				limit = { OR = { has_dlc = "Waking the Tiger" has_dlc = "Together for Victory" has_dlc = "Death or Dishonor" } }
 				add_autonomy_ratio = {
-					value = -0.1
+					value = -0.05
 					localization = USA_FED_pro_federal_politics
 				}
 			}
@@ -618,6 +646,10 @@ TDTL_USA_federalist_category = {
 			has_autonomy_state = autonomy_federal_district
 		}
 
+		ai_will_do = {
+			factor = 1
+		}
+
 		fire_only_once = yes
 
 		complete_effect = {
@@ -701,6 +733,22 @@ TDTL_USA_federalist_category = {
 		fire_only_once = yes
 
 		days_remove = 70
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				add = 1
+				democratic > 0.55
+			}
+			modifier = {
+				add = 1
+				has_opinion = { target = USA value > -25 }
+			}
+			modifier = {
+				factor = 0
+				has_political_power < 150
+			}
+		}
 
 		visible = {
 			NOT = {
@@ -802,6 +850,10 @@ TDTL_USA_federalist_category = {
 		cost = 150
 
 		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
 
 		available = {
 			has_autonomy_state = autonomy_regional_district

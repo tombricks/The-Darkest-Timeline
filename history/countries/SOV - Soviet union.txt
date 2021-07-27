@@ -10,6 +10,12 @@ set_politics = {
 	elections_allowed = no
 }
 
+set_popularities = {
+	fascism = 70
+	democratic = 15
+	socialism = 15
+}
+
 create_country_leader = {
 	name = "Yevgeny Lavlinsky"
 	picture = "Yevgeny Lavlinsky.dds"

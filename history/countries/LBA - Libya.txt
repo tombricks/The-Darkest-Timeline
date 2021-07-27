@@ -9,3 +9,11 @@ set_politics = {
 	election_frequency = 48
 	elections_allowed = no
 }
+
+set_popularities = {
+	neutrality = 40
+	democratic = 15
+	socialism = 15
+	fascism = 15
+	communism = 15
+}

@@ -8,6 +8,20 @@ political_actions = {
 			fascism_drift = 0.1
 		}
 
+		days_re_enable = 70
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				fascism > 0.15
+				add = 1
+			}
+			modifier = {
+				factor = 0
+				has_political_power < 120
+			}
+		}
+
 		cost = 50
 
 		days_remove = 70
@@ -24,6 +38,20 @@ political_actions = {
 
 		modifier = {
 			communism_drift = 0.1
+		}
+
+		days_re_enable = 70
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				communism > 0.15
+				add = 1
+			}
+			modifier = {
+				factor = 0
+				has_political_power < 120
+			}
 		}
 
 		cost = 50
@@ -44,6 +72,20 @@ political_actions = {
 			socialism_drift = 0.1
 		}
 
+		days_re_enable = 70
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				socialism > 0.15
+				add = 1
+			}
+			modifier = {
+				factor = 0
+				has_political_power < 120
+			}
+		}
+
 		cost = 50
 
 		days_remove = 70
@@ -60,6 +102,20 @@ political_actions = {
 
 		modifier = {
 			democratic_drift = 0.1
+		}
+
+		days_re_enable = 70
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				democratic > 0.15
+				add = 1
+			}
+			modifier = {
+				factor = 0
+				has_political_power < 120
+			}
 		}
 
 		cost = 50
@@ -80,6 +136,20 @@ political_actions = {
 			neutrality_drift = 0.1
 		}
 
+		days_re_enable = 70
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				neutrality > 0.15
+				add = 1
+			}
+			modifier = {
+				factor = 0
+				has_political_power < 120
+			}
+		}
+
 		cost = 50
 
 		days_remove = 70
@@ -98,6 +168,8 @@ political_actions = {
 			NOT = { has_government = fascism }
 		}
 
+		days_re_enable = 120
+
 		available = {
 			fascism > 0.1
 		}
@@ -105,6 +177,18 @@ political_actions = {
 		modifier = {
 			fascism_drift = -0.05
 			stability_weekly = 0.007
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				add = 1
+				fascism > 0.2
+			}
+			modifier = {
+				factor = 0
+				has_political_power < 120
+			}
 		}
 	
 		days_remove = 120
@@ -130,8 +214,22 @@ political_actions = {
 			NOT = { has_government = democratic }
 		}
 
+		days_re_enable = 120
+
 		available = {
 			democratic > 0.1
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				add = 1
+				democratic > 0.2
+			}
+			modifier = {
+				factor = 0
+				has_political_power < 120
+			}
 		}
 	
 		modifier = {
@@ -162,8 +260,22 @@ political_actions = {
 			NOT = { has_government = communism }
 		}
 
+		days_re_enable = 120
+
 		available = {
 			communism > 0.1
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				add = 1
+				communism > 0.2
+			}
+			modifier = {
+				factor = 0
+				has_political_power < 120
+			}
 		}
 	
 		modifier = {
@@ -194,8 +306,22 @@ political_actions = {
 			NOT = { has_government = socialism }
 		}
 
+		days_re_enable = 120
+
 		available = {
 			socialism > 0.1
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				add = 1
+				socialism > 0.2
+			}
+			modifier = {
+				factor = 0
+				has_political_power < 120
+			}
 		}
 	
 		modifier = {
@@ -428,7 +554,6 @@ political_actions = {
 				}
 				set_country_flag = banned_socialism_flag
 			}
-			remove_communist_spirits_effect = yes
 			custom_effect_tooltip = ban_socialism_party_tt
 			add_stability = ban_ideology_var
 		}
@@ -572,4 +697,835 @@ political_actions = {
 			factor = 0
 		}
 	}
+}
+
+TDTL_rising_ideologies = {
+	
+	TDTL_crush_opposition = {
+
+		icon = oppression
+
+		cost = 50
+
+		visible = {
+			OR = {
+				AND = {
+					NOT = { has_government = fascism }
+					fascism > 0.25
+				}
+				AND = {
+					NOT = { has_government = democratic }
+					democratic > 0.25
+				}
+				AND = {
+					NOT = { has_government = socialism }
+					socialism > 0.25
+				}
+				AND = {
+					NOT = { has_government = neutrality }
+					neutrality > 0.25
+				}
+				AND = {
+					NOT = { has_government = communism }
+					communism > 0.25
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				add = 1
+				has_political_power > 150
+			}
+			modifier = {
+				factor = 0.5
+				has_government = democratic
+			}
+			modifier = {
+				factor = 1.5
+				has_government = fascism
+			}
+			modifier = {
+				factor = 1.5
+				has_government = communism
+			}
+			modifier = {
+				factor = 2
+				has_stability < 0.5
+			}
+		}
+
+		days_re_enable = 365
+
+		complete_effect = {
+			if = {
+				limit = { NOT = { has_government = fascism } fascism > 0.25 }
+				add_popularity = {
+					ideology = fascism
+					popularity = -0.05
+				}
+			}
+			if = {
+				limit = { NOT = { has_government = communism } communism > 0.25 }
+				add_popularity = {
+					ideology = communism
+					popularity = -0.05
+				}
+			}
+			if = {
+				limit = { NOT = { has_government = democratic } democratic > 0.25 }
+				add_popularity = {
+					ideology = democratic
+					popularity = -0.05
+				}
+			}
+			if = {
+				limit = { NOT = { has_government = neutrality } neutrality > 0.25 }
+				add_popularity = {
+					ideology = neutrality
+					popularity = -0.05
+				}
+			}
+			if = {
+				limit = { NOT = { has_government = socialism } socialism > 0.25 }
+				add_popularity = {
+					ideology = socialism
+					popularity = -0.05
+				}
+			}
+			add_stability = 0.03
+		}
+
+	}
+
+	TDTL_consolidate_socialism = {
+
+		icon = generic_political_discourse
+
+		visible = {
+			socialism > 0.3
+			communism > 0.05
+		}
+
+		cost = 75
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				add = 1
+				neutrality > 0.2
+			}
+			modifier = {
+				add = 1
+				fascism > 0.2
+			}
+			modifier = {
+				add = 1
+				has_political_power > 150
+			}
+		}
+
+		days_re_enable = 365
+
+		complete_effect = {
+			add_stability = -0.03
+			set_temp_variable = { temp_communism = party_popularity@communism }
+			divide_temp_variable = { temp_communism = 2 }
+			add_popularity = {
+				ideology = socialism
+				popularity = temp_communism
+			}
+		}
+
+	}
+
+	TDTL_consolidate_communism = {
+
+		icon = generic_political_discourse
+
+		visible = {
+			communism > 0.3
+			socialism > 0.05
+		}
+
+		cost = 75
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				add = 1
+				fascism > 0.2
+			}
+			modifier = {
+				add = 1
+				neutrality > 0.2
+			}
+			modifier = {
+				add = 1
+				has_political_power > 150
+			}
+		}
+
+		days_re_enable = 365
+
+		complete_effect = {
+			add_stability = -0.03
+			set_temp_variable = { temp_socialism = party_popularity@socialism }
+			divide_temp_variable = { temp_socialism = 2 }
+			add_popularity = {
+				ideology = communism
+				popularity = temp_socialism
+			}
+		}
+
+	}
+
+	TDTL_consolidate_fascism = {
+
+		icon = generic_political_discourse
+
+		visible = {
+			fascism > 0.3
+			neutrality > 0.05
+		}
+
+		cost = 75
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				add = 1
+				communism > 0.2
+			}
+			modifier = {
+				add = 1
+				democratic > 0.2
+			}
+			modifier = {
+				add = 1
+				has_political_power > 150
+			}
+		}
+
+		days_re_enable = 365
+
+		complete_effect = {
+			add_stability = -0.03
+			set_temp_variable = { temp_neutrality = party_popularity@neutrality }
+			divide_temp_variable = { temp_neutrality = 2 }
+			add_popularity = {
+				ideology = fascism
+				popularity = temp_neutrality
+			}
+		}
+
+	}
+
+	TDTL_consolidate_democratic = {
+
+		icon = generic_political_discourse
+
+		visible = {
+			democratic > 0.3
+			socialism > 0.05
+		}
+
+		cost = 75
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				add = 1
+				communism > 0.2
+			}
+			modifier = {
+				add = 1
+				fascism > 0.2
+			}
+			modifier = {
+				add = 1
+				has_political_power > 150
+			}
+		}
+
+		days_re_enable = 365
+
+		complete_effect = {
+			add_stability = -0.03
+			set_temp_variable = { temp_socialism = party_popularity@socialism }
+			divide_temp_variable = { temp_socialism = 2 }
+			add_popularity = {
+				ideology = democratic
+				popularity = temp_socialism
+			}
+		}
+
+	}
+
+	TDTL_consolidate_neutrality = {
+
+		icon = generic_political_discourse
+
+		visible = {
+			neutrality > 0.3
+			fascism > 0.05
+		}
+
+		cost = 75
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				add = 1
+				communism > 0.2
+			}
+			modifier = {
+				add = 1
+				socialism > 0.2
+			}
+			modifier = {
+				add = 1
+				has_political_power > 150
+			}
+		}
+
+		days_re_enable = 365
+
+		complete_effect = {
+			add_stability = -0.03
+			set_temp_variable = { temp_fascism = party_popularity@fascism }
+			divide_temp_variable = { temp_fascism = 2 }
+			add_popularity = {
+				ideology = neutrality
+				popularity = temp_fascism
+			}
+		}
+
+	}
+
+	TDTL_swap_govt_fascism = {
+
+		icon = GFX_decision_category_generic_fascism
+
+		cost = 150
+
+		visible = {
+			NOT = { has_government = fascism }
+			NOT = { has_country_flag = TDTL_civil_war_incoming }
+			OR = {
+				fascism > 0.4
+				AND = {
+					fascism > 0.3
+					has_stability < 0.45
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				add = 1
+				fascism > 0.55
+			}
+		}
+
+		available = {
+			OR = {
+				fascism > 0.5
+				AND = {
+					has_stability < 0.45
+					fascism > 0.4
+				}
+			}
+		}
+
+		complete_effect = {
+			add_stability = -0.05
+			set_politics = {
+				ruling_party = fascism
+				elections_allowed = no
+			}
+		}
+
+	}
+
+	TDTL_swap_govt_communism = {
+
+		icon = GFX_decision_category_generic_communism
+
+		cost = 150
+
+		visible = {
+			NOT = { has_government = communism }
+			NOT = { has_country_flag = TDTL_civil_war_incoming }
+			OR = {
+				communism > 0.4
+				AND = {
+					communism > 0.3
+					has_stability < 0.45
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				add = 1
+				communism > 0.55
+			}
+		}
+
+		available = {
+			OR = {
+				communism > 0.5
+				AND = {
+					has_stability < 0.45
+					communism > 0.4
+				}
+			}
+		}
+
+		complete_effect = {
+			add_stability = -0.05
+			set_politics = {
+				ruling_party = communism
+				elections_allowed = no
+			}
+		}
+
+	}
+
+	TDTL_swap_govt_democratic = {
+
+		icon = GFX_decision_category_generic_democracy
+
+		cost = 150
+
+		visible = {
+			NOT = { has_government = democratic }
+			NOT = { has_country_flag = TDTL_civil_war_incoming }
+			OR = {
+				democratic > 0.4
+				AND = {
+					democratic > 0.3
+					has_stability < 0.45
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				add = 1
+				democratic > 0.55
+			}
+		}
+
+		available = {
+			OR = {
+				democratic > 0.5
+				AND = {
+					has_stability < 0.45
+					democratic > 0.4
+				}
+			}
+		}
+
+		complete_effect = {
+			add_stability = -0.05
+			set_politics = {
+				ruling_party = democratic
+				elections_allowed = yes
+			}
+		}
+
+	}
+
+	TDTL_swap_govt_socialism = {
+
+		icon = GFX_decision_category_generic_democracy
+
+		cost = 150
+
+		visible = {
+			NOT = { has_government = socialism }
+			NOT = { has_country_flag = TDTL_civil_war_incoming }
+			OR = {
+				socialism > 0.4
+				AND = {
+					socialism > 0.3
+					has_stability < 0.45
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				add = 1
+				socialism > 0.55
+			}
+		}
+
+		available = {
+			OR = {
+				socialism > 0.5
+				AND = {
+					has_stability < 0.45
+					socialism > 0.4
+				}
+			}
+		}
+
+		complete_effect = {
+			add_stability = -0.05
+			set_politics = {
+				ruling_party = socialism
+				elections_allowed = yes
+			}
+		}
+
+	}
+
+	TDTL_swap_govt_neutrality = {
+
+		icon = GFX_decision_category_military_operation
+
+		cost = 150
+
+		visible = {
+			NOT = { has_government = neutrality }
+			NOT = { has_country_flag = TDTL_civil_war_incoming }
+			OR = {
+				neutrality > 0.4
+				AND = {
+					neutrality > 0.3
+					has_stability < 0.45
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				add = 1
+				neutrality > 0.55
+			}
+		}
+
+		available = {
+			OR = {
+				neutrality > 0.5
+				AND = {
+					has_stability < 0.45
+					neutrality > 0.4
+				}
+			}
+		}
+
+		complete_effect = {
+			add_stability = -0.05
+			set_politics = {
+				ruling_party = neutrality
+				elections_allowed = no
+			}
+		}
+
+	}
+
+	TDTL_fascist_civil_war = {
+
+		icon = GFX_decision_category_generic_fascism
+
+		cost = 75
+
+		fire_only_once = yes
+
+		visible = {
+			NOT = { has_government = fascism }
+			OR = {
+				fascism > 0.3
+				AND = {
+					fascism > 0.25
+					has_stability < 0.5
+				}
+			}
+		}
+
+		available = {
+			fascism > 0.4
+		}
+
+		days_remove = 200
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				has_stability < 0.3
+				add = 1
+			}
+		}
+
+		complete_effect = {
+			set_variable = { civil_war_points = party_popularity@fascism }
+			add_to_variable = { civil_war_points = 0.1 }
+			set_country_flag = TDTL_civil_war_incoming
+		}
+
+		remove_effect = {
+			start_civil_war = {
+				ideology = ROOT
+				ruling_party = fascism
+				size = civil_war_points
+			}
+		}
+
+	}
+
+	TDTL_neutrality_civil_war = {
+
+		icon = GFX_decision_category_military_operation
+
+		cost = 75
+
+		fire_only_once = yes
+
+		visible = {
+			NOT = { has_government = neutrality }
+			OR = {
+				neutrality > 0.3
+				AND = {
+					neutrality > 0.25
+					has_stability < 0.5
+				}
+			}
+		}
+
+		available = {
+			neutrality > 0.4
+		}
+
+		days_remove = 200
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				has_stability < 0.3
+				add = 1
+			}
+		}
+
+		complete_effect = {
+			set_variable = { civil_war_points = party_popularity@neutrality }
+			add_to_variable = { civil_war_points = 0.1 }
+			set_country_flag = TDTL_civil_war_incoming
+		}
+
+		remove_effect = {
+			start_civil_war = {
+				ideology = ROOT
+				ruling_party = neutrality
+				size = civil_war_points
+			}
+		}
+
+	}
+
+	TDTL_democratic_civil_war = {
+
+		icon = GFX_decision_category_generic_democracy
+
+		cost = 75
+
+		fire_only_once = yes
+
+		visible = {
+			NOT = { has_government = democratic }
+			OR = {
+				democratic > 0.3
+				AND = {
+					democratic > 0.25
+					has_stability < 0.5
+				}
+			}
+		}
+
+		available = {
+			democratic > 0.4
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				has_stability < 0.3
+				add = 1
+			}
+		}
+
+		days_remove = 200
+
+		complete_effect = {
+			set_variable = { civil_war_points = party_popularity@democratic }
+			add_to_variable = { civil_war_points = 0.1 }
+			set_country_flag = TDTL_civil_war_incoming
+		}
+
+		remove_effect = {
+			start_civil_war = {
+				ideology = ROOT
+				ruling_party = democratic
+				size = civil_war_points
+			}
+		}
+
+	}
+
+	TDTL_socialism_civil_war = {
+
+		icon = GFX_decision_category_generic_democracy
+
+		cost = 75
+
+		fire_only_once = yes
+
+		visible = {
+			NOT = { has_government = socialism }
+			OR = {
+				socialism > 0.3
+				AND = {
+					socialism > 0.25
+					has_stability < 0.5
+				}
+			}
+		}
+
+		available = {
+			socialism > 0.4
+		}
+
+		days_remove = 200
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				has_stability < 0.3
+				add = 1
+			}
+		}
+
+		complete_effect = {
+			set_variable = { civil_war_points = party_popularity@socialism }
+			add_to_variable = { civil_war_points = 0.1 }
+			set_country_flag = TDTL_civil_war_incoming
+		}
+
+		remove_effect = {
+			start_civil_war = {
+				ideology = ROOT
+				ruling_party = socialism
+				size = civil_war_points
+			}
+		}
+
+	}
+
+	TDTL_communism_civil_war = {
+
+		icon = GFX_decision_category_generic_communism
+
+		cost = 75
+
+		fire_only_once = yes
+
+		visible = {
+			NOT = { has_government = communism }
+			OR = {
+				communism > 0.3
+				AND = {
+					communism > 0.25
+					has_stability < 0.5
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				has_stability < 0.3
+				add = 1
+			}
+		}
+
+		available = {
+			communism > 0.4
+		}
+
+		days_remove = 200
+
+		complete_effect = {
+			set_variable = { civil_war_points = party_popularity@communism }
+			add_to_variable = { civil_war_points = 0.1 }
+			set_country_flag = TDTL_civil_war_incoming
+		}
+
+		remove_effect = {
+			start_civil_war = {
+				ideology = ROOT
+				ruling_party = communism
+				size = civil_war_points
+			}
+		}
+
+	}
+
+	TDTL_sway_officers = {
+
+		icon = generic_army_support
+
+		fire_only_once = yes
+
+		visible = {
+			has_country_flag = TDTL_civil_war_incoming
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		cost = 50
+
+		complete_effect = {
+			army_experience = 5
+			add_to_variable = { civil_war_points = 0.1 }
+		}
+
+	}
+
+	TDTL_sway_people = {
+
+		icon = generic_civil_support
+
+		fire_only_once = yes
+
+		visible = {
+			has_country_flag = TDTL_civil_war_incoming
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		cost = 50
+
+		complete_effect = {
+			add_popularity = {
+				ideology = ROOT
+				popularity = -0.05
+			}
+			add_to_variable = { civil_war_points = 0.1 }
+		}
+
+	}
+
 }

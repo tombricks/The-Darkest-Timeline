@@ -4,8 +4,16 @@ set_stability = 0.6
 set_war_support = 0.6
 
 set_politics = {
-		 ruling_party = neutrality
-		last_election = "2012.1.1"
-		election_frequency = 48
-		elections_allowed = no
+	ruling_party = democratic
+	last_election = "2012.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	democratic = 40
+	neutrality = 15
+	socialism = 15
+	fascism = 15
+	communism = 15
 }

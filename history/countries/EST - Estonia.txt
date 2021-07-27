@@ -2,7 +2,7 @@
 capital = 13
 set_stability = 0.6
 set_war_support = 0.6
-
+set_country_flag = military_administration_puppet_flag
 set_politics = {
 	ruling_party = fascism
 	last_election = "2012.1.1"

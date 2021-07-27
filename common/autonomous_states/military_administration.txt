@@ -2,7 +2,7 @@ autonomy_state = {
 	id = autonomy_military_administration
 	
 	default = no
-	is_puppet = yes
+	is_puppet = no
 	use_overlord_color = yes
 	
 	min_freedom_level = 0.3
@@ -40,6 +40,7 @@ autonomy_state = {
 
 	allowed = {
 		NOT = { OR = { tag = MID tag = TEX tag = CAL tag = APA } OVERLORD = { tag = USA } }
+		has_country_flag = military_administration_puppet_flag
 	}
 
 	#ROOT is puppet - FROM is potential OVERLORD

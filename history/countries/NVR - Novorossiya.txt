@@ -9,7 +9,7 @@ set_politics = {
 	election_frequency = 48
 	elections_allowed = no
 }
-
+set_country_flag = autonomous_area_puppet_flag
 set_cosmetic_tag = NVR_SOV_Union_fascism
 
 SOV = {
